@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <Homepage/>
+    <vue-page-transition name="fade-in-down">
+    <router-view/>
+    </vue-page-transition>
+
   </div>
 </template>
 
 <script>
-import Homepage from './views/Homepage.vue'
 
 export default {
   name: 'App',
-  components: {
-    Homepage
-  }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: "Dedale-Regular";
+
   text-align: center;
+  background-color:$yellow;
+
 }
 </style>

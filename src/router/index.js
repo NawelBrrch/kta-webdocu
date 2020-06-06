@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Homepage from '../views/Homepage.vue'
+import test from '../views/test.vue'
 
 Vue.use(VueRouter)
 
-// C'est dans la constante routes que vous définisez les différentes routes de votre projet
-// Chaque route doivent avoir au minimum un path et un component associé
+
 const routes = [
   {
     path: '/',
     name: 'Homepage',
     component: Homepage
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: test
   }
 ]
 
