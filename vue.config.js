@@ -6,9 +6,10 @@ module.exports = {
     loaderOptions: {
       sass: {
         prependData: `
-        @import "@/scss/_variables.scss";
-        @import "@/scss/_reset.scss";
-        @import "@/scss/_mixins.scss";`
+        @import "@/scss/config/_reset.scss";
+        @import "@/scss/global/_variables.scss";
+        @import "@/scss/global/_mixins.scss";
+        @import "@/scss/global/_fonts.scss";`
 
       }
     }
