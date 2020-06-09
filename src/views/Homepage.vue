@@ -4,7 +4,7 @@
       <h1>La face cachée des Catacombes de Paris</h1>
     </div>
     <div>
-      <router-link :to="{ name: 'Equipment' }" tag="button">
+      <router-link :to="{ name: 'Disclaimer' }" tag="button">
         Commencer la descente
       </router-link>
     </div>

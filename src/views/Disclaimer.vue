@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>Disclaimer</p>
-    <router-link :to="{ name: 'Homepage' }" tag="button">
+    <router-link :to="{ name: 'Equipment' }" tag="button">
       skip
     </router-link>
   </div>
