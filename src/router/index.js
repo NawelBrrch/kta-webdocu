@@ -10,6 +10,8 @@ import PanoramicView from "@/views/PanoramicView.vue";
 import Gallery from "@/views/Gallery.vue";
 import About from "@/views/About.vue";
 import Sources from "@/views/Sources.vue";
+import Room from "@/views/Room.vue";
+import KtaMap from "@/views/Map.vue";
 
 Vue.use(VueRouter);
 
@@ -58,6 +60,16 @@ const routes = [
     path: "/sources",
     name: "Sources",
     component: Sources,
+  },
+  {
+    path: "/room/:id",
+    name: "Room",
+    component: Room,
+  },
+  {
+    path: "/map",
+    name: "Map",
+    component: KtaMap,
   },
 ];
 

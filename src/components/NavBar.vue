@@ -33,7 +33,7 @@
       </li>
     </nav>
     <li>
-      <router-link :to="{ name: 'Homepage' }">
+      <router-link :to="{ name: 'Map' }">
         Map
       </router-link>
     </li>
