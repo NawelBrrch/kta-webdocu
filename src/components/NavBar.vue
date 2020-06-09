@@ -1,18 +1,42 @@
 <template>
   <div>
-    <nav>
-      <li>Accueil</li>
+    <nav id="here">
       <li>
-        Galerie
+        <router-link :to="{ name: 'Homepage' }">
+          Accueil
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'Gallery' }">Galerie</router-link>
         <ul>
-          <li>Photos</li>
-          <li>Video</li>
+          <li>
+            <router-link :to="{ name: 'Gallery' }">
+              Photos
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{ name: 'Gallery' }">
+              Vidéos
+            </router-link>
+          </li>
         </ul>
       </li>
-      <li>Sources</li>
-      <li>À propos</li>
+      <li>
+        <router-link :to="{ name: 'Sources' }">
+          Sources
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'About' }">
+          À propos
+        </router-link>
+      </li>
     </nav>
-    <div>Map</div>
+    <li>
+      <router-link :to="{ name: 'Homepage' }">
+        Map
+      </router-link>
+    </li>
   </div>
 </template>
 

@@ -7,6 +7,9 @@ import Equipment from "@/views/Equipment.vue";
 import GoingDownVideo from "@/views/GoingDownVideo.vue";
 import GoingDownHistory from "@/views/GoingDownHistory.vue";
 import PanoramicView from "@/views/PanoramicView.vue";
+import Gallery from "@/views/Gallery.vue";
+import About from "@/views/About.vue";
+import Sources from "@/views/Sources.vue";
 
 Vue.use(VueRouter);
 
@@ -40,6 +43,21 @@ const routes = [
     path: "/panorama",
     name: "PanoramicView",
     component: PanoramicView,
+  },
+  {
+    path: "/gallery",
+    name: "Gallery",
+    component: Gallery,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
+    path: "/sources",
+    name: "Sources",
+    component: Sources,
   },
 ];
 
