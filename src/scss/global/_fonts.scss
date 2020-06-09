@@ -3,7 +3,6 @@
   src: url(~@/scss/fonts/Dedale-Light.ttf) format("trueType");
 }
 
-
 @font-face {
   font-family: "Dedale-Regular";
   src: url(~@/scss/fonts/Dedale-Regular.ttf) format("trueType");
@@ -12,4 +11,44 @@
 @font-face {
   font-family: "Dedale-Bold";
   src: url(~@/scss/fonts/Dedale-Bold.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Light";
+  src: url(~@/scss/fonts/Merriweather-Light.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Light Italic";
+  src: url(~@/scss/fonts/Merriweather-LightItalic.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Regular";
+  src: url(~@/scss/fonts/Merriweather-Regular.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Regular Italic";
+  src: url(~@/scss/fonts/Merriweather-Italic.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Bold";
+  src: url(~@/scss/fonts/Merriweather-Bold.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Bold Italic";
+  src: url(~@/scss/fonts/Merriweather-BoldItalic.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Black";
+  src: url(~@/scss/fonts/Merriweather-Black.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: "Merriweather Black Italic";
+  src: url(~@/scss/fonts/Merriweather-BlackItalic.ttf) format("trueType");
 }
