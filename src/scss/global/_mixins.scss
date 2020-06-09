@@ -1,21 +1,22 @@
-// @mixin h1-style {
-//   font-family: ;
-//   font-size: ;
-//   color: ;
-// }
+@mixin h1-style {
+  font-family: Dedale;
+  font-size: 48px;
+  color: $white;
+  text-transform: uppercase;
+}
 
-// @mixin h2-style {
-//   font-family: ;
-//   font-size:;
-//   color: ;
-// }
+@mixin h2-style {
+  font-family: Dedale;
+  font-size: 40px;
+  color: $white;
+  text-transform: uppercase;
+}
 
-// @mixin h3-style {
-//   font-family: ;
-//   color: ;
-//   font-size: ;
-//   line-height: ;
-// }
+@mixin h3-style {
+  font-family: Dedale;
+  color: $lightbrown;
+  font-size: 30px;
+}
 
 // @mixin CTA-style {
 //   font-family: ;
@@ -27,9 +28,14 @@
 //   text-decoration: none;
 // }
 
-// @mixin p-style {
-//   font-family: ;
-//   font-size: ;
-//   line-height: ;
-//   color: ;
-// }
+@mixin p-style {
+  font-family: Merriweather Regular;
+  font-size: 15px;
+  color: $gray;
+}
+
+@mixin em-style {
+  font-family: Merriweather Bold;
+  font-size: 15px;
+  color: $lightbrown;
+}
