@@ -1,28 +1,52 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Homepage from '../views/Homepage.vue'
-import test from '../views/test.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+import Disclaimer from "@/views/Disclaimer.vue";
+import Homepage from "@/views/Homepage.vue";
+import Equipment from "@/views/Equipment.vue";
+import GoingDownVideo from "@/views/GoingDownVideo.vue";
+import GoingDownHistory from "@/views/GoingDownHistory.vue";
+import PanoramicView from "@/views/PanoramicView.vue";
 
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Homepage',
-    component: Homepage
+    path: "/",
+    name: "Disclaimer",
+    component: Disclaimer,
   },
   {
-    path: '/test',
-    name: 'test',
-    component: test
-  }
-]
+    path: "/home",
+    name: "Homepage",
+    component: Homepage,
+  },
+  {
+    path: "/equipment",
+    name: "Equipment",
+    component: Equipment,
+  },
+  {
+    path: "/goingDownVideo",
+    name: "GoingDownVideo",
+    component: GoingDownVideo,
+  },
+  {
+    path: "/goingDownHistory",
+    name: "GoingDownHistory",
+    component: GoingDownHistory,
+  },
+  {
+    path: "/panorama",
+    name: "PanoramicView",
+    component: PanoramicView,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

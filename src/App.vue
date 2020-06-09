@@ -1,24 +1,25 @@
 <template>
   <div id="app">
+    <NavBar />
     <vue-page-transition name="fade-in-down">
-    <router-view/>
+      <router-view />
     </vue-page-transition>
-
   </div>
 </template>
 
 <script>
+import NavBar from "@/components/NavBar.vue";
 
 export default {
-  name: 'App',
-}
+  name: "App.vue",
+  components: {
+    NavBar,
+  },
+};
 </script>
 
 <style lang="scss">
 #app {
-
-  text-align: center;
-  background-color:$yellow;
-
+  background-color: $yellow;
 }
 </style>
