@@ -40,6 +40,7 @@ export default {
     background-color: pink;
     width: 20px;
     height: 20px;
+    margin-bottom: 20%;
   }
 }
 
@@ -47,11 +48,13 @@ export default {
   background-color: lightgreen;
   width: 20px;
   height: 20px;
+  margin-bottom: 20%;
 }
 
 .footer__mute {
   background-color: lightseagreen;
   width: 20px;
   height: 20px;
+  margin-bottom: 20%;
 }
 </style>
