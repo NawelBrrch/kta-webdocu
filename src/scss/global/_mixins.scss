@@ -1,6 +1,5 @@
 @mixin h-style {
   font-family: "Dedale";
-  font-weight: normal;
   color: $white;
   line-height: 150%;
   text-transform: uppercase;
@@ -42,18 +41,19 @@
 //   text-decoration: none;
 // }
 
-@mixin p-mobile-style {
-  font-family: "Merriweather";
-  font-size: 30px;
-  color: $gray;
-  font-weight: normal;
-}
-
 @mixin p-style {
   font-family: "Merriweather";
-  font-size: 10px;
   color: $gray;
-  font-weight: normal;
+}
+
+@mixin p-mobile-style {
+  font-size: 30px;
+  @include p-style;
+}
+
+@mixin p-desktop-style {
+  font-size: 10px;
+  @include p-style;
 }
 
 @mixin em-style {
