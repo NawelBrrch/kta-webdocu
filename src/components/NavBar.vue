@@ -52,6 +52,14 @@ export default {
 
 <style lang="scss" scoped>
 .navBar {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(5, 5, 5, 0.56472) 39.03%,
+    rgba(5, 5, 5, 0.378) 63.23%,
+    rgba(26, 26, 26, 0) 105.55%,
+    rgba(26, 26, 26, 0) 105.56%
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +78,8 @@ export default {
 
 .burgerMenu {
   display: flex;
-  display: none;
+  position: absolute;
+  //display: none;
   width: 100%;
   height: 48px;
   align-items: center;

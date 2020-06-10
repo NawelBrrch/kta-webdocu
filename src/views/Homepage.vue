@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .homepage {
+  overflow: hidden;
   height: 100vh;
   display: flex;
   flex-direction: column;
