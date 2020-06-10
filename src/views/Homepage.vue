@@ -1,7 +1,8 @@
 <template>
   <div>
+    <RoomFacts />
     <div>
-      <h1>La face cachée des Catacombes de Paris</h1>
+      <h1>La face cachée Des catacombes</h1>
     </div>
     <div>
       <router-link :to="{ name: 'Disclaimer' }" tag="button">
@@ -12,8 +13,13 @@
 </template>
 
 <script>
+import RoomFacts from "@/components/RoomFacts.vue";
+
 export default {
   name: "Homepage",
+  components: {
+    RoomFacts,
+  },
 };
 </script>
 

@@ -29,13 +29,13 @@
 // }
 
 @mixin p-style {
-  font-family: Merriweather Regular;
+  font-family: "Merriweather Regular";
   font-size: 15px;
   color: $gray;
 }
 
 @mixin em-style {
-  font-family: Merriweather Bold;
+  font-family: "Merriweather Bold";
   font-size: 15px;
   color: $lightbrown;
 }
