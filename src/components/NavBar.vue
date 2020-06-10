@@ -48,6 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 div {
+  display: none;
   background-color: white;
 }
 </style>

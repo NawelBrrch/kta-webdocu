@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss">
 #app {
-  background-color: $yellow;
+  //background-color: $gray;
   width: 100%;
   height: 100vh;
 }

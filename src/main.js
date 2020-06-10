@@ -4,8 +4,6 @@ import VuePageTransition from "vue-page-transition";
 import App from "./App.vue";
 import router from "./javaScript/router";
 
-import "./scss/_styles.scss";
-
 Vue.use(VuePageTransition);
 Vue.config.productionTip = false;
 

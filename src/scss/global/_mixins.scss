@@ -1,19 +1,39 @@
 @mixin h1-style {
-  font-family: Dedale;
-  font-size: 48px;
+  font-family: "Dedale";
+  font-weight: normal;
+  //font-size: 48px;
   color: $white;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+@mixin h1-mobile-style {
+  font-family: "Dedale";
+  font-weight: bold;
+  //font-size: 24px;
+  color: $white;
+  line-height: 150%;
   text-transform: uppercase;
 }
 
 @mixin h2-style {
-  font-family: Dedale;
+  font-family: "Dedale";
   font-size: 40px;
   color: $white;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+@mixin h2-mobile-style {
+  font-family: "Dedale";
+  font-size: 1rem;
+  color: $white;
+  line-height: 150%;
   text-transform: uppercase;
 }
 
 @mixin h3-style {
-  font-family: Dedale;
+  font-family: "Dedale";
   color: $lightbrown;
   font-size: 30px;
 }
