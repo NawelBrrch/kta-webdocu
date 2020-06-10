@@ -51,12 +51,12 @@ export default {
   }
 
   &--title {
-    @include h1-mobile-style;
+    @include p-style;
     color: $white;
   }
 
   &--subtitle {
-    @include h2-mobile-style;
+    @include p-style;
   }
 }
 </style>
