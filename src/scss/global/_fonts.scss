@@ -1,16 +1,19 @@
 @font-face {
-  font-family: "Dedale-Light";
+  font-family: "Dedale";
   src: url(~@/scss/fonts/Dedale-Light.ttf) format("trueType");
+  font-weight: 100;
 }
 
 @font-face {
-  font-family: "Dedale-Regular";
+  font-family: "Dedale";
   src: url(~@/scss/fonts/Dedale-Regular.ttf) format("trueType");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "Dedale-Bold";
+  font-family: "Dedale";
   src: url(~@/scss/fonts/Dedale-Bold.ttf) format("trueType");
+  font-weight: bold;
 }
 
 @font-face {
