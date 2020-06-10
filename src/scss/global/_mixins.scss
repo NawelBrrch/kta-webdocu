@@ -64,20 +64,11 @@
   color: $lightbrown;
 }
 
-@mixin tablet-portrait {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media (min-width: 920px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: 1160px) {
-    @content;
-  }
+@mixin menu-style {
+  font-family: "Dedale";
+  color: $white;
+  line-height: 150%;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 12px;
 }

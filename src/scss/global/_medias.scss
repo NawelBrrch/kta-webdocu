@@ -1,0 +1,17 @@
+@mixin tablet-portrait {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: 920px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1160px) {
+    @content;
+  }
+}
