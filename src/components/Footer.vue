@@ -14,22 +14,23 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
   background: linear-gradient(
-    180deg,
+    0deg,
     rgba(0, 0, 0, 0.7) 0%,
     rgba(5, 5, 5, 0.56472) 39.03%,
     rgba(5, 5, 5, 0.378) 63.23%,
     rgba(26, 26, 26, 0) 105.55%,
     rgba(26, 26, 26, 0) 105.56%
   );
-  transform: rotate(-180deg);
-  height: 15%;
+  height: 45px;
 }
 
 .footer__icones {
   display: flex;
   justify-content: space-between;
-  transform: rotate(180deg);
 }
 
 .footer__play {
@@ -48,13 +49,11 @@ export default {
   background-color: lightgreen;
   width: 20px;
   height: 20px;
-  margin-bottom: 20%;
 }
 
 .footer__mute {
   background-color: lightseagreen;
   width: 20px;
   height: 20px;
-  margin-bottom: 20%;
 }
 </style>
