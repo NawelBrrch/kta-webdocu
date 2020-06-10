@@ -1,53 +1,52 @@
 <template>
-  <div>
+  <section class="homepage">
     <div class="homepage__presentation">
-      <h1 class="homepage__presentation--title">
-        Les Catacombes
-      </h1>
-      <h2 class="homepage__presentation--subtitle">La face cachée de Paris</h2>
+      <TextFrame>
+        <h1 class="homepage__presentation--title">
+          Les Catacombes
+        </h1>
+        <h2 class="homepage__presentation--subtitle">
+          La face cachée de Paris
+        </h2>
+      </TextFrame>
     </div>
     <div>
       <router-link :to="{ name: 'Disclaimer' }" tag="button">
         Commencer la descente
       </router-link>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import TextFrame from "@/components/TextFrame.vue";
+
 export default {
   name: "Homepage",
+  components: {
+    TextFrame,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.homepage__presentation {
-  text-align: center;
-  padding: 30px;
-  background-color: hsla(0, 0, 10%, 0.7);
-  display: inline-block;
-  position: relative;
+.homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: center / cover no-repeat url("../assets/images/homepage.png");
 
-  &:before {
-    left: 0;
-    top: 0;
-    border-left: 1px solid $yellow;
-    border-top: 1px solid $yellow;
-  }
+  &__presentation {
+    width: 70%;
+    &--title {
+      text-align: center;
+    }
 
-  &:after {
-    bottom: 0;
-    right: 0;
-    border-right: 1px solid $yellow;
-    border-bottom: 1px solid $yellow;
-  }
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
+    &--subtitle {
+      text-align: center;
+    }
   }
 }
 </style>
