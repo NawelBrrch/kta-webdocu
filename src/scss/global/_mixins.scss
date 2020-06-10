@@ -49,9 +49,11 @@
 // }
 
 @mixin p-style {
-  font-family: "Merriweather Regular";
+  font-family: "Merriweather";
   font-size: 15px;
   color: $gray;
+  font-weight: 100;
+  //font-style: italic;
 }
 
 @mixin em-style {
