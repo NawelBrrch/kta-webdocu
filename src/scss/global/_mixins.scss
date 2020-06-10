@@ -8,6 +8,7 @@
 @mixin h1-mobile-style {
   font-size: 24px;
   @include h-style;
+  font-weight: bold;
 }
 
 @mixin h1-desktop-style {
