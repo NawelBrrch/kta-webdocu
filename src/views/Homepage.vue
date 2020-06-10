@@ -49,14 +49,5 @@ export default {
     height: 20px;
     width: 20px;
   }
-
-  &--title {
-    @include p-style;
-    color: $white;
-  }
-
-  &--subtitle {
-    @include p-style;
-  }
 }
 </style>

@@ -1,35 +1,29 @@
-@mixin h1-style {
+@mixin h-style {
   font-family: "Dedale";
   font-weight: normal;
-  //font-size: 48px;
   color: $white;
   line-height: 150%;
   text-transform: uppercase;
 }
 
 @mixin h1-mobile-style {
-  font-family: "Dedale";
-  font-weight: bold;
-  //font-size: 24px;
-  color: $white;
-  line-height: 150%;
-  text-transform: uppercase;
+  font-size: 24px;
+  @include h-style;
 }
 
-@mixin h2-style {
-  font-family: "Dedale";
-  font-size: 40px;
-  color: $white;
-  line-height: 150%;
-  text-transform: uppercase;
+@mixin h1-desktop-style {
+  font-size: 48px;
+  @include h-style;
 }
 
 @mixin h2-mobile-style {
-  font-family: "Dedale";
-  font-size: 1rem;
-  color: $white;
-  line-height: 150%;
-  text-transform: uppercase;
+  font-size: 18px;
+  @include h-style;
+}
+
+@mixin h2-desktop-style {
+  font-size: 40px;
+  @include h-style;
 }
 
 @mixin h3-style {
@@ -48,16 +42,23 @@
 //   text-decoration: none;
 // }
 
+@mixin p-mobile-style {
+  font-family: "Merriweather";
+  font-size: 30px;
+  color: $gray;
+  font-weight: normal;
+}
+
 @mixin p-style {
   font-family: "Merriweather";
-  font-size: 15px;
+  font-size: 10px;
   color: $gray;
-  font-weight: 100;
-  //font-style: italic;
+  font-weight: normal;
 }
 
 @mixin em-style {
-  font-family: "Merriweather Bold";
+  font-family: "Merriweather";
+  font-weight: bold;
   font-size: 15px;
   color: $lightbrown;
 }
