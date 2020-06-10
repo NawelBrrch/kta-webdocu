@@ -1,6 +1,6 @@
 <template>
   <div>
-    <RoomFacts />
+    <RoomFacts>TEXTE A INSERER ICI</RoomFacts>
     <div>
       <h1>La face cachée Des catacombes</h1>
     </div>
