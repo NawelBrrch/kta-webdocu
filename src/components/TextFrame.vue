@@ -1,6 +1,6 @@
 <template>
-  <div class="roomFacts">
-    <p class="roomFacts__text">
+  <div class="textFrame">
+    <p class="textFrame__text">
       <slot></slot>
     </p>
   </div>
@@ -8,13 +8,14 @@
 
 <script>
 export default {
-  name: "RoomFacts",
+  name: "TextFrame",
 };
 </script>
 
 <style lang="scss" scoped>
-.roomFacts {
-  padding: 47px;
+.textFrame {
+  width: 100%;
+  padding: 30px 10%;
   background-color: hsla(0, 0, 10%, 0.7);
   display: inline-block;
   position: relative;
@@ -42,9 +43,7 @@ export default {
   }
 
   &__text {
-    //@include p-style;
     color: $white;
-    width: 517px;
     line-height: 170%;
   }
 }
