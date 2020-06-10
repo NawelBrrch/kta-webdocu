@@ -4,3 +4,15 @@
 @import "global/_medias.scss";
 @import "global/_mixins.scss";
 @import "global/_variables.scss";
+
+h1 {
+  @include h1-mobile-style;
+}
+
+h2 {
+  @include h2-mobile-style;
+}
+
+p {
+  @include p-mobile-style;
+}
