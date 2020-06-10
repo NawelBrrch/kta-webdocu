@@ -16,3 +16,8 @@ h2 {
 p {
   @include p-mobile-style;
 }
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

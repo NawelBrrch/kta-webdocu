@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .textFrame {
   width: 100%;
-  padding: 30px 10%;
+  padding: 15px;
   background-color: hsla(0, 0, 10%, 0.7);
   display: inline-block;
   position: relative;
