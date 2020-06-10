@@ -306,7 +306,7 @@ export default {
 .burgerMenu {
   display: flex;
   position: absolute;
-  //display: none;
+  display: none;
   width: 100%;
   height: 48px;
   align-items: center;
