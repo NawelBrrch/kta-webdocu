@@ -36,7 +36,7 @@ export default {
 .footer__play {
   display: none;
 
-  @media (min-width: 768px) {
+  @mixin tablette {
     display: block;
     background-color: pink;
     width: 20px;
