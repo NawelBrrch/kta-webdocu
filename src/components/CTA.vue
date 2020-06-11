@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 
 
-$btn-height: 60px;
+
 
 *:before,
 *:after {
@@ -35,16 +35,18 @@ $btn-height: 60px;
 }
 
 .button {
-  background-color: hsla(0, 0, 10%, 0.7);
+  background-color: $lightblack;
   z-index: -1;
   display: inline-block;
 }
 
+$btn-height: 39px;
+
 
 .button__cta {
+  @include CTA-style;
   z-index: 1;
   text-align: center;
-  color: $white;
   text-decoration: none;
   line-height: $btn-height;
   position: relative;
@@ -52,7 +54,7 @@ $btn-height: 60px;
   overflow: hidden;
   size: 100% $btn-height;
   max-width: 100%;
-  border: 1px solid $yellow;
+  
 
   &:before,
   &:after {
@@ -66,7 +68,7 @@ $btn-height: 60px;
 
   span {
     z-index: 2;
-    padding: 0 1vw;
+    padding: 0 2vw;
   }
 
   &:before {

@@ -11,8 +11,8 @@
       </TextFrame>
     </div>
     <div>
-      <router-link :to="{ name: 'Disclaimer' }" tag="button">
-        Commencer la descente
+      <router-link :to="{ name: 'Disclaimer' }">
+        <CTA msg="Commencer la visite"/>
       </router-link>
     </div>
   </section>
@@ -20,11 +20,13 @@
 
 <script>
 import TextFrame from "@/components/TextFrame.vue";
+import CTA from "@/components/CTA.vue";
 
 export default {
   name: "Homepage",
   components: {
     TextFrame,
+    CTA,
   },
 };
 </script>
