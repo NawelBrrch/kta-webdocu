@@ -1,9 +1,9 @@
 @import "config/_reset.scss";
 
+@import "global/_variables.scss";
 @import "global/_fonts.scss";
 @import "global/_medias.scss";
 @import "global/_mixins.scss";
-@import "global/_variables.scss";
 
 h1 {
   @include h1-style;
@@ -11,6 +11,10 @@ h1 {
 
 h2 {
   @include h2-style;
+}
+
+h3 {
+  @include h3-style;
 }
 
 p {
