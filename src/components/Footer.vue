@@ -156,13 +156,14 @@ export default {
     rgba(26, 26, 26, 0) 105.55%,
     rgba(26, 26, 26, 0) 105.56%
   );
-  height: 55px;
+  height: 48px;
 }
 
 .footer__icones {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 3%;
 }
 
 .footer__play {
@@ -172,7 +173,6 @@ export default {
     background-color: pink;
     width: 20px;
     height: 20px;
-    margin-bottom: 20%;
   }
 }
 
@@ -180,11 +180,16 @@ export default {
   display: none;
 
   @mixin tablet-portrait {
+    display: flex;
     margin-right: 5%;
   }
 }
 
 .footer__mute {
-  margin-right: 5%;
+  margin-right: 20px;
+
+  @mixin tablet-portrait {
+    margin-bottom: 3%;
+  }
 }
 </style>
