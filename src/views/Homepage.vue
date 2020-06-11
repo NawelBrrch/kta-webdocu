@@ -41,6 +41,9 @@ export default {
 
   &__presentation {
     width: 70%;
+    display: flex;
+    justify-content: center;
+
     &--title {
       text-align: center;
     }
