@@ -90,6 +90,18 @@ export default {
     height: 48px;
     z-index: 2;
     width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(5, 5, 5, 0.5) 39.03%,
+      rgba(5, 5, 5, 0.2) 63.23%,
+      rgba(26, 26, 26, 0) 105.55%,
+      rgba(26, 26, 26, 0) 105.56%
+    );
+
+    @include tablet-portrait {
+      height: 93px;
+    }
 
     &--list {
       display: flex;
@@ -97,12 +109,24 @@ export default {
       justify-content: space-around;
       align-items: center;
       height: 100%;
+
+      @include tablet-portrait {
+        padding: 0 20%;
+      }
+
+      @include desktop {
+        padding: 0 25%;
+      }
     }
   }
 }
 
 .list__item {
-  @include menu-style;
+  @include menu-style-mobile;
+
+  @include tablet-portrait {
+    @include menu-style-desktop;
+  }
 
   a {
     text-decoration: none;
@@ -116,7 +140,7 @@ export default {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .slide-enter,

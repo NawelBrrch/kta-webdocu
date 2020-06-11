@@ -70,5 +70,14 @@
   line-height: 150%;
   text-transform: uppercase;
   font-weight: 100;
+}
+
+@mixin menu-style-mobile {
+  @include menu-style;
   font-size: 12px;
+}
+
+@mixin menu-style-desktop {
+  @include menu-style;
+  font-size: 18px;
 }

@@ -122,6 +122,7 @@
 <script>
 import BurgerMenu from "@/components/burgerMenu/BurgerMenu.vue";
 import BurgerMenuTopBar from "@/components/burgerMenu/BurgerMenuTopBar.vue";
+import { store, mutations } from "@/javaScript/store.js";
 
 export default {
   name: "NavBar",
@@ -149,6 +150,10 @@ export default {
   list-style: none;
   width: 100%;
   height: 48px;
+
+  @include tablet-portrait {
+    height: 93px;
+  }
 }
 
 .mapMenu {
@@ -157,5 +162,10 @@ export default {
   width: 20px;
   position: relative;
   z-index: 3;
+
+  @include tablet-portrait {
+    width: 35px;
+    height: 35px;
+  }
 }
 </style>
