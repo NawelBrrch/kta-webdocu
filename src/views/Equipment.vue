@@ -1,18 +1,31 @@
 <template>
   <div class="equipment">
-    <p class="equipment__text">
-      Pour une meilleure expérience attrapez votre équipement,<br />
-      éteignez les <strong class="text__glow">lumières</strong>, et branchez
-      votre <strong class="text__animation">casque</strong>
-    </p>
-    <router-link :to="{ name: 'GoingDownVideo' }" tag="button">
-      GO DOOOOOWN
+    <h3 class="equipment__title">
+      Pour une meilleure expérience attrapez votre équipement, éteignez les
+      <em>lumières</em>, et branchez votre casque.
+    </h3>
+    <TextFrame class="equipment__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </TextFrame>
+    <router-link :to="{ name: 'GoingDownVideo' }">
+      <CTA msg="Commencer la descente"/>
     </router-link>
   </div>
 </template>
 
 <script>
-export default { name: "Equipment" };
+
+import TextFrame from "@/components/TextFrame.vue";
+import CTA from "@/components/CTA.vue";
+
+export default {
+  name: "Equipment",
+  components: {
+    TextFrame,
+    CTA,
+  },
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -27,18 +40,19 @@ export default { name: "Equipment" };
   align-items: center;
 }
 
+.equipment__title {
+  width: 90vw;
+  text-align: center;
+  line-height: 200%;
+  margin-bottom: 36px;
+  color: $white;
+
+  em {
+    animation: light 2s infinite alternate;
+  }
+}
+
 .equipment__text {
   width: 60vw;
-  text-align: center;
-  margin-bottom: 5%;
-}
-
-.text__glow {
-  text-shadow: 0 0 20px #efede5, 0 0 15px #efede5, 0 0 20px #f5eabd,
-    0 0 25px #efede5, 0 0 30px #f5eabd, 0 0 35px #f5eabd;
-}
-
-.text__animation {
-  animation: 3s ease-in 1s infinite reverse both running slidein;
 }
 </style>

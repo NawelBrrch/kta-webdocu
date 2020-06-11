@@ -1,6 +1,6 @@
 <template>
   <div class="loadingPage">
-    <h1>Disclaimer</h1>
+    <h2 class="disclaimer__title">Disclaimer</h2>
     <p class="disclaimer__school">
       Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus
       Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet
@@ -14,14 +14,21 @@
       carte que vous trouverez sur le site est fictive, mais les lieux présentés
       sont bien réels.
     </p>
-    <router-link :to="{ name: 'Equipment' }" tag="button">
-      skip
+    <router-link :to="{ name: 'Equipment' }">
+      <CTA msg="Continuer"/>
     </router-link>
   </div>
 </template>
 
 <script>
-export default { name: "Disclaimer" };
+import CTA from "@/components/CTA.vue";
+
+export default { 
+  name: "Disclaimer",
+  components: {
+    CTA,
+  }
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -35,22 +42,25 @@ export default { name: "Disclaimer" };
   align-items: center;
 }
 
-h1 {
-  @include h1-mobile-style;
-  margin-bottom: 4%;
+.disclaimer__title {
+  margin-bottom: 5%;
 }
 
 .disclaimer__school {
-  @include p-mobile-style;
-  text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   width: 80vw;
+
+  @include desktop {
+    width: 60vw;
+  }
 }
 
 .disclaimer__kta {
-  @include p-mobile-style;
-  text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   width: 80vw;
+
+  @include desktop {
+    width: 60vw;
+  }
 }
 </style>

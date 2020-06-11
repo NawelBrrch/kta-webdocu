@@ -145,6 +145,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -157,6 +160,10 @@ export default {
     rgba(26, 26, 26, 0) 105.56%
   );
   height: 48px;
+
+  @include tablet-portrait {
+    height: 93px;
+  }
 }
 
 .footer__icones {
@@ -181,8 +188,14 @@ export default {
 
   @include tablet-portrait {
     display: flex;
-    margin-right: 20px;
-    padding-bottom: 20px;
+    margin-right: 35px;
+  }
+
+  svg {
+    @include tablet-portrait {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -190,7 +203,14 @@ export default {
   margin-right: 20px;
 
   @include tablet-portrait {
-    padding-bottom: 20px;
+    margin-right: 35px;
+  }
+
+  svg {
+    @include tablet-portrait {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 </style>

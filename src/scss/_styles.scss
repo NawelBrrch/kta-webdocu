@@ -1,20 +1,24 @@
 @import "config/_reset.scss";
 
+@import "global/_variables.scss";
 @import "global/_fonts.scss";
 @import "global/_medias.scss";
 @import "global/_mixins.scss";
-@import "global/_variables.scss";
 
 h1 {
-  @include h1-mobile-style;
+  @include h1-style;
 }
 
 h2 {
-  @include h2-mobile-style;
+  @include h2-style;
+}
+
+h3 {
+  @include h3-style;
 }
 
 p {
-  @include p-mobile-style;
+  @include p-style;
 }
 
 * {

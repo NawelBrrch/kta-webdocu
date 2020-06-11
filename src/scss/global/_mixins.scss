@@ -5,56 +5,74 @@
   text-transform: uppercase;
 }
 
-@mixin h1-mobile-style {
+@mixin h1-style {
+  @include h-style;
   font-size: 24px;
-  @include h-style;
   font-weight: bold;
+
+  @include tablet-portrait {
+    font-weight: normal;
+    font-size: 48px;
+  }
+
+  @include desktop {
+    font-weight: normal;
+    font-size: 64px;
+  }
 }
 
-@mixin h1-desktop-style {
-  font-size: 48px;
+@mixin h2-style {
   @include h-style;
-}
-
-@mixin h2-mobile-style {
   font-size: 18px;
-  @include h-style;
-}
 
-@mixin h2-desktop-style {
-  font-size: 40px;
-  @include h-style;
+  @include tablet-portrait {
+    font-weight: normal;
+    font-size: 36px;
+  }
+
+  @include desktop {
+    font-weight: normal;
+    font-size: 48px;
+  }
 }
 
 @mixin h3-style {
   font-family: "Dedale";
   color: $lightbrown;
-  font-size: 30px;
+  font-size: 14px;
 }
 
-// @mixin CTA-style {
-//   font-family: ;
-//   border-radius: ;
-//   font-size: ;
-//   background-color: ;
-//   color: ;
-//   border: none;
-//   text-decoration: none;
-// }
+@mixin CTA-style {
+  font-family: "Dedale";
+  font-weight: normal;
+  border-radius: 1px;
+  font-size: 14px;
+  color: $gray;
+  border: 1.3px solid $yellow;
+
+  @include tablet-landscape {
+    font-size: 18px;
+  }
+}
 
 @mixin p-style {
   font-family: "Merriweather";
   color: $gray;
-}
+  line-height: 150%;
+  font-size: 12px;
 
-@mixin p-mobile-style {
-  font-size: 10px;
-  @include p-style;
-}
+  @include tablet-portrait {
+    font-size: 14px;
+  }
 
-@mixin p-desktop-style {
-  font-size: 18px;
-  @include p-style;
+  @include tablet-landscape {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+    font-weight: 100;
+  }
 }
 
 @mixin em-style {
@@ -70,5 +88,18 @@
   line-height: 150%;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 12px;
+  font-size: 11px;
+
+  @include tablet-landscape {
+    font-size: 18px;
+  }
+}
+
+@keyframes light {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(0px 0px 5px $white);
+  }
 }

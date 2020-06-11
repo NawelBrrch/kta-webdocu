@@ -149,6 +149,10 @@ export default {
   list-style: none;
   width: 100%;
   height: 48px;
+
+  @include tablet-portrait {
+    height: 93px;
+  }
 }
 
 .mapMenu {
@@ -157,5 +161,11 @@ export default {
   width: 20px;
   position: relative;
   z-index: 3;
+
+  @include tablet-portrait {
+    width: 35px;
+    height: 35px;
+    margin-right: 35px;
+  }
 }
 </style>

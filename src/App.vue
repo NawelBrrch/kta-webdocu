@@ -23,8 +23,12 @@ export default {
 
 <style lang="scss">
 #app {
-  //background-color: $gray;
+  background-color: $black;
   width: 100%;
   height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
