@@ -15,7 +15,7 @@
       sont bien réels.
     </p>
     <router-link :to="{ name: 'Equipment' }">
-      <CTA msg="Continuer"/>
+      <CTA msg="Continuer" />
     </router-link>
   </div>
 </template>
@@ -23,12 +23,12 @@
 <script>
 import CTA from "@/components/CTA.vue";
 
-export default { 
+export default {
   name: "Disclaimer",
   components: {
     CTA,
-  }
-  };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,12 +43,13 @@ export default {
 }
 
 .disclaimer__title {
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .disclaimer__school {
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   width: 80vw;
+  text-align: center;
 
   @include desktop {
     width: 60vw;
@@ -56,8 +57,9 @@ export default {
 }
 
 .disclaimer__kta {
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   width: 80vw;
+  text-align: center;
 
   @include desktop {
     width: 60vw;
