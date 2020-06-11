@@ -7,21 +7,26 @@
     <TextFrame class="equipment__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </TextFrame>
-    <router-link :to="{ name: 'GoingDownVideo' }" tag="button">
-      GO DOOOOOWN
+    <router-link :to="{ name: 'GoingDownVideo' }">
+      <CTA msg="Commencer la descente"/>
+
     </router-link>
   </div>
 </template>
 
 <script>
+
 import TextFrame from "@/components/TextFrame.vue";
+import CTA from "@/components/CTA.vue";
 
 export default {
   name: "Equipment",
   components: {
     TextFrame,
+    CTA,
   },
 };
+
 </script>
 
 <style lang="scss" scoped>
