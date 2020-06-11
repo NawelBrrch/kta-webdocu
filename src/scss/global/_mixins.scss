@@ -48,12 +48,12 @@
 }
 
 @mixin p-mobile-style {
-  font-size: 30px;
+  font-size: 10px;
   @include p-style;
 }
 
 @mixin p-desktop-style {
-  font-size: 10px;
+  font-size: 18px;
   @include p-style;
 }
 
