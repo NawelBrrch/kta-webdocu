@@ -142,6 +142,11 @@ export default {
   &__icon--close {
     z-index: 3;
     margin-left: 20px;
+
+    @include tablet-portrait {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__bone {
