@@ -1,6 +1,6 @@
 <template>
   <div class="loadingPage">
-    <h1>Disclaimer</h1>
+    <h2 class="disclaimer__title">Disclaimer</h2>
     <p class="disclaimer__school">
       Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus
       Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet
@@ -35,22 +35,19 @@ export default { name: "Disclaimer" };
   align-items: center;
 }
 
-h1 {
-  @include h1-mobile-style;
+.disclaimer__title {
   margin-bottom: 4%;
 }
 
 .disclaimer__school {
-  @include p-mobile-style;
   text-align: center;
   margin-bottom: 3%;
-  width: 80vw;
+  width: 70vw;
 }
 
 .disclaimer__kta {
-  @include p-mobile-style;
   text-align: center;
   margin-bottom: 3%;
-  width: 80vw;
+  width: 70vw;
 }
 </style>
