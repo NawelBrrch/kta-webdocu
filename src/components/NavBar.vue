@@ -120,8 +120,8 @@
 </template>
 
 <script>
-import BurgerMenu from "@/components/BurgerMenu.vue";
-import BurgerMenuTopBar from "@/components/BurgerMenuTopBar.vue";
+import BurgerMenu from "@/components/burgerMenu/BurgerMenu.vue";
+import BurgerMenuTopBar from "@/components/burgerMenu/BurgerMenuTopBar.vue";
 
 export default {
   name: "NavBar",
@@ -152,7 +152,10 @@ export default {
 }
 
 .mapMenu {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 20px;
+  width: 20px;
+  position: relative;
+  z-index: 3;
 }
 </style>
