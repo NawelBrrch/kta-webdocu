@@ -163,14 +163,14 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 3%;
+  padding-top: 10px;
 }
 
 .footer__play {
   display: none;
 
-  @mixin tablet-portrait {
-    background-color: pink;
+  @include tablet-portrait {
+    display: none;
     width: 20px;
     height: 20px;
   }
@@ -179,17 +179,18 @@ export default {
 .footer__fullScreen {
   display: none;
 
-  @mixin tablet-portrait {
+  @include tablet-portrait {
     display: flex;
-    margin-right: 5%;
+    margin-right: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .footer__mute {
   margin-right: 20px;
 
-  @mixin tablet-portrait {
-    margin-bottom: 3%;
+  @include tablet-portrait {
+    padding-bottom: 20px;
   }
 }
 </style>
