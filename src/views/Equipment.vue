@@ -2,19 +2,19 @@
   <div class="equipment">
     <h3 class="equipment__title">
       Pour une meilleure expérience attrapez votre équipement, éteignez les
-      <em>lumières</em>, et branchez votre casque.
+      <em classe="title__glow">lumières</em>, et branchez votre
+      <em class="title__animation">casque</em>
     </h3>
     <TextFrame class="equipment__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </TextFrame>
     <router-link :to="{ name: 'GoingDownVideo' }">
-      <CTA msg="Commencer la descente"/>
+      <CTA msg="Commencer la descente" />
     </router-link>
   </div>
 </template>
 
 <script>
-
 import TextFrame from "@/components/TextFrame.vue";
 import CTA from "@/components/CTA.vue";
 
@@ -25,7 +25,6 @@ export default {
     CTA,
   },
 };
-
 </script>
 
 <style lang="scss" scoped>
@@ -47,12 +46,35 @@ export default {
   margin-bottom: 36px;
   color: $white;
 
-  em {
+  .title__glow {
     animation: light 2s infinite alternate;
+  }
+}
+
+.title__animation {
+  position: relative;
+  right: 500px;
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  transition-timing-function: ease;
+
+  @keyframes slideIn {
+    from {
+      color: $gray;
+      left: 200px;
+      top: 0px;
+    }
+    to {
+      color: $gray;
+      left: 0px;
+      top: 0px;
+    }
   }
 }
 
 .equipment__text {
   width: 60vw;
+  margin-bottom: 3%;
 }
 </style>
