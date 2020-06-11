@@ -122,7 +122,6 @@
 <script>
 import BurgerMenu from "@/components/burgerMenu/BurgerMenu.vue";
 import BurgerMenuTopBar from "@/components/burgerMenu/BurgerMenuTopBar.vue";
-import { store, mutations } from "@/javaScript/store.js";
 
 export default {
   name: "NavBar",
