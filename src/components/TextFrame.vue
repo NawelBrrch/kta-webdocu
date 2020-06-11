@@ -13,6 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .textFrame {
   width: 100%;
   padding: 15px;

@@ -1,14 +1,17 @@
 <template>
-  <div>
+  <div class="disclaimer">
     <p>Disclaimer</p>
-    <router-link :to="{ name: 'Equipment' }" tag="button">
-      skip
-    </router-link>
   </div>
 </template>
 
 <script>
-export default { name: "Disclaimer" };
+
+export default { 
+  name: "Disclaimer"
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+</style>
