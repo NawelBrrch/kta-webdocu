@@ -12,6 +12,7 @@ import About from "@/views/About.vue";
 import Sources from "@/views/Sources.vue";
 import Room from "@/views/Room.vue";
 import KtaMap from "@/views/Map.vue";
+import Exit from "@/views/Exit.vue";
 
 Vue.use(VueRouter);
 
@@ -70,6 +71,11 @@ const routes = [
     path: "/map",
     name: "Map",
     component: KtaMap,
+  },
+  {
+    path: "/exit",
+    name: "Exit",
+    component: Exit,
   },
 ];
 
