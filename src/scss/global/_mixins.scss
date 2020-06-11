@@ -59,10 +59,10 @@
   font-family: "Merriweather";
   color: $gray;
   line-height: 150%;
-  font-size: 12px;
+  font-size: 10px;
 
   @include tablet-portrait {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   @include tablet-landscape {
