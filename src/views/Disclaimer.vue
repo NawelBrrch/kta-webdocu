@@ -14,14 +14,21 @@
       carte que vous trouverez sur le site est fictive, mais les lieux présentés
       sont bien réels.
     </p>
-    <router-link :to="{ name: 'Equipment' }" tag="button">
-      skip
+    <router-link :to="{ name: 'Equipment' }">
+      <CTA msg="Continuer"/>
     </router-link>
   </div>
 </template>
 
 <script>
-export default { name: "Disclaimer" };
+import CTA from "@/components/CTA.vue";
+
+export default { 
+  name: "Disclaimer",
+  components: {
+    CTA,
+  }
+  };
 </script>
 
 <style lang="scss" scoped>
