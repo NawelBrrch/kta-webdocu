@@ -1,5 +1,4 @@
 <template>
-
   <div class="loadingPage">
     <h2 class="disclaimer__title">Disclaimer</h2>
     <p class="disclaimer__school">
@@ -18,19 +17,14 @@
     <router-link :to="{ name: 'Equipment' }" tag="button">
       skip
     </router-link>
-
   </div>
 </template>
 
 <script>
-
-export default { 
-  name: "Disclaimer"
-};
+export default { name: "Disclaimer" };
 </script>
 
 <style lang="scss" scoped>
-
 .loadingPage {
   background-image: url("../assets/images/backgroundParcheminNoir.png");
   height: 100vh;
@@ -42,19 +36,24 @@ export default {
 }
 
 .disclaimer__title {
-  margin-bottom: 4%;
+  margin-bottom: 5%;
 }
 
 .disclaimer__school {
-  text-align: center;
-  margin-bottom: 3%;
-  width: 70vw;
+  margin-bottom: 5%;
+  width: 80vw;
+
+  @include desktop {
+    width: 60vw;
+  }
 }
 
 .disclaimer__kta {
-  text-align: center;
-  margin-bottom: 3%;
-  width: 70vw;
-}
+  margin-bottom: 5%;
+  width: 80vw;
 
+  @include desktop {
+    width: 60vw;
+  }
+}
 </style>
