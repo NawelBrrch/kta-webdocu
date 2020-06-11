@@ -81,14 +81,9 @@
   line-height: 150%;
   text-transform: uppercase;
   font-weight: 100;
-}
-
-@mixin menu-style-mobile {
-  @include menu-style;
   font-size: 11px;
-}
 
-@mixin menu-style-desktop {
-  @include menu-style;
-  font-size: 15px;
+  @include tablet-landscape {
+    font-size: 18px;
+  }
 }
