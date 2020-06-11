@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="loadingPage">
     <h1>Disclaimer</h1>
     <p class="disclaimer__school">
       Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus
@@ -25,13 +25,32 @@ export default { name: "Disclaimer" };
 </script>
 
 <style lang="scss" scoped>
+.loadingPage {
+  background-image: url("../assets/images/backgroundParcheminNoir.png");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
-  //@include h1-mobile-style;
-  font-size: 12px;
-  color: black;
+  @include h1-mobile-style;
+  margin-bottom: 4%;
 }
 
 .disclaimer__school {
   @include p-mobile-style;
+  text-align: center;
+  margin-bottom: 3%;
+  width: 80vw;
+}
+
+.disclaimer__kta {
+  @include p-mobile-style;
+  text-align: center;
+  margin-bottom: 3%;
+  width: 80vw;
 }
 </style>
