@@ -1,7 +1,7 @@
 <template>
   <div>
     Panoramic View kta
-    <router-link :to="{ name: 'PanoramicView' }" tag="button">
+    <router-link :to="{ name: 'PanoramicView' }">
       Skip
     </router-link>
   </div>

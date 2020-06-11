@@ -40,7 +40,7 @@ export default {
   display: inline-block;
 }
 
-$btn-height: 39px;
+$btn-height: 35px;
 
 
 .button__cta {
