@@ -9,7 +9,6 @@
     </TextFrame>
     <router-link :to="{ name: 'GoingDownVideo' }">
       <CTA msg="Commencer la descente"/>
-
     </router-link>
   </div>
 </template>
