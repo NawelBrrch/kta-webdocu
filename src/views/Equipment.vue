@@ -4,14 +4,22 @@
       Pour une meilleure expérience attrapez votre équipement, éteignez les
       lumières, et branchez votre casque.
     </p>
-    <router-link :to="{ name: 'GoingDownVideo' }" tag="button">
-      GO DOOOOOWN
+    <router-link :to="{ name: 'GoingDownVideo' }" >
+      <CTA msg="Commencer la descente"/>
     </router-link>
   </div>
 </template>
 
 <script>
-export default { name: "Equipment" };
+import CTA from "@/components/CTA.vue";
+
+export default { 
+  name: "Equipment",
+  components: {
+    CTA,
+  }
+};
+
 </script>
 
 <style lang="scss" scoped>
