@@ -1,9 +1,12 @@
 <template>
   <div class="equipment">
-    <p class="equipment__text">
+    <h3 class="equipment__title">
       Pour une meilleure expérience attrapez votre équipement, éteignez les
-      lumières, et branchez votre casque.
-    </p>
+      <em>lumières</em>, et branchez votre casque.
+    </h3>
+    <TextFrame class="equipment__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </TextFrame>
     <router-link :to="{ name: 'GoingDownVideo' }" tag="button">
       GO DOOOOOWN
     </router-link>
@@ -11,7 +14,14 @@
 </template>
 
 <script>
-export default { name: "Equipment" };
+import TextFrame from "@/components/TextFrame.vue";
+
+export default {
+  name: "Equipment",
+  components: {
+    TextFrame,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -26,8 +36,19 @@ export default { name: "Equipment" };
   align-items: center;
 }
 
-.equipment__text {
-  width: 50vw;
+.equipment__title {
+  width: 90vw;
   text-align: center;
+  line-height: 200%;
+  margin-bottom: 36px;
+  color: $white;
+
+  em {
+    animation: light 2s infinite alternate;
+  }
+}
+
+.equipment__text {
+  width: 60vw;
 }
 </style>
