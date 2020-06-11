@@ -22,13 +22,13 @@ export default {
 
   @include tablet-landscape {
     width: 89%;
-    padding: 20px;
+    padding: 40px;
   }
 
   @include desktop {
     max-width: 840px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &:before {
