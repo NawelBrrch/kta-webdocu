@@ -165,6 +165,7 @@ export default {
   @include tablet-portrait {
     width: 35px;
     height: 35px;
+    margin-right: 35px;
   }
 }
 </style>
