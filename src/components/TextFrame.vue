@@ -26,7 +26,7 @@ export default {
   }
 
   @include desktop {
-    width: 89%;
+    max-width: 840px;
     padding-top: 30px;
     padding-bottom: 30px;
   }

@@ -122,11 +122,7 @@ export default {
 }
 
 .list__item {
-  @include menu-style-mobile;
-
-  @include tablet-portrait {
-    @include menu-style-desktop;
-  }
+  @include menu-style;
 
   a {
     text-decoration: none;
