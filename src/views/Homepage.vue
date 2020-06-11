@@ -40,7 +40,10 @@ export default {
   background: center / cover no-repeat url("../assets/images/homepage.png");
 
   &__presentation {
-    width: 70%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+
     &--title {
       text-align: center;
     }

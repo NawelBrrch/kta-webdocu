@@ -145,6 +145,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -157,20 +160,24 @@ export default {
     rgba(26, 26, 26, 0) 105.56%
   );
   height: 48px;
+
+  @include tablet-portrait {
+    height: 93px;
+  }
 }
 
 .footer__icones {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 3%;
+  padding-top: 10px;
 }
 
 .footer__play {
   display: none;
 
-  @mixin tablet-portrait {
-    background-color: pink;
+  @include tablet-portrait {
+    display: none;
     width: 20px;
     height: 20px;
   }
@@ -179,17 +186,31 @@ export default {
 .footer__fullScreen {
   display: none;
 
-  @mixin tablet-portrait {
+  @include tablet-portrait {
     display: flex;
-    margin-right: 5%;
+    margin-right: 35px;
+  }
+
+  svg {
+    @include tablet-portrait {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 .footer__mute {
   margin-right: 20px;
 
-  @mixin tablet-portrait {
-    margin-bottom: 3%;
+  @include tablet-portrait {
+    margin-right: 35px;
+  }
+
+  svg {
+    @include tablet-portrait {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 </style>

@@ -21,6 +21,17 @@ export default {
   display: inline-block;
   position: relative;
 
+  @include tablet-landscape {
+    width: 89%;
+    padding: 20px;
+  }
+
+  @include desktop {
+    max-width: 840px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   &:before {
     left: 0;
     top: 0;
