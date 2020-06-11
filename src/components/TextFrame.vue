@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .textFrame {
   width: 100%;
   padding: 15px;
@@ -52,6 +51,11 @@ export default {
     position: absolute;
     height: 20px;
     width: 20px;
+
+    @include tablet-landscape {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   &__text {
