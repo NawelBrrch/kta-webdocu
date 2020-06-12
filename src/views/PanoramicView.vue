@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 
 .view {
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
   overflow: hidden;
 }
