@@ -40,7 +40,8 @@ export default {
   display: inline-block;
 }
 
-$btn-height: 35px;
+
+
 
 
 .button__cta {
@@ -48,14 +49,18 @@ $btn-height: 35px;
   z-index: 1;
   text-align: center;
   text-decoration: none;
-  line-height: $btn-height;
+  line-height: $btn-height-mobile;
   position: relative;
   display: block;
   overflow: hidden;
-  size: 100% $btn-height;
+  size: 100% $btn-height-mobile;
   max-width: 100%;
-  
+  @include tablet-landscape {
+    line-height: $btn-height-tablet;
+    size: 100% $btn-height-tablet;
 
+  }
+  
   &:before,
   &:after {
     content: "";
@@ -74,15 +79,22 @@ $btn-height: 35px;
   &:before {
     right: -50px;
     border-right: 50px solid transparent;
-    border-bottom: $btn-height solid  $yellow;
+    border-bottom: $btn-height-mobile solid  $yellow;
     transform: translateX(-100%);
+    @include tablet-landscape {
+      border-bottom: $btn-height-tablet solid  $yellow;
+    }
   }
 
   &:after {
     left: -50px;
     border-left: 50px solid transparent;
-    border-top: $btn-height solid  $yellow;
+    border-top: $btn-height-mobile solid  $yellow;
     transform: translateX(100%);
+    @include tablet-landscape {
+      border-top: $btn-height-tablet solid  $yellow;
+    }
+    
   }
 
   &:hover {

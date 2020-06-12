@@ -43,6 +43,7 @@
 }
 
 @mixin CTA-style {
+
   font-family: "Dedale";
   font-weight: normal;
   border-radius: 1px;
@@ -92,8 +93,6 @@
   @include tablet-landscape {
     font-size: 18px;
   }
-
-
 }
 
 @mixin menu-style {
