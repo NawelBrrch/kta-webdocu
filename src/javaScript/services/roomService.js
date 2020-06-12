@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const apiUrl = "http://kta-api.vhswebs.com/";
+
 const apiClient = axios.create({
-  baseURL: "https://cors-anywhere.herokuapp.com/http://kta-api.vhswebs.com/",
+  baseURL: proxyUrl + apiUrl,
   withCredentials: false,
   headers: {
     Accept: "application.json",
@@ -13,7 +16,4 @@ export default {
   getRoom(id) {
     return apiClient.get("/room/" + id);
   },
-  /*   getRoom(id) {
-    return apiClient.get("/result" + id);
-  }, */
 };
