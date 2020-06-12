@@ -1,6 +1,6 @@
 <template>
   <div class="exit">
-    <h2 class="exit__art"> Arrêté préfectoral du 2 novembre 1955</h2>
+    <div class="exit__art"> Arrêté préfectoral du 2 novembre 1955</div>
 
 
 
@@ -47,6 +47,9 @@ export default {
     margin-bottom: 2%;
     width: 90vw;
     text-align: center;
+    @include tablet-landscape {
+      margin-bottom: 4%;
+    }
   }
 }
 
