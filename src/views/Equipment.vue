@@ -45,11 +45,12 @@ export default {
   line-height: 200%;
   margin-bottom: 36px;
   color: $white;
+  position: relative;
   overflow: hidden;
-
-  .title__glow {
-    animation: light 2s infinite alternate;
   }
+
+.title__glow {
+  animation: light 2s infinite alternate;
 }
 
 .title__animation {

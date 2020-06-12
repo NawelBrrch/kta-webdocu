@@ -129,6 +129,11 @@ export default {
     color: white;
   }
 
+  &:hover {
+    transition: all 0.3s linear;
+    filter: drop-shadow(0px 0px 5px $white);
+  }
+
   &--menu {
     display: none;
   }

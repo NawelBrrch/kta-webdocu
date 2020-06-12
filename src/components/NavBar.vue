@@ -2,7 +2,7 @@
   <nav class="navBar">
     <BurgerMenu />
     <BurgerMenuTopBar />
-    <router-link :to="{ name: 'Map' }">
+    <router-link :to="{ name: 'KtaMap' }">
       <svg
         class="mapMenu"
         width="24"

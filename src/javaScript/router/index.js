@@ -11,7 +11,7 @@ import Gallery from "@/views/Gallery.vue";
 import About from "@/views/About.vue";
 import Sources from "@/views/Sources.vue";
 import Room from "@/views/Room.vue";
-import KtaMap from "@/views/Map.vue";
+import KtaMap from "@/views/KtaMap.vue";
 import Exit from "@/views/Exit.vue";
 
 Vue.use(VueRouter);
@@ -68,8 +68,8 @@ const routes = [
     component: Room,
   },
   {
-    path: "/map",
-    name: "Map",
+    path: "/ktamap",
+    name: "KtaMap",
     component: KtaMap,
   },
   {
