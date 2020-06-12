@@ -48,6 +48,7 @@
   border-radius: 1px;
   font-size: 14px;
   color: $gray;
+  cursor: pointer;
   border: 1.3px solid $yellow;
 
   @include tablet-landscape {
