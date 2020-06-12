@@ -1,6 +1,6 @@
 <template>
 
-  <Pano  class="reda" :source="url[0]"></Pano>
+  <Pano  class="view" :source="url[0]"></Pano>
 
 </template>
 
@@ -24,15 +24,18 @@ export default {
 
 <style lang="scss" scoped>
 
-.reda {
+.view {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 
 </style> 
 
 <style lang="scss" scoped>
+
+
 
 
 </style>

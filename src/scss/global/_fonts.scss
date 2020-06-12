@@ -71,3 +71,10 @@
   font-weight: 900;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Cinzel";
+  src: url(~@/scss/fonts/Cinzel-Regular.ttf) format("trueType");
+  font-weight: normal;
+  font-style: normal;
+}
