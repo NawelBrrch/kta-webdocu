@@ -66,6 +66,7 @@ const routes = [
     path: "/room/:id_room",
     name: "Room",
     component: Room,
+    props: true,
   },
   {
     path: "/ktamap",
