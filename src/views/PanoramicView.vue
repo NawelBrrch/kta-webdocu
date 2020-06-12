@@ -1,22 +1,39 @@
 <template>
-  <Pano @on-load="onLoad" :source="urls[index]"> </Pano>
+
+  <Pano  class="reda" :source="url[0]"></Pano>
+
 </template>
 
 <script>
-import Pano from 'vuejs-vr';
+import {Pano} from 'vuejs-vr';
+import urlImage from "../assets/images/panorama.jpg";
 
 export default {
   name: "PanoramicView",
   components: {
-    Pano,
+    Pano
   },
   data() {
     return {
-      ulrs: ["src/assets/images/panorama.png", "../assets/pano.png"],
-      index: 0,
+      url: [urlImage]
     };
   },
 };
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.reda {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+</style> 
+
+<style lang="scss" scoped>
+
+
+</style>
+
