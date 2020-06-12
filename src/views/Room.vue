@@ -1,23 +1,27 @@
 <template>
   <div>
-    Room
+    Room {{ room.id }}
+    <HeroRoom />
   </div>
 </template>
 
 <script>
-import roomService from "@/javaScript/services/roomService.js";
+import HeroRoom from "@/components/room/HeroRoom.vue";
+import RoomService from "@/javaScript/services/roomService.js";
 export default {
   name: "Room",
+  components: {
+    HeroRoom,
+  },
   data() {
     return {
-      room: [],
+      room: {},
     };
   },
   created() {
-    roomService
-      .getRooms()
+    RoomService.getRoom()
       .then((response) => {
-        this.room = response.data;
+        this.room = response.data.result[0];
         console.log(this.room);
       })
       .catch((error) => {
