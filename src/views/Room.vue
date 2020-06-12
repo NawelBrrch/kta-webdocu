@@ -1,7 +1,6 @@
 <template>
   <div>
-    Room {{ room.id }}
-    <HeroRoom />
+    <HeroRoom :key="room.id" :room="room" />
   </div>
 </template>
 

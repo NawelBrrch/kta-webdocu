@@ -150,7 +150,7 @@ export default {
   align-items: center;
   bottom: 0;
   width: 100%;
-  position: absolute;
+  position: fixed;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.7) 0%,
