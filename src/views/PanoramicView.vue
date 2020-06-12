@@ -1,15 +1,29 @@
 <template>
-  <div>
-    Panoramic View kta
-    <router-link :to="{ name: 'PanoramicView' }">
-      Skip
-    </router-link>
-  </div>
+
+    <Pano
+        @on-load="onLoad"
+        :source="urls[index]">
+    </Pano>
+
 </template>
 
 <script>
+import Pano from 'vue-vr';
+
 export default {
   name: "PanoramicView",
+  components: {
+    Pano
+  },
+  data() {
+    return { 
+      ulrs: [
+        'src/assets/images/panorama.png',
+        '../assets/pano.png'
+      ],
+      index: 0
+    }
+  },
 };
 </script>
 
