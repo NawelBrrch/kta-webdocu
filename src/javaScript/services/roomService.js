@@ -9,11 +9,9 @@ const apiClient = axios.create({
   },
 });
 
-const id_room = 7;
-
 export default {
   getRoom() {
-    return apiClient.get("/room/" + id_room);
+    return apiClient.get("/room/7");
   },
   /*   getRoom(id) {
     return apiClient.get("/result" + id);
