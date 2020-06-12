@@ -10,12 +10,11 @@
       >
         >
       </video>
-      <div class="wayDowPage__progressBarOutside">
-        Passer la vidéo
-        <div class="wayDowPage__progressBarInside"></div>
-      </div>
-      <router-link :to="{ name: 'GoingDownHistory' }" tag="button">
-        Skip
+      <router-link
+        :to="{ name: 'GoingDownHistory' }"
+        class="wayDowPage__progressBarOutside"
+      >
+        <div class="wayDowPage__progressBarInside">Passer la vidéo</div>
       </router-link>
     </section>
   </div>
@@ -27,6 +26,7 @@ export default { name: "GoingDownVideo" };
 
 <style lang="scss" scoped>
 .wayDownPage {
+  position: relative;
   height: 100vh;
   width: 100%;
 }
@@ -38,6 +38,9 @@ export default { name: "GoingDownVideo" };
 }
 
 .wayDowPage__progressBarOutside {
+  position: absolute;
+  top: 75%;
+  left: 5%;
   border-radius: 1px;
   border: 1.3px solid $yellow;
   width: 160px;
@@ -48,6 +51,7 @@ export default { name: "GoingDownVideo" };
 
 .wayDowPage__progressBarInside {
   height: 100%;
+  width: 50%;
   background-color: $yellow;
 }
 </style>
