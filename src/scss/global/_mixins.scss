@@ -103,3 +103,12 @@
     filter: drop-shadow(0px 0px 5px $white);
   }
 }
+
+@keyframes slideIn {
+  from {
+    left: 200px;
+  }
+  to {
+    left: 0px;
+  }
+}
