@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Pano from "vuejs-vr";
+import Pano from 'vuejs-vr';
 
 export default {
   name: "PanoramicView",
