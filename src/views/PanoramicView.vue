@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Pano from 'vue-vr';
+import Pano from 'vuejs-vr';
 
 export default {
   name: "PanoramicView",
