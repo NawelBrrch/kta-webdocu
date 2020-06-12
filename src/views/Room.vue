@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ $route.params.id_room }}
     <HeroRoom :key="room.id" :room="room" />
   </div>
 </template>
