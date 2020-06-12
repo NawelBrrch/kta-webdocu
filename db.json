@@ -1,0 +1,27 @@
+{
+  "result": [
+    {
+      "id": "3",
+      "room_name": "Val de Grâce",
+      "room_describ": "<h3> Le Val-de-Grâce </h3><br/> <br/> <p>L'abbaye du Val-de-Grâce fut fondée à la suite du vœu d'Anne d'Autriche. On charge François Mansart, le plus prestigieux des architectes de l'époque, de dresser les plans et de diriger la construction de l'église. Seulement, il y a un hic : la future église du Val-de-Grâce se trouve juste au-dessus d'anciens vides de carrière, où les bancs de calcaire avaient été exploités sur une hauteur allant jusqu'à six mètres. Construire sur un tel vide provoquerait un effondrement immédiat, c'est pourquoi Mansart fait ériger <strong>des confortations monumentales</strong> dans la partie concernée de la carrière. De gigantesques voûtes et maçonneries, aussi hautes que l'ancienne exploitation, sont bâties. En octobre 1646, la carrière est totalement confortée et la construction peut se faire sans danger. </p><p> Toutefois, Mansart a construit des confortations si importantes qu'il a dû dépenser, pour les voir achevées, <strong>la quasi-totalité du budget</strong> destiné à l'ensemble des travaux, alors que l'église, en surface, s'élève à peine jusqu'au premier étage. Mansart est remercié et remplacé par Jacques Lemercier, qui terminera l'église et ses confortations selon les plans laissés par son prédécesseur.<p>  <br/> <h3> La salle Z </h3> <br/><p>À proximité des vides sous le Val-de-Grâce se trouve un autre <strong>ensemble exceptionnel</strong> par sa très grande hauteur de quatre mètres. C’est la salle <strong>la plus vaste</strong> du Grand Réseau Sud. Il s'agit d'une carrière qui a été décapé au moment de la construction de <strong>l'abri de défense passive</strong> qui a été conçu sous la maison de la Géologie en 1944. <br/> Ce site aux deux escaliers en colimaçon est unique par ses dimensions, tant en largeur qu'en hauteur. Cet ensemble de salles vit l'organisation de nombreuses <strong>fêtes clandestines</strong> dans les années 1980. Des centaines de personnes s’y retrouvent en même temps, sous les confortations monumentales érigées par Mansart, avec leur cortège de graffitis et de détritus comme trace de la période fêtarde.</p>",
+      "poster_principale": "/val-de-grace/val-de-grace-main.png",
+      "pics": {
+        "p1": "/val-de-grace/val-de-grace-0.png",
+        "p2": "/val-de-grace/val-de-grace-1.png",
+        "p3": "/val-de-grace/val-de-grace-2.png",
+        "p4": "/val-de-grace/val-de-grace-3.png",
+        "p5": "/val-de-grace/val-de-grace-4.png",
+        "p6": "/val-de-grace/val-de-grace-5.png",
+        "p7": "/val-de-grace/val-de-grace-6.png",
+        "p8": "/val-de-grace/val-de-grace-7.png",
+        "p9": "/val-de-grace/val-de-grace-8.png",
+        "p10": "/val-de-grace/val-de-grace-9.png"
+      },
+      "facts": {
+        "p8": "On trouve ici les voûtes de la salle Z. Cette salle héberge depuis des décennies toutes les plus grandes fêtes des catacombes. Cette tradition se transmet de génération en génération.",
+        "p9": "Le Val de Grâce possède de nombreuses curiosités, dont la plaque \"A. Fontaine\" sur laquelle est sculptée une fleur de Lys. Toutes les fleurs de lys des plaques des catacombes ont été retirées par les civils s’échappant dans les carrières lors de la révolution française.",
+        "p10": "Sous la cour du Val-de-Grâce se trouve l’escalier Mansart. Il s’agit d’une ancienne descente en pente douce, condamnée à la suite d’un éboulement, puis aménagée en escalier au XVI ème siècle. Bien qu’il n’ait pas été construit par Mansart lui-même, l’escalier a été baptisé ainsi en raison des consolidations que l’architecte avait fait édifier à proximité. Il est aujourd’hui classé monument historique."
+      }
+    }
+  ]
+}
