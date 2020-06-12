@@ -47,7 +47,7 @@ export default {
   color: $white;
   position: relative;
   overflow: hidden;
-  }
+}
 
 .title__glow {
   animation: light 2s infinite alternate;
@@ -61,6 +61,13 @@ export default {
   animation-delay: 3s;
   transition-timing-function: ease;
   animation-fill-mode: forwards;
+
+  @include tablet-portrait {
+    right: 700px;
+  }
+  @include desktop {
+    right: 900px;
+  }
 }
 
 .equipment__text {
