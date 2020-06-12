@@ -1,7 +1,7 @@
 <template>
   <div class="equipment">
     <h3 class="equipment__title">
-      Pour une meilleure expérience attrapez votre équipement, éteignez les
+      Pour une meilleure expérience attrapez votre équipement,<br />éteignez les
       <em classe="title__glow">lumières</em>, et branchez votre
       <em class="title__animation">casque</em>
     </h3>
@@ -45,7 +45,9 @@ export default {
   line-height: 200%;
   margin-bottom: 36px;
   color: $white;
-}
+  position: relative;
+  overflow: hidden;
+  }
 
 .title__glow {
   animation: light 2s infinite alternate;
@@ -58,19 +60,7 @@ export default {
   animation-duration: 2s;
   animation-delay: 3s;
   transition-timing-function: ease;
-
-  @keyframes slideIn {
-    from {
-      color: $gray;
-      left: 200px;
-      top: 0px;
-    }
-    to {
-      color: $gray;
-      left: 0px;
-      top: 0px;
-    }
-  }
+  animation-fill-mode: forwards;
 }
 
 .equipment__text {
