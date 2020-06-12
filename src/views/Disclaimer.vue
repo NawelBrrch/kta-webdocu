@@ -1,13 +1,13 @@
 <template>
   <div class="loadingPage">
     <h2 class="disclaimer__title">Disclaimer</h2>
-    <p class="disclaimer__school">
+    <p class="disclaimer__part">
       Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus
       Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet
       d'une demande de droit d'utilisation. Ce site ne sera, en aucun cas,
       exploité à des fins commerciales et ne sera pas publié.
     </p>
-    <p class="disclaimer__kta">
+    <p class="disclaimer__part">
       De plus, tous les lieux présentés ont été visités par des personnes
       aguerries, les catacombes sont un endroit dangereux et il est interdit de
       s’y aventurer par arrêté préfectoral. Pour des raisons de sécurité, la
@@ -46,7 +46,7 @@ export default {
   margin-bottom: 3%;
 }
 
-.disclaimer__school {
+.disclaimer__part {
   margin-bottom: 3%;
   width: 80vw;
   text-align: center;
@@ -56,13 +56,4 @@ export default {
   }
 }
 
-.disclaimer__kta {
-  margin-bottom: 3%;
-  width: 80vw;
-  text-align: center;
-
-  @include desktop {
-    width: 60vw;
-  }
-}
 </style>

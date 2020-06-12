@@ -83,6 +83,19 @@
   color: $lightbrown;
 }
 
+@mixin exit-style {
+  font-family: "Cinzel";
+  font-weight: normal;
+  font-size: 10px;
+  color: $white;
+
+  @include tablet-landscape {
+    font-size: 18px;
+  }
+
+
+}
+
 @mixin menu-style {
   font-family: "Dedale";
   color: $white;
@@ -95,6 +108,8 @@
     font-size: 18px;
   }
 }
+
+
 
 @keyframes light {
   from {
