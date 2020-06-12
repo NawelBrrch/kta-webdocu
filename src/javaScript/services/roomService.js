@@ -9,7 +9,7 @@ const apiClient = axios.create({
   },
 });
 
-const id_room = 3;
+const id_room = 7;
 
 export default {
   getRoom() {
