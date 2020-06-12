@@ -1,28 +1,20 @@
 <template>
-
-    <Pano
-        @on-load="onLoad"
-        :source="urls[index]">
-    </Pano>
-
+  <Pano @on-load="onLoad" :source="urls[index]"> </Pano>
 </template>
 
 <script>
-import Pano from 'vue-vr';
+import Pano from "vuejs-vr";
 
 export default {
   name: "PanoramicView",
   components: {
-    Pano
+    Pano,
   },
   data() {
-    return { 
-      ulrs: [
-        'src/assets/images/panorama.png',
-        '../assets/pano.png'
-      ],
-      index: 0
-    }
+    return {
+      ulrs: ["src/assets/images/panorama.png", "../assets/pano.png"],
+      index: 0,
+    };
   },
 };
 </script>
