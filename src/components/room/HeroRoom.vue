@@ -21,7 +21,7 @@ export default {
 .hero {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
 
   &__title {
     align-self: center;
