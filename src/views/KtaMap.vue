@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export default { name: "Map" };
+export default { name: "KtaMap" };
 </script>
 
 <style lang="scss" scoped></style>
