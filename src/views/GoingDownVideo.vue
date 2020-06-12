@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Video Going Down
+  <div class="hey">
+    Video Going Down YOYO
     <router-link :to="{ name: 'GoingDownHistory' }" tag="button">
       Skip
     </router-link>
@@ -11,4 +11,8 @@
 export default { name: "GoingDownVideo" };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hey {
+  color: white;
+}
+</style>
