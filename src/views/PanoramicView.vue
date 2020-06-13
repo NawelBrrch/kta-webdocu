@@ -8,6 +8,8 @@
 import {Pano} from 'vuejs-vr';
 import urlImage from "../assets/images/panorama.jpg";
 
+
+
 export default {
   name: "PanoramicView",
   components: {
