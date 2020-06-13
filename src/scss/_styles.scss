@@ -21,6 +21,11 @@ p {
   @include p-style;
 }
 
+strong {
+  font-weight: bold;
+  color: $lightbrown;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
