@@ -112,6 +112,11 @@
   }
 }
 
+
+
+// KEYFRAMES
+
+
 @keyframes light {
   from {
     filter: none;
@@ -129,5 +134,14 @@
   to {
     opacity: 1;
     left: 0px;
+  }
+}
+
+@keyframes dragAnimation {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    transform: translateX(20px);
   }
 }
