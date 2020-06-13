@@ -16,9 +16,9 @@ export default {
   getRoom(id) {
     return apiClient.get("/room/" + id);
   },
-  
+
   getMainPic(pathImage) {
-    return apiClient.get("/images" + pathImage)
+    return apiClient.get("/images" + pathImage);
   },
 };
 

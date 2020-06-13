@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroRoom :room="room" />
+    <HeroRoom :room="room" :mainPic="mainPic" />
     <DocumentationRoom :room="room" />
   </div>
 </template>
@@ -17,19 +17,20 @@ export default {
     HeroRoom,
     DocumentationRoom,
   },
-  props: ["id_room", "path_img"],
+  props: ["id_room"],
   data() {
     return {
       room: {},
-      mainPic: {}
+      mainPic: "",
     };
   },
   created() {
     RoomService.getRoom(this.id_room)
       .then((response) => {
+        const apiUrl = "http://kta-api.vhswebs.com/";
         this.room = response.data.result[0];
-        this.mainPic = response.data.result[0].poster_principale;
-        console.log(response.data.result[0].poster_principale)
+        this.mainPic =
+          apiUrl + "/images" + response.data.result[0].poster_principale;
       })
       .catch((error) => {
         console.log("There was an error:", error.response);

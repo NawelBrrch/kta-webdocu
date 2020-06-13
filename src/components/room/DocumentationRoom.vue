@@ -9,6 +9,7 @@ export default {
   name: "DocumentationRoom",
   props: {
     room: Object,
+    mainPic: Object,
   },
 };
 </script>
@@ -17,6 +18,5 @@ export default {
 .documentation__text {
   padding: 10px;
   background-color: $black;
-  height: 100vh;
 }
 </style>
