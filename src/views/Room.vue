@@ -17,16 +17,19 @@ export default {
     HeroRoom,
     DocumentationRoom,
   },
-  props: ["id_room"],
+  props: ["id_room", "path_img"],
   data() {
     return {
       room: {},
+      mainPic: {}
     };
   },
   created() {
     RoomService.getRoom(this.id_room)
       .then((response) => {
         this.room = response.data.result[0];
+        this.mainPic = response.data.result[0].poster_principale;
+        console.log(response.data.result[0].poster_principale)
       })
       .catch((error) => {
         console.log("There was an error:", error.response);

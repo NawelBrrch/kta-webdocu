@@ -16,6 +16,10 @@ export default {
   getRoom(id) {
     return apiClient.get("/room/" + id);
   },
+  
+  getMainPic(pathImage) {
+    return apiClient.get("/images" + pathImage)
+  },
 };
 
 //http://kta-api.vhswebs.com/images/val-de-grace/val-de-grace-0.png
