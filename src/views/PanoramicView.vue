@@ -1,7 +1,7 @@
 <template>
-
-  <Pano  class="view" :source="url[0]"></Pano>
-
+  <div class="panorama">
+    <Pano  class="panorama__view" :source="url[0]"></Pano>*
+  </div>
 </template>
 
 <script>
@@ -24,10 +24,14 @@ export default {
 
 <style lang="scss" scoped>
 
-.view {
-  height: 130vh;
-  width: 100vw;
+.panorama {
   overflow: hidden;
+  height: 100vh;
+}
+
+.panorama__view {
+  height: 110vh;
+  width: 100vw;
 }
 
 
