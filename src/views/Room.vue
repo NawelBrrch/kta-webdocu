@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeroRoom :room="room" :mainPic="mainPic" />
-    <DocumentationRoom :room="room" />
+    <DocumentationRoom :room="room" :allPics="allPics" />
   </div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
     return {
       room: {},
       mainPic: "",
+      allPics: {},
     };
   },
   created() {
@@ -31,6 +32,7 @@ export default {
         this.room = response.data.result[0];
         this.mainPic =
           apiUrl + "/images" + response.data.result[0].poster_principale;
+        this.allPics = response.data.result[0].pics;
       })
       .catch((error) => {
         console.log("There was an error:", error.response);
