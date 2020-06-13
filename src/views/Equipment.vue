@@ -55,6 +55,7 @@ export default {
 
 .title__animation {
   position: relative;
+  opacity: 0;
   right: 500px;
   animation-name: slideIn;
   animation-duration: 2s;
