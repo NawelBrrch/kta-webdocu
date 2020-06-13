@@ -17,5 +17,6 @@ export default {
 .documentation__text {
   padding: 10px;
   background-color: $black;
+  height: 100vh;
 }
 </style>

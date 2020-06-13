@@ -40,10 +40,14 @@
   font-family: "Dedale";
   color: $lightbrown;
   font-size: 14px;
+
+  @include tablet-portrait {
+    font-weight: normal;
+    font-size: 30px;
+  }
 }
 
 @mixin CTA-style {
-
   font-family: "Dedale";
   font-weight: normal;
   border-radius: 1px;
@@ -61,7 +65,7 @@
   font-family: "Merriweather";
   color: $gray;
   line-height: 150%;
-  font-size: 10px;
+  font-size: 11px;
 
   @include tablet-portrait {
     font-size: 12px;
@@ -107,8 +111,6 @@
     font-size: 18px;
   }
 }
-
-
 
 @keyframes light {
   from {
