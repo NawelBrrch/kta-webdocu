@@ -1,5 +1,5 @@
 <template>
-  <div class="panorama" @click.exact.stop="clickIcon">
+  <div class="panorama" @mousedown="clickIcon">
     <Pano  class="panorama__view" :source="url[0]"></Pano>
 
       <svg class="dragIcon" id="dragIcon" width="32" height="34" viewBox="0 0 32 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,6 @@ export default {
     methods: {
     clickIcon(){
       document.querySelector('#dragIcon').style.display = 'none';
-
     } 
   }
 };

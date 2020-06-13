@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <audio
+<!--     <audio
       class="audio"
       autoplay="false"
       loop="true"
       preload="auto"
-      src="../src/assets/sound/audioKta.mp3"
-    ></audio>
+      src="@/assets/sound/audioKta.mp3"
+    ></audio>  -->
     <NavBar />
     <vue-page-transition name="fade-in-down">
       <router-view />

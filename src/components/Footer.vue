@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="footer__icones">
       <div class="footer__play">P</div>
-      <div class="footer__fullScreen">
+      <div class="footer__fullScreen" @click.exact.stop="fullScreen">
         <svg
           width="25"
           height="25"
@@ -60,7 +60,7 @@
           </defs>
         </svg>
       </div>
-      <div class="footer__mute">
+      <div class="footer__mute" @click.exact.stop="muteSound">
         <svg
           width="24"
           height="24"
@@ -138,12 +138,19 @@
     </div>
   </div>
 </template>
+
+
 <script>
+
+
 export default {
   name: "Footer",
-};
+
+}
 </script>
+
 <style lang="scss" scoped>
+
 .footer {
   display: flex;
   justify-content: flex-end;

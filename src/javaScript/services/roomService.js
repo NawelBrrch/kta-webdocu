@@ -22,5 +22,3 @@ export default {
   },
 };
 
-//http://kta-api.vhswebs.com/images/val-de-grace/val-de-grace-0.png
-//'url' + '/images' + 'poster_principale'
