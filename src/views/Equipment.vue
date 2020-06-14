@@ -7,6 +7,8 @@
     </h3>
     <div class="equipment__images">
       <svg
+        class="equipment__images--icons"
+        :class="{ filter: isColored }"
         width="40"
         height="40"
         viewBox="0 0 40 40"
@@ -37,8 +39,8 @@ export default {
   },
   data() {
     return {
-      description:
-        "Une lampe de poche, de préfrence frontale, pour s’éclairer dans les couloirs",
+      isColored: true,
+      description: "Passez votre souris sur l'équipement de votre choix.",
       items: [
         {
           id: 1,
@@ -46,7 +48,7 @@ export default {
           image:
             '<path d="M6.95996 0.975586L30.7564 0.975614V5.83545L27.8854 6.19696V14.1343L25.0689 16.8868L23.7887 36.3462L18.9879 39.4187L13.803 36.3462V16.8868L10.3464 13.8143V6.19696H6.96006L6.95996 0.975586Z" fill="#393939"/><path d="M13.0678 33.913C13.0678 37.2686 15.7993 40 19.1548 40C22.5104 40 25.2418 37.2686 25.2418 33.913V17.3034C27.2233 16.8992 28.72 15.1435 28.72 13.0435V6.95652H31.3287C31.8098 6.95652 32.1983 6.56675 32.1983 6.08696V0.869565C32.1983 0.389776 31.8098 0 31.3287 0H6.98089C6.49983 0 6.11133 0.389776 6.11133 0.869565V6.08696C6.11133 6.56675 6.49983 6.95652 6.98089 6.95652H9.58959V13.0435C9.58959 15.1427 11.0863 16.8992 13.0678 17.3034V33.913ZM23.5026 17.3913V20.8696H14.807V17.3913H23.5026ZM19.1548 38.2609C16.7576 38.2609 14.807 36.3103 14.807 33.913V22.6087H23.5026V33.913C23.5026 36.3103 21.5521 38.2609 19.1548 38.2609ZM7.85046 1.73913H30.4592V5.21739H7.85046V1.73913ZM11.3287 13.0435V6.95652H26.9809V13.0435C26.9809 14.4816 25.8103 15.6522 24.3722 15.6522H13.9374C12.4993 15.6522 11.3287 14.4816 11.3287 13.0435Z"fill="url(#paint0_linear)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M28.72 6.95652H31.3287C31.8098 6.95652 32.1983 6.56675 32.1983 6.08696V0.869565C32.1983 0.389776 31.8098 0 31.3287 0H6.98089C6.49983 0 6.11133 0.389776 6.11133 0.869565V6.08696C6.11133 6.56675 6.49983 6.95652 6.98089 6.95652H9.58959H11.3287H26.9809H28.72ZM29.0191 5.21739H13.3007H7.85046H30.4592H29.0191Z" fill="#FFCE1F"/><defs><linearGradient id="paint0_linear" x1="44.9793" y1="-23.8504" x2="-64.9604" y2="50.4332" gradientUnits="userSpaceOnUse" ><stop stop-color="#FFCE1F" /><stop offset="0.333819" stop-color="#FAF0CE" /> <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083"/> <stop offset="1" stop-color="white" stop-opacity="0" /> </linearGradient> </defs>',
           description:
-            "Une lampe de poche, de préfrence frontale, pour s’éclairer dans les couloirs",
+            "Une lampe de poche, de préférence frontale, pour s’éclairer dans les couloirs",
         },
         {
           id: 2,
@@ -62,7 +64,7 @@ export default {
           image:
             '<path d="M14.7381 0H25.6839L25.2359 10.7747L28.0524 13.3351L28.8845 20L29.2199 40H11.1211V20L11.6015 12.439L14.7381 10.7747V0Z" fill="#393939"/><path d="M26.0871 0.869565C26.0871 0.389776 25.6986 0 25.2176 0H14.7828C14.3017 0 13.9132 0.389776 13.9132 0.869565V10.5227C11.9316 10.926 10.4349 12.6834 10.4349 14.7826V38.2609C9.95388 38.2609 9.56551 38.6494 9.56551 39.1304C9.56551 39.6115 9.95402 40 10.4351 40H29.5654C30.0465 40 30.435 39.6115 30.435 39.1304C30.435 38.6494 30.0465 38.2609 29.5654 38.2609V14.7826C29.5654 12.6826 28.0687 10.926 26.0871 10.5227V0.869565ZM15.6523 1.73913H24.348V6.95652H15.6523V1.73913ZM27.8263 31.3043H12.1741V19.1304H27.8263V31.3043ZM12.1741 38.2609V33.0435H27.8263V38.2609H12.1741ZM27.8263 14.7826V17.3913H12.1741V14.7826C12.1741 13.3445 13.3447 12.1739 14.7828 12.1739C15.2638 12.1739 15.6523 11.7841 15.6523 11.3043V8.69565H24.348V11.3043C24.348 11.7841 24.7365 12.1739 25.2176 12.1739C26.6557 12.1739 27.8263 13.3445 27.8263 14.7826Z" fill="url(#paint0_linear)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M26.087 0.869565C26.087 0.389776 25.6985 0 25.2174 0H14.7827C14.3016 0 13.9131 0.389776 13.9131 0.869565V8.69565H26.087V0.869565Z" fill="#FFCE1F"/><defs><linearGradient id="paint0_linear" x1="40.6598" y1="-23.8504" x2="-58.4785" y2="29.7378" gradientUnits="userSpaceOnUse"><stop stop-color="#FFCE1F"/><stop offset="0.333819" stop-color="#FAF0CE"/><stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient></defs>',
           description:
-            "Une gourde d’eau, ou une bouteille mais il faudra bien la jeter dans une poubelle à la surface.",
+            "Une gourde d’eau, ou une bouteille, mais il faudra bien la jeter dans une poubelle à la surface.",
         },
         {
           id: 4,
@@ -86,6 +88,7 @@ export default {
   methods: {
     updateItem(itemImage) {
       this.description = itemImage;
+      this.isColored = false;
     },
   },
 };
@@ -108,13 +111,21 @@ export default {
   width: 50vw;
   justify-content: space-between;
 
-  svg {
+  &--icons {
+    transition: filter 0.5s;
+
+    &.filter {
+      animation: lightIcons 1s infinite alternate;
+    }
+
     &:hover {
-      filter: drop-shadow(0px 0px 5px #feca28);
+      cursor: pointer;
+      filter: drop-shadow(0px 0px 8px $yellow);
     }
 
     @include tablet-landscape {
       height: 60px;
+      width: 60px;
     }
   }
 
