@@ -10,18 +10,22 @@
       >
         >
       </video>
-      <router-link
-        :to="{ name: 'GoingDownHistory' }"
-        class="wayDowPage__progressBarOutside"
-      >
-        <div class="wayDowPage__progressBarInside">Passer la vidéo</div>
+      <router-link :to="{ name: 'GoingDownHistory' }" class="wayDowPage__CTA">
+        <CTA msg="Passer la vidéo" />
       </router-link>
     </section>
   </div>
 </template>
 
 <script>
-export default { name: "GoingDownVideo" };
+import CTA from "@/components/CTA.vue";
+
+export default {
+  name: "GoingDownVideo",
+  components: {
+    CTA,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -37,21 +41,9 @@ export default { name: "GoingDownVideo" };
   object-fit: cover;
 }
 
-.wayDowPage__progressBarOutside {
+.wayDowPage__CTA {
   position: absolute;
-  top: 75%;
-  left: 5%;
-  border-radius: 1px;
-  border: 1.3px solid $yellow;
-  width: 160px;
-  height: 50px;
-  text-align: center;
-  background-color: none;
-}
-
-.wayDowPage__progressBarInside {
-  height: 100%;
-  width: 50%;
-  background-color: $yellow;
+  bottom: 10px;
+  left: 20px;
 }
 </style>
