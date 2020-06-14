@@ -1,6 +1,6 @@
 <template>
   <div class="loadingPage">
-    <h2 class="disclaimer__title">Disclaimer</h2>
+    <h2 class="disclaimer__title">Avertissement</h2>
     <p class="disclaimer__part">
       Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus
       Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet
@@ -55,5 +55,4 @@ export default {
     width: 60vw;
   }
 }
-
 </style>
