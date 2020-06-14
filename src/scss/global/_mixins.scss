@@ -43,6 +43,11 @@
 
   @include tablet-portrait {
     font-weight: normal;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    font-weight: normal;
     font-size: 30px;
   }
 }
@@ -112,10 +117,7 @@
   }
 }
 
-
-
 // KEYFRAMES
-
 
 @keyframes light {
   from {
@@ -128,7 +130,7 @@
 
 @keyframes slideIn {
   from {
-    opacity: 1;
+    opacity: 0;
     left: 300px;
   }
   to {
