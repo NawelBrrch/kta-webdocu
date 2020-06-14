@@ -47,7 +47,7 @@ $arrowHeight: 30vh;
     width: fit-content;
     position: absolute;
     bottom: 7vh;
-    left: 7vw;
+    left: 60px;
 
     &--arrow {
       width: 90px;
