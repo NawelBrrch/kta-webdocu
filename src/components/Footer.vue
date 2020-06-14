@@ -1,8 +1,14 @@
 <template>
   <div class="footer">
+    <audio
+      class="audio"
+      autoplay="true"
+      loop="true"
+      preload="auto"
+      src="@/assets/sound/audioKta.mp3"
+    ></audio>
     <div class="footer__icones">
-      <div class="footer__play">P</div>
-      <div class="footer__screen" @click.exact.stop="fullScreen">
+      <div class="footer__screen">
         <svg class="fullScreenIcon"
           width="25"
           height="25"
@@ -79,7 +85,7 @@
           </defs>
         </svg>
       </div>
-      <div class="footer__sound" @click.exact.stop="muteSound">
+      <div class="footer__sound">
         <svg class="soundOffIcon"
           width="24"
           height="24"
@@ -190,14 +196,10 @@
 
 <script>
 
-
 export default {
   name: "Footer",
-  methods: {
-
-  }
-
 }
+
 </script>
 
 <style lang="scss" scoped>

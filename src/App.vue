@@ -1,12 +1,5 @@
 <template>
   <div id="app">
-    <audio
-      class="audio"
-      autoplay="false"
-      loop="true"
-      preload="auto"
-      src="@/assets/sound/audioKta.mp3"
-    ></audio>
     <NavBar />
     <vue-page-transition name="fade-in-down">
       <router-view />
@@ -37,5 +30,13 @@ export default {
 
 a {
   text-decoration: none;
+}
+
+.fullScreenIcon {
+  border: 3px solid red;
+}
+
+.soundOnIcon {
+  border: 2px solid blue;
 }
 </style>
