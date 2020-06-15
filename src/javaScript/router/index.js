@@ -20,10 +20,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-      path: "/MobileLandscape",
-      name: "MobileLandscape",
-      component: MobileLandscape,
-    },
+    path: "/MobileLandscape",
+    name: "MobileLandscape",
+    component: MobileLandscape,
+  },
   {
     path: "/disclaimer",
     name: "Disclaimer",
@@ -85,6 +85,13 @@ const routes = [
     name: "Exit",
     component: Exit,
   },
+  {
+    path: "/video",
+    name: "Video",
+    component: Video,
+    props: true,
+  }
+
 ];
 
 const router = new VueRouter({

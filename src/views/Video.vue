@@ -1,20 +1,19 @@
 <template>
-<div class="wayDownPage">
+  <div class="wayDownPage">
     <section>
       <video
+        ref="currentVideo"
+        @click="stpLog()"
         class="wayDownPage__video"
         muted="true"
         autoplay="true"
         preload="auto"
-        :src="videoTab[video]"
+        :src="videoTab[nbClick]"
         type="video/mp4"
-        >
-      </video>
+      ></video>
     </section>
-</div>
+  </div>
 </template>
-
-
 
 <script>
 import marche1 from "../assets/videos/marche1.mp4";
@@ -24,16 +23,33 @@ import marche4 from "../assets/videos/marche4.mp4";
 import marche5 from "../assets/videos/marche5.mp4";
 import marche6 from "../assets/videos/marche6.mp4";
 import marche7 from "../assets/videos/marche7.mp4";
+
 export default {
   name: "Video",
   data(){
       return{
           videoTab: [marche1, marche2, marche3, marche4, marche5, marche6, marche7],
-          video: localStorage.getItem('nbClick'),
+          nbClick: localStorage.getItem('nbClick'),
           }
-        }
-};
+        },
+  props: ["id_room"],
+  methods: {
+    stpLog(){
+      let videoDuration = 0;
 
+      setTimeout(() => {
+        videoDuration = this.$refs.currentVideo.duration
+      
+      setTimeout(() => {
+        window.location.href = `room/${this.id_room}`
+      }, videoDuration*1000);
+      }, 1000);
+    }
+  },
+  mounted(){
+    this.stpLog()
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +64,4 @@ export default {
   height: 100vh;
   object-fit: cover;
 }
-
-
 </style>
