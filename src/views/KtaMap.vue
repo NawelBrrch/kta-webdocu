@@ -1,6 +1,7 @@
 <template>
   <div class="ktaMap">
-    <div class="ktaMap__map">
+    <div class="ktaMap__map" v-on:mousemove="event => mouseMove(event)">
+      <div>ftg nawel</div>
       <svg
         class="ktaMap__map--svg"
         width="974"
@@ -117,6 +118,7 @@
         <!-- MONTSOURIS DOT -->
         <router-link :to="{ name: 'Video', params: { id_room: '1' } }">
           <path
+            class="mouse"
             @click="incrementNbClick()"
             d="M241.751 77.8496C252.395 77.8496 261.024 71.8242 261.024 64.3916C261.024 56.9589 252.395 50.9336 241.751 50.9336C231.108 50.9336 222.479 56.9589 222.479 64.3916C222.479 71.8242 231.108 77.8496 241.751 77.8496Z"
             fill="#403F3F"
@@ -613,6 +615,7 @@
         <!-- OBS TEXT -->
       </svg>
     </div>
+    <div class="ktaMap__mouse" ref="mouse"></div>
   </div>
 </template>
 
@@ -632,6 +635,10 @@ export default {
       localStorage.setItem('nbClick', 0)
       }
       console.log(this.nbClick);
+    },
+      mouseMove(event){
+        this.$refs.mouse.style.left = event.pageX - 100 + 'px';
+        this.$refs.mouse.style.top = event.pageY - 100 + 'px';
     }
   }
 };
@@ -639,17 +646,34 @@ export default {
 
 <style lang="scss" scoped>
 .ktaMap {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.ktaMap * {
+  z-index: 20;
+  color: #000;
+}
+.ktaMap {
   .ktaMap__map {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("../assets/images/map-bg.jpg");
-
     &--map {
       width: 90vw;
     }
+  }
+  &__mouse {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    box-shadow: inset 0 0 60px 60px #000;
+    background: #fff;
+    z-index: 10;
+    opacity: 0.5;
+    border-radius: 50%;
   }
 }
 </style>
