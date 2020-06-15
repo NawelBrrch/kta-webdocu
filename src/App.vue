@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div ref="screen" id="app">
     <NavBar />
     <vue-page-transition name="fade-in-down">
       <router-view />
     </vue-page-transition>
-    <Footer/>
+    <Footer :screenRef="screenRef" />
   </div>
 </template>
 
@@ -18,6 +18,14 @@ export default {
     NavBar,
     Footer,
   },
+  data(){
+    return {
+      screenRef: {},
+    }
+  },  
+  mounted(){
+    this.screenRef = this.$refs['screen']
+  }
 };
 </script>
 
