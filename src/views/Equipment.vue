@@ -163,9 +163,13 @@ export default {
 
 .equipment__text {
   width: 60vw;
-  height: fit-content;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mobile-landscape {
+    height: 80px;
+  }
 }
 </style>
