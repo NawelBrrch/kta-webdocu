@@ -34,7 +34,7 @@ $arrowHeight: 30vh;
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
-
+  background-position: center;
   &__title {
     align-self: center;
     margin-top: 25vh;
