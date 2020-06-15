@@ -35,9 +35,11 @@ $arrowHeight: 30vh;
   background-repeat: no-repeat;
   align-items: center;
   background-position: center;
+
   &__title {
     align-self: center;
     margin-top: 25vh;
+    filter: drop-shadow(0px 0px 8px $black);
   }
 
   &__nav {

@@ -36,7 +36,6 @@ export default {
     padding: $padding-navBar-desktop;
     padding-top: 100px;
   }
-
   &__content {
     &--img {
       display: flex;

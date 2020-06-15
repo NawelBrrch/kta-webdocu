@@ -17,8 +17,13 @@ h3 {
   @include h3-style;
 }
 
-p {
+p,
+li {
   @include p-style;
+}
+
+ul {
+  margin-top: 10px;
 }
 
 strong {
