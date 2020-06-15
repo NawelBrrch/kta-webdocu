@@ -167,3 +167,12 @@
     filter: drop-shadow(0px 0px 3px $yellow);
   }
 }
+
+@keyframes button {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
