@@ -15,7 +15,7 @@
       sont bien réels.
     </p>
     <router-link :to="{ name: 'Equipment' }">
-      <CTA msg="Continuer" />
+      <CTA msg="Continuer" class="button" />
     </router-link>
   </div>
 </template>
@@ -54,5 +54,13 @@ export default {
   @include desktop {
     width: 60vw;
   }
+}
+
+.button {
+  opacity: 0;
+  animation-name: button;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 </style>

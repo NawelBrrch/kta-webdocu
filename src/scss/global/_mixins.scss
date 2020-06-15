@@ -167,3 +167,12 @@
     filter: none;
   }
 }
+
+@keyframes button {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
