@@ -218,7 +218,11 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
+              <stop
+                offset="0.569189"
+                stop-color="#F5BC87"
+                stop-opacity="0.651083"
+              />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
             <linearGradient
@@ -231,7 +235,11 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
+              <stop
+                offset="0.569189"
+                stop-color="#F5BC87"
+                stop-opacity="0.651083"
+              />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
             <linearGradient
@@ -244,7 +252,11 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
+              <stop
+                offset="0.569189"
+                stop-color="#F5BC87"
+                stop-opacity="0.651083"
+              />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
           </defs>
@@ -254,9 +266,7 @@
   </div>
 </template>
 
-
 <script>
-
 export default {
   name: "Footer",
   data() {
@@ -276,12 +286,13 @@ export default {
     toggleIsMute(){
       var audio = this.$refs.audioElm;
       this.isMute = !this.isMute;
-      if (this.isMute){
+      if (this.isMute) {
         audio.pause();
-      }else{
+      } else {
         audio.play();
       }
     },
+
     toogleFullScreen(){
       this.isFullScreen = !this.isFullScreen;
 
@@ -295,6 +306,7 @@ export default {
     }  
     
 }
+
 
 </script>
 
@@ -363,6 +375,7 @@ export default {
 
 .footer__sound {
   margin-right: 20px;
+  cursor: pointer;
 
   @include tablet-portrait {
     margin-right: 35px;
