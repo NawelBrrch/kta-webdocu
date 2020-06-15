@@ -4,7 +4,7 @@
     <vue-page-transition name="fade-in-down">
       <router-view />
     </vue-page-transition>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
