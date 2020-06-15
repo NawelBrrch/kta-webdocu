@@ -18,6 +18,9 @@ import Video from "@/views/Video.vue";
 
 import MobileLandscape from "@/views/MobileLandscape";
 
+
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -91,7 +94,8 @@ const routes = [
     path: "/video",
     name: "Video",
     component: Video,
-  },
+    props: true,
+  }
 ];
 
 const router = new VueRouter({

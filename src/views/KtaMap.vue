@@ -115,7 +115,7 @@
           stroke-linejoin="round"
         />
         <!-- MONTSOURIS DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '1' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '1' } }">
           <path
             @click="incrementNbClick()"
             d="M241.751 77.8496C252.395 77.8496 261.024 71.8242 261.024 64.3916C261.024 56.9589 252.395 50.9336 241.751 50.9336C231.108 50.9336 222.479 56.9589 222.479 64.3916C222.479 71.8242 231.108 77.8496 241.751 77.8496Z"
@@ -123,7 +123,7 @@
           />
         </router-link>
         <!-- CABI DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '5' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '5' } }">
           <path
             @click="incrementNbClick()"
             d="M639.058 26.916C649.702 26.916 658.331 20.8906 658.331 13.458C658.331 6.02535 649.702 0 639.058 0C628.415 0 619.786 6.02535 619.786 13.458C619.786 20.8906 628.415 26.916 639.058 26.916Z"
@@ -131,7 +131,7 @@
           />
         </router-link>
         <!-- MONTPARNASSE DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '2' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '2' } }">
           <path
             @click="incrementNbClick()"
             d="M316.469 354.463C327.113 354.463 335.741 348.438 335.741 341.005C335.741 333.572 327.113 327.547 316.469 327.547C305.825 327.547 297.196 333.572 297.196 341.005C297.196 348.438 305.825 354.463 316.469 354.463Z"
@@ -139,7 +139,7 @@
           />
         </router-link>
         <!-- BUNKER DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '4' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '4' } }">
           <path
             @click="incrementNbClick()"
             d="M666.336 222.367C676.98 222.367 685.609 216.342 685.609 208.909C685.609 201.477 676.98 195.451 666.336 195.451C655.693 195.451 647.064 201.477 647.064 208.909C647.064 216.342 655.693 222.367 666.336 222.367Z"
@@ -147,7 +147,7 @@
           />
         </router-link>
         <!-- VDG DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '3' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '3' } }">
           <path
             @click="incrementNbClick()"
             d="M815.179 187.169C825.823 187.169 834.451 181.144 834.451 173.711C834.451 166.279 825.823 160.253 815.179 160.253C804.535 160.253 795.906 166.279 795.906 173.711C795.906 181.144 804.535 187.169 815.179 187.169Z"
@@ -155,7 +155,7 @@
           />
         </router-link>
         <!-- OBSERVATOIRE DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '6' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '6' } }">
           <path
             @click="incrementNbClick()"
             d="M791.458 434.383C802.102 434.383 810.731 428.357 810.731 420.925C810.731 413.492 802.102 407.467 791.458 407.467C780.815 407.467 772.186 413.492 772.186 420.925C772.186 428.357 780.815 434.383 791.458 434.383Z"
@@ -163,7 +163,7 @@
           />
         </router-link>
         <!-- PLAGE DOT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '7' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '7' } }">
           <path
             @click="incrementNbClick()"
             d="M144.587 151.326C155.231 151.326 163.859 145.3 163.859 137.868C163.859 130.435 155.231 124.41 144.587 124.41C133.943 124.41 125.314 130.435 125.314 137.868C125.314 145.3 133.943 151.326 144.587 151.326Z"
@@ -171,7 +171,7 @@
           />
         </router-link>
         <!-- MONTSOURIS TEXT -->
-        <router-link :to="{ name: 'Room', params: { id_room: '1' } }">
+        <router-link :to="{ name: 'Video', params: { id_room: '1' } }">
           <path
             d="M208.745 26.7998C208.621 25.2511 208.472 23.367 208.472 21.9798H208.407C207.856 23.2759 207.192 24.6796 206.391 26.2118L203.568 31.624H202.015L199.405 26.3112C198.646 24.7335 198.024 23.3007 197.579 21.9798H197.52C197.466 23.3711 197.36 25.2262 197.205 26.9033L196.784 31.6944H194.833L195.948 20.5139H198.581L201.303 25.8971C201.961 27.2636 202.489 28.4934 202.916 29.657H202.975C203.396 28.5266 203.954 27.2967 204.671 25.9012L207.518 20.4932H210.162L211.153 31.6737H209.125L208.745 26.7998Z"
             fill="#783131"
@@ -628,6 +628,9 @@ export default {
     incrementNbClick() {
       this.nbClick++;
       localStorage.setItem('nbClick', this.nbClick)
+      if(localStorage.getItem('nbClick') > 7){
+      localStorage.setItem('nbClick', 0)
+      }
       console.log(this.nbClick);
     }
   }

@@ -5,11 +5,10 @@
         class="wayDownPage__video"
         autoplay="true"
         preload="auto"
+        muted="true"
         src="../assets/videos/ouverture-plaque.mp4"
         type="video/mp4"
-      >
-        >
-      </video>
+      >></video>
       <router-link :to="{ name: 'GoingDownHistory' }" class="wayDowPage__CTA">
         <CTA msg="Passer la vidéo" />
       </router-link>

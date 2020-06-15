@@ -1,6 +1,6 @@
 <template>
   <div ref="screen" id="app">
-    <div v-if="isMobile()">
+    <div v-if="!isMobile()">
       <MobileLandscape />
     </div>
     <div v-else>
@@ -33,7 +33,8 @@ export default {
   
   methods: {
   isMobile() {
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    /* if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { */
+    if(window.matchMedia("(min-width: 768px)").matches) {
       return true
     } else {
       return false

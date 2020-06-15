@@ -99,7 +99,7 @@
     </div>
 
     <div class="CTA">
-      <router-link :to="{ name: 'Homepage' }"> 
+      <router-link to="/"> 
         <CTA msg="Continuer"/>
       </router-link> 
     </div>
