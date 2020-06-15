@@ -26,24 +26,36 @@ export default {
 
 <style lang="scss" scoped>
 .documentation {
-  padding-top: 134px;
-  padding: 80px;
+  padding: $padding-navBar-mobile;
+  padding-top: 40px;
   background-color: $black;
   display: flex;
+  justify-content: space-between;
+
+  @include tablet-landscape {
+    padding: $padding-navBar-desktop;
+    padding-top: 100px;
+  }
 
   &__content {
     &--img {
       display: flex;
       flex-direction: column;
+      width: 41vw;
 
       img {
-        align-self: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
     }
 
     &--text {
-      padding-right: 100px;
+      width: 51vw;
+      padding-right: $padding-navBar-mobile;
+
+      @include tablet-landscape {
+        width: 45vw;
+        padding-right: 50px;
+      }
     }
   }
 }

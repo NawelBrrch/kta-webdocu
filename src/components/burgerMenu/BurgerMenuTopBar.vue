@@ -46,7 +46,6 @@ export default {
 <style lang="scss" scoped>
 .burgerMenu {
   width: 100%;
-  height: 10px;
 
   &__backdrop {
     width: 100vw;
@@ -62,7 +61,7 @@ export default {
     position: fixed;
     left: 0;
     top: 0;
-    height: 48px;
+    height: 57px;
     z-index: 2;
     width: 100%;
     background: linear-gradient(

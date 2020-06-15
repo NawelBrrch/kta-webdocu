@@ -157,16 +157,16 @@ export default {
 }
 
 .mapMenu {
-  margin-top: 5px;
-  margin-right: 20px;
   width: 31px;
   position: relative;
   z-index: 3;
+  margin-top: 5px;
+  margin-right: $padding-navBar-mobile;
 
   @include tablet-portrait {
     width: 35px;
     height: 35px;
-    margin-right: 35px;
+    margin-right: $padding-navBar-desktop;
   }
 }
 </style>
