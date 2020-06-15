@@ -143,12 +143,12 @@ export default {
   &__icon--close {
     cursor: pointer;
     z-index: 3;
-    margin-left: 20px;
+    margin-left: $padding-navBar-mobile;
 
     @include tablet-portrait {
       width: 40px;
-      margin-left: 35px;
       height: 40px;
+      margin-left: $padding-navBar-desktop;
     }
   }
 

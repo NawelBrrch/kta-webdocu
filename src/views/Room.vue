@@ -2,6 +2,7 @@
   <div>
     <HeroRoom :room="room" :mainPic="mainPic" />
     <DocumentationRoom :room="room" :allPics="allPics" />
+    <RoomFacts v-for="(fact, idx) in facts" :key="idx" :fact="fact" />
   </div>
 </template>
 
@@ -10,12 +11,14 @@ import RoomService from "@/javaScript/services/roomService.js";
 
 import HeroRoom from "@/components/room/HeroRoom.vue";
 import DocumentationRoom from "@/components/room/DocumentationRoom.vue";
+import RoomFacts from "@/components/room/RoomFacts.vue";
 
 export default {
   name: "Room",
   components: {
     HeroRoom,
     DocumentationRoom,
+    RoomFacts,
   },
   props: ["id_room"],
   data() {
@@ -23,6 +26,7 @@ export default {
       room: {},
       mainPic: "",
       allPics: {},
+      facts: {},
     };
   },
   created() {
@@ -33,6 +37,7 @@ export default {
         this.mainPic =
           apiUrl + "/images" + response.data.result[0].poster_principale;
         this.allPics = response.data.result[0].pics;
+        this.facts = response.data.result[0].picsAndFacts;
       })
       .catch((error) => {
         console.log("There was an error:", error.response);
@@ -41,8 +46,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-div {
-  color: white;
-}
-</style>
+<style lang="scss" scoped></style>

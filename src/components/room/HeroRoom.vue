@@ -47,7 +47,11 @@ $arrowHeight: 30vh;
     width: fit-content;
     position: absolute;
     bottom: 7vh;
-    left: 60px;
+    left: $padding-navBar-mobile + 3;
+
+    @include tablet-portrait {
+      left: $padding-navBar-desktop + 2;
+    }
 
     &--arrow {
       width: 90px;
