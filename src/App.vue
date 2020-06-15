@@ -1,17 +1,15 @@
 <template>
-
   <div ref="screen" id="app">
     <div v-if="isMobile()">
-      <MobileLandscape/>
-      </div>
+      <MobileLandscape />
+    </div>
     <div v-else>
       <NavBar />
-        <vue-page-transition name="fade-in-down">
+      <vue-page-transition name="fade-in-down">
         <router-view />
-        </vue-page-transition>
-        <Footer :screenRef="screenRef" />
+      </vue-page-transition>
+      <Footer :screenRef="screenRef" />
     </div>
-
   </div>
 </template>
 
@@ -41,10 +39,10 @@ export default {
       return false
     }
   },
+},
   mounted(){
     this.screenRef = this.$refs['screen']
   }
-}
 }
 </script>
 
@@ -58,5 +56,4 @@ export default {
 a {
   text-decoration: none;
 }
-
 </style>

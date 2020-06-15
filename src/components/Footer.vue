@@ -104,7 +104,6 @@
         <svg
           v-if="isMute"
           class="soundOffIcon"
-
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -219,11 +218,7 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop
-                offset="0.569189"
-                stop-color="#F5BC87"
-                stop-opacity="0.651083"
-              />
+              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
             <linearGradient
@@ -236,11 +231,7 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop
-                offset="0.569189"
-                stop-color="#F5BC87"
-                stop-opacity="0.651083"
-              />
+              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
             <linearGradient
@@ -253,11 +244,7 @@
             >
               <stop stop-color="#FFCE1F" />
               <stop offset="0.333819" stop-color="#FAF0CE" />
-              <stop
-                offset="0.569189"
-                stop-color="#F5BC87"
-                stop-opacity="0.651083"
-              />
+              <stop offset="0.569189" stop-color="#F5BC87" stop-opacity="0.651083" />
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
           </defs>
@@ -292,6 +279,7 @@ export default {
       } else {
         audio.play();
       }
+      console.log(this.$attrs.screenRef)
     },
 
     toogleFullScreen(){
