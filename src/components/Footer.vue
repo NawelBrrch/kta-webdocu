@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
     <audio
+      ref="audioElm"
       class="audio"
       autoplay="true"
       loop="true"
@@ -9,7 +10,7 @@
     ></audio>
     <div class="footer__icones">
       <div class="footer__screen">
-        <svg class="fullScreenIcon"
+      <svg class="fullScreenIcon"
           width="25"
           height="25"
           viewBox="0 0 25 25"
@@ -85,8 +86,8 @@
           </defs>
         </svg>
       </div>
-      <div class="footer__sound">
-        <svg class="soundOffIcon"
+      <div @click="toggleIsMute()" class="footer__sound">
+        <svg v-if="isMute" class="soundOffIcon"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -159,7 +160,7 @@
             </clipPath>
           </defs>
         </svg>
-        <svg class="soundOnIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-else class="soundOnIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.935669 7.46895H5.86074L11.1798 2.98716L12.9036 2.19915V21.8008L11.1798 20.8651L5.86074 16.137L0.935696 15.8908L0.935669 7.46895Z" fill="#393939"/>
           <path d="M13.103 1.57445C12.6528 1.31981 12.1199 1.32812 11.6775 1.59475C11.6563 1.60721 11.636 1.62197 11.6176 1.63765L5.36686 6.92563H0.461308C0.206205 6.92563 0 7.13183 0 7.38693V16.1518C0 16.2745 0.0484373 16.3917 0.135163 16.4779C0.221889 16.5642 0.3386 16.6131 0.461308 16.6131L5.35578 16.6108L11.6033 22.3495C11.6263 22.3707 11.6513 22.3891 11.6775 22.4048C11.9045 22.5418 12.1559 22.6106 12.4073 22.6106C12.6458 22.6101 12.8839 22.5487 13.103 22.4251C13.5638 22.1649 13.8392 21.6898 13.8392 21.1542V2.84582C13.8392 2.31024 13.5638 1.83509 13.103 1.57445ZM12.9166 21.1542C12.9166 21.353 12.8165 21.5279 12.6495 21.6224C12.578 21.6626 12.3967 21.7401 12.1882 21.6344L5.997 15.947V13.8452C5.997 13.5901 5.7908 13.3839 5.53569 13.3839C5.28059 13.3839 5.07439 13.5901 5.07439 13.8452V15.6886L0.922616 15.6905V7.84824H5.07439V9.69347C5.07439 9.94858 5.28059 10.1548 5.53569 10.1548C5.7908 10.1548 5.997 9.94858 5.997 9.69347V7.60098L12.1808 2.36975C12.3935 2.25811 12.5776 2.33746 12.6495 2.37805C12.8165 2.47262 12.9166 2.64746 12.9166 2.84582V21.1542Z" fill="url(#paint0_linear)"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36685 6.9256H0.461308C0.206205 6.9256 0 7.1318 0 7.38691V16.1518C0 16.2745 0.0484373 16.3916 0.135163 16.4779C0.221889 16.5642 0.3386 16.6131 0.461308 16.6131L5.35578 16.6108L5.997 15.9469V13.8452V9.69345V7.60095L5.36685 6.9256ZM5.07439 13.8452V15.6886L0.922616 15.6904V7.84821H5.07439V9.69345V13.8452Z" fill="#FFCE1F"/>
@@ -198,6 +199,24 @@
 
 export default {
   name: "Footer",
+  data() {
+    return {
+      isMute: false,
+    };
+  },
+    methods: {
+    toggleIsMute(){
+      var audio = this.$refs.audioElm;
+      this.isMute = !this.isMute;
+      if (this.isMute){
+        audio.pause();
+      }else{
+        audio.play();
+      }
+    },
+
+    }  
+    
 }
 
 </script>
@@ -206,7 +225,7 @@ export default {
 
 
 .soundOffIcon {
-  display: none;
+  //display: none;
 }
 .smallScreenIcon {
   display: none;
