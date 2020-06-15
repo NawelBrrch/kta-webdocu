@@ -15,35 +15,10 @@
           </li>
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
             <router-link :to="{ name: 'Gallery' }">Galerie</router-link>
-            <ul class="list__item list__item--menu">
-              <li
-                class="list__item"
-                @click="closeTopBarPanel"
-                v-if="isPanelOpen"
-              >
-                <router-link :to="{ name: 'Gallery' }">
-                  Photos
-                </router-link>
-              </li>
-              <li
-                class="list__item"
-                @click="closeTopBarPanel"
-                v-if="isPanelOpen"
-              >
-                <router-link :to="{ name: 'Gallery' }">
-                  Vidéos
-                </router-link>
-              </li>
-            </ul>
           </li>
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
             <router-link :to="{ name: 'Sources' }">
               Sources
-            </router-link>
-          </li>
-          <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
-            <router-link :to="{ name: 'About' }">
-              À propos
             </router-link>
           </li>
         </ul>
