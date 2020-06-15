@@ -30,18 +30,21 @@
       <img src="../assets/images/gallery11.png" alt="photos des catacombes" />
       <img src="../assets/images/gallery10.png" alt="photos des catacombes" />
       <img src="../assets/images/gallery8.png" alt="photos des catacombes" />
-
       <img src="../assets/images/gallery13.png" alt="photos des catacombes" />
-
       <img src="../assets/images/gallery15.png" alt="photos des catacombes" />
       <img src="../assets/images/gallery16.png" alt="photos des catacombes" />
       <img
         src="../assets/images/gallery17-min.png"
         alt="photos des catacombes"
       />
-      <img src="../assets/images/gallery18.png" alt="photos des catacombes" />
       <img src="../assets/images/gallery19.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery23.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery24.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery26.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery21.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery22.png" alt="photos des catacombes" />
       <img src="../assets/images/gallery20.png" alt="photos des catacombes" />
+      <img src="../assets/images/gallery18.png" alt="photos des catacombes" />
     </div>
   </div>
 </template>
@@ -59,6 +62,12 @@ export default {
   width: 100vw;
 }
 
+h2 {
+  padding-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .galery__images {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +76,9 @@ export default {
 }
 
 img {
-  width: 20%;
-  height: 20%;
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+  overflow: hidden;
 }
 </style>
