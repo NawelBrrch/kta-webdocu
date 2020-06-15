@@ -6,8 +6,8 @@
       <svg
         class="mapMenu"
         data-map
-        width="24"
-        height="25"
+        width="34"
+        height="34"
         viewBox="0 0 24 25"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ export default {
   position: fixed;
   list-style: none;
   width: 100%;
-  height: 48px;
+  height: 55px;
 
   @include tablet-portrait {
     height: 93px;
@@ -159,7 +159,7 @@ export default {
 .mapMenu {
   margin-top: 5px;
   margin-right: 20px;
-  width: 20px;
+  width: 31px;
   position: relative;
   z-index: 3;
 

@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+
+  <div ref="screen" id="app">
     <div v-if="isMobile()">
       <MobileLandscape/>
       </div>
@@ -9,7 +10,8 @@
           <router-view />
         </vue-page-transition>
         <Footer />
-      </div>
+    <Footer :screenRef="screenRef" />
+
   </div>
 </template>
 
@@ -25,6 +27,7 @@ export default {
     Footer,
     MobileLandscape
   },
+
   methods: {
   isMobile() {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -33,6 +36,15 @@ export default {
       return false
     }
   }
+
+  data(){
+    return {
+      screenRef: {},
+    }
+  },  
+  mounted(){
+    this.screenRef = this.$refs['screen']
+
   }
 };
 </script>
@@ -49,10 +61,10 @@ a {
 }
 
 .fullScreenIcon {
-  border: 3px solid red;
+  //border: 3px solid red;
 }
 
 .soundOnIcon {
-  border: 2px solid blue;
+  //border: 2px solid blue;
 }
 </style>
