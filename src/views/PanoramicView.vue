@@ -73,6 +73,10 @@ export default {
   transform: translate(-50%, -50%);
 }
 
+/deep/ .mapMenu {
+  animation: scaleLightIcon 1s infinite alternate;
+}
+
 /deep/ .navBar {
   background: none;
 }
