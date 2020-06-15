@@ -21,4 +21,3 @@ export default {
     return apiClient.get("/images" + pathImage);
   },
 };
-

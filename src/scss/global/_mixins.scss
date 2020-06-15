@@ -70,10 +70,10 @@
   font-family: "Merriweather";
   color: $gray;
   line-height: 150%;
-  font-size: 11px;
+  font-size: 12px;
 
   @include tablet-portrait {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   @include tablet-landscape {
@@ -81,7 +81,7 @@
   }
 
   @include desktop {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 100;
   }
 }
@@ -110,7 +110,7 @@
   line-height: 150%;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 11px;
+  font-size: 14px;
 
   @include tablet-landscape {
     font-size: 18px;
