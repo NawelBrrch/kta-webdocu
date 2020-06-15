@@ -2,6 +2,7 @@
   <div>
     <HeroRoom :room="room" :mainPic="mainPic" />
     <DocumentationRoom :room="room" :allPics="allPics" />
+    <FactRoom/>
   </div>
 </template>
 
@@ -10,12 +11,14 @@ import RoomService from "@/javaScript/services/roomService.js";
 
 import HeroRoom from "@/components/room/HeroRoom.vue";
 import DocumentationRoom from "@/components/room/DocumentationRoom.vue";
+import FactRoom from "@/components/room/FactRoom.vue";
 
 export default {
   name: "Room",
   components: {
     HeroRoom,
     DocumentationRoom,
+    FactRoom
   },
   props: ["id_room"],
   data() {
