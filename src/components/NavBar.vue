@@ -149,7 +149,7 @@ export default {
   position: fixed;
   list-style: none;
   width: 100%;
-  height: 48px;
+  height: 55px;
 
   @include tablet-portrait {
     height: 93px;
