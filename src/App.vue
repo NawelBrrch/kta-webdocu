@@ -7,10 +7,10 @@
     <div v-else>
       <NavBar />
         <vue-page-transition name="fade-in-down">
-          <router-view />
+        <router-view />
         </vue-page-transition>
-        <Footer />
-    <Footer :screenRef="screenRef" />
+        <Footer :screenRef="screenRef" />
+    </div>
 
   </div>
 </template>
@@ -59,11 +59,4 @@ a {
   text-decoration: none;
 }
 
-.fullScreenIcon {
-  //border: 3px solid red;
-}
-
-.soundOnIcon {
-  //border: 2px solid blue;
-}
 </style>
