@@ -1,6 +1,5 @@
 <template>
   <div class="ktaMap">
-    <div class="ktaMap__bg"></div>
     <div class="ktaMap__map">
       <svg
         class="ktaMap__map--svg"
@@ -622,7 +621,6 @@
         <!-- OBS TEXT -->
       </svg>
     </div>
-    <div class="cursor cursor--small"></div>
   </div>
 </template>
 

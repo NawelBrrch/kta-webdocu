@@ -26,18 +26,16 @@ export default {
 
 <style lang="scss" scoped>
 .documentation {
-  padding-top: 10px;
-  padding: 10px;
+  padding-top: 134px;
+  padding: 80px;
   background-color: $black;
   display: flex;
 
   &__content {
-    padding: 20px;
-
     &--img {
-      width: 40%;
       display: flex;
       flex-direction: column;
+
       img {
         align-self: center;
         margin-bottom: 10px;
@@ -45,7 +43,7 @@ export default {
     }
 
     &--text {
-      width: 60%;
+      padding-right: 100px;
     }
   }
 }
