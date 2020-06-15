@@ -14,9 +14,19 @@ import Room from "@/views/Room.vue";
 import KtaMap from "@/views/KtaMap.vue";
 import Exit from "@/views/Exit.vue";
 
+import Video from "@/views/Video.vue";
+
+import MobileLandscape from '@/views/MobileLandscape'
+
+
 Vue.use(VueRouter);
 
 const routes = [
+  {
+      path: "/MobileLandscape",
+      name: "MobileLandscape",
+      component: MobileLandscape,
+    },
   {
     path: "/disclaimer",
     name: "Disclaimer",
@@ -78,6 +88,11 @@ const routes = [
     name: "Exit",
     component: Exit,
   },
+  {
+    path: "/video",
+    name: "Video",
+    component: Video,
+  }
 ];
 
 const router = new VueRouter({
