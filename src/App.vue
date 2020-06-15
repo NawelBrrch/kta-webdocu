@@ -27,7 +27,12 @@ export default {
     Footer,
     MobileLandscape
   },
-
+  data(){
+    return {
+      screenRef: {}
+    }
+  },   
+  
   methods: {
   isMobile() {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -35,18 +40,12 @@ export default {
     } else {
       return false
     }
-  }
-
-  data(){
-    return {
-      screenRef: {},
-    }
-  },  
+  },
   mounted(){
     this.screenRef = this.$refs['screen']
-
   }
-};
+}
+}
 </script>
 
 <style lang="scss">
