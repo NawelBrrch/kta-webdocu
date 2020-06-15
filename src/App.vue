@@ -33,10 +33,10 @@ a {
 }
 
 .fullScreenIcon {
-  border: 3px solid red;
+  //border: 3px solid red;
 }
 
 .soundOnIcon {
-  border: 2px solid blue;
+  //border: 2px solid blue;
 }
 </style>
