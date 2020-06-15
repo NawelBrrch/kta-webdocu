@@ -163,7 +163,7 @@ export default {
 
 .equipment__text {
   width: 60vw;
-  height: 80px;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
