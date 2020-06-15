@@ -86,7 +86,7 @@
         </svg>
       </div>
       <div class="footer__sound">
-        <svg class="soundOffIcon"
+        <svg class="soundOffIcon" title="Mute" v-if="volume" @click="mute()"
           width="24"
           height="24"
           viewBox="0 0 24 24"
