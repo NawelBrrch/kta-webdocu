@@ -279,7 +279,6 @@ export default {
       } else {
         audio.play();
       }
-      console.log(this.$attrs.screenRef)
     },
 
     toogleFullScreen(){

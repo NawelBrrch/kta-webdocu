@@ -1,5 +1,6 @@
 <template>
   <div class="ktaMap">
+    <div id="light" :style="light" @mousedown="flashlight()"></div>
     <div class="ktaMap__map">
       <svg
         class="ktaMap__map--svg"
@@ -632,6 +633,15 @@ export default {
       localStorage.setItem('nbClick', 0)
       }
       console.log(this.nbClick);
+    }, 
+    flashlight() {
+      this.mousemove(e => {
+        let top = e.pageY - 250
+        let left = e.pageX - 250
+
+        this.light.top = `${top}px`
+        this.light.left = `${left}px`
+      })
     }
   }
 };
@@ -639,6 +649,7 @@ export default {
 
 <style lang="scss" scoped>
 .ktaMap {
+
   .ktaMap__map {
     height: 100vh;
     display: flex;
@@ -646,10 +657,26 @@ export default {
     justify-content: center;
     align-items: center;
     background: url("../assets/images/map-bg.jpg");
-
+    z-index: 20;
+    color: rgba(0,0,0,1.00);
+    -moz-user-select: none;
+    user-select: none;
+    background-color:rgba(0,0,0,1.00);
     &--map {
       width: 90vw;
     }
   }
+}
+
+
+
+#light {
+  border-radius: 50%;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  box-shadow: inset 0 0 50px 70px #000;
+  background: #fff;
+  z-index: 10;
 }
 </style>
