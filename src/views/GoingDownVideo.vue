@@ -2,6 +2,8 @@
   <div class="wayDownPage">
     <section>
       <video
+        ref="currentVideo"
+        @click="goToHistory()"
         class="wayDownPage__video"
         autoplay="true"
         preload="auto"
@@ -24,6 +26,22 @@ export default {
   components: {
     CTA,
   },
+  methods: {
+    goToHistory(){
+      let videoDuration = 0;
+
+      setTimeout(() => {
+        videoDuration = this.$refs.currentVideo.duration
+      
+      setTimeout(() => {
+        window.location.href = 'GoingDownHistory'
+      }, videoDuration*1000);
+      }, 1000);
+    }
+  },
+  mounted(){
+    this.goToHistory()
+  }
 };
 </script>
 
