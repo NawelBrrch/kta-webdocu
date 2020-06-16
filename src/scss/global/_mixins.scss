@@ -175,3 +175,21 @@
     opacity: 1;
   }
 }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100%{
+    transform: translateY(-900px);
+  }
+}
+
+@keyframes slideUpMobile {
+  0% {
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(-700px);
+  }
+}
