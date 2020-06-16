@@ -2,7 +2,7 @@
   <div class="equipment">
     <h3 class="equipment__title">
       Pour une meilleure expérience attrapez votre équipement,<br />éteignez les
-      <em classe="title__glow">lumières</em>, et branchez votre
+      <em class="title__glow" >lumières</em>, et branchez votre
       <em class="title__animation">casque</em>
     </h3>
     <div class="equipment__images">
@@ -141,6 +141,10 @@ export default {
   color: $white;
   position: relative;
   overflow: hidden;
+}
+
+.title__glow {
+  filter: drop-shadow(0px 0px 5px $white)
 }
 
 .title__animation {

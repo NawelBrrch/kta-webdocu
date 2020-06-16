@@ -1,7 +1,7 @@
 <template>
-  <div class="goingDownImage">
-    <TextFrame class="text__frame">
-      <p ref="text" class="goingDownImage__text">
+  <div class="goingDownHistory">
+    <TextFrame class="goingDownHistory__frame">
+      <p ref="text" class="goingDownHistory__text">
         Les catacombes sont d’anciennes carrières souterraines
         de l’époque romaine dont on exploitait la pierre calcaire pour
         construire la ville de Paris. 
@@ -26,7 +26,7 @@
         groupes de cataphiles. Avec eux se dessine un nouveau monde parallèle.
       </p>
     </TextFrame>
-    <router-link class="CTAcontinue" :to="{ name: 'PanoramicView' }">
+    <router-link class="goingDownHistory__CTA" :to="{ name: 'PanoramicView' }">
       <CTA msg="Continuer" />
     </router-link>
   </div>
@@ -58,16 +58,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 svg {
   width: 50px;
   transform: rotate(90deg);
   display: flex;
   margin-left: 44%;
 }
-/* .scroll{
-  overflow-Y: scroll !important;
-} */
-.goingDownImage {
+
+.goingDownHistory {
   height: 100vh;
   width: 100%;
   background-image: url("../assets/images/descente.png");
@@ -76,7 +75,7 @@ svg {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  .text__frame {
+  &__frame {
     width: 60vw;
     display: flex;
     justify-content: center;
@@ -85,7 +84,7 @@ svg {
   }
   &__text {
     animation: slideUp 30s linear;
-    padding: 0px 40px 0px 40px;
+    padding: 0px 30px 0px 30px;
     height: 30vh;
     width: 100%;
     margin: auto;
@@ -94,17 +93,17 @@ svg {
     justify-content: center;
     line-height: 5vh;
     font-size: 20px;
-    
-    @include mobile-landscape {
+
+/*     @include mobile-landscape {
       animation: slideUpMobile 35s linear;
       padding: 0px 10px 0px 10px;
       line-height: 9vh;
       font-size: 14px;
-    }
+    } */
   }
 }
 
-.CTAcontinue {
+.goingDownHistory__CTA {
   position: relative;
   z-index: 3;
   margin-bottom: 5px;
