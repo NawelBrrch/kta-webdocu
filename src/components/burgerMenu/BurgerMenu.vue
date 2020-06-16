@@ -142,7 +142,7 @@ export default {
 .burgerMenu {
   &__icon--close {
     cursor: pointer;
-    z-index: 3;
+    z-index: 999;
     margin-left: $padding-navBar-mobile;
 
     @include tablet-portrait {
