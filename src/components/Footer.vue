@@ -329,10 +329,12 @@ export default {
     toogleFullScreen() {
       this.isFullScreen = !this.isFullScreen;
 
-      if (this.isFullScreen) {
-        this.$attrs.screenRef.requestFullscreen();
-      } else {
-        document.exitFullscreen();
+
+      if(this.isFullScreen){
+        document.documentElement.requestFullscreen()
+      }
+      else {
+        document.exitFullscreen()
       }
     },
   },
@@ -340,13 +342,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.soundOffIcon {
-  //display: none;
-}
-.smallScreenIcon {
-  //display: none;
-}
-
 .footer {
   display: flex;
   justify-content: flex-end;
