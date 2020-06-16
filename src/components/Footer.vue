@@ -292,6 +292,9 @@ export default {
       }
     },
   },
+  mounted() {
+    this.$refs.audioElm.volume = 0.1;
+  }
 };
 </script>
 
