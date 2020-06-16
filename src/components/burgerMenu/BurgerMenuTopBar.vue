@@ -1,25 +1,20 @@
 <template>
   <div class="burgerMenu">
-    <div
-      class="burgerMenu__backdrop"
-      @click="closeTopBarPanel"
-      v-if="isPanelOpen"
-    ></div>
+    <div class="burgerMenu__backdrop" @click="closeTopBarPanel" v-if="isPanelOpen"></div>
     <transition name="slide">
       <div v-if="isPanelOpen" class="burgerMenu__panel">
         <ul class="burgerMenu__panel--list">
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
-            <router-link :to="{ name: 'Homepage' }">
-              Accueil
-            </router-link>
+            <router-link :to="{ name: 'Homepage' }">Accueil</router-link>
           </li>
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
             <router-link :to="{ name: 'Gallery' }">Galerie</router-link>
           </li>
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
-            <router-link :to="{ name: 'Sources' }">
-              Sources
-            </router-link>
+            <router-link :to="{ name: 'UnofficialRoom'}">Salle perdu</router-link>
+          </li>
+          <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
+            <router-link :to="{ name: 'Sources' }">Sources</router-link>
           </li>
         </ul>
       </div>
