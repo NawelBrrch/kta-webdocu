@@ -165,6 +165,12 @@ export default {
   z-index: 999;
   margin-top: 5px;
   margin-right: $padding-navBar-mobile;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+    &:hover {
+    filter: drop-shadow(0px 0px 8px $yellow);
+    transform: scale(1.3);
+  }
 
   @include tablet-portrait {
     width: 35px;

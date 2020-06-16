@@ -340,6 +340,11 @@ export default {
 
 .footer__screen {
   display: none;
+  transition: all .2s ease-in-out;
+    &:hover {
+    filter: drop-shadow(0px 0px 8px $yellow);
+    transform: scale(1.3);
+  }
 
   @include tablet-portrait {
     cursor: pointer;
@@ -358,6 +363,11 @@ export default {
 .footer__sound {
   margin-right: 20px;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+    &:hover {
+    filter: drop-shadow(0px 0px 8px $yellow);
+    transform: scale(1.3);
+  }
 
   @include tablet-portrait {
     margin-right: 35px;
