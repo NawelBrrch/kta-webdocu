@@ -19,10 +19,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
-
 *:before,
 *:after {
   box-sizing: border-box;
@@ -39,11 +35,6 @@ export default {
   z-index: -1;
   display: inline-block;
 }
-
-
-
-
-
 .button__cta {
   @include CTA-style;
   z-index: 1;
@@ -58,9 +49,8 @@ export default {
   @include tablet-landscape {
     line-height: $btn-height-tablet;
     size: 100% $btn-height-tablet;
-
   }
-  
+
   &:before,
   &:after {
     content: "";
@@ -79,22 +69,21 @@ export default {
   &:before {
     right: -50px;
     border-right: 50px solid transparent;
-    border-bottom: $btn-height-mobile solid  $yellow;
+    border-bottom: $btn-height-mobile solid $yellow;
     transform: translateX(-100%);
     @include tablet-landscape {
-      border-bottom: $btn-height-tablet solid  $yellow;
+      border-bottom: $btn-height-tablet solid $yellow;
     }
   }
 
   &:after {
     left: -50px;
     border-left: 50px solid transparent;
-    border-top: $btn-height-mobile solid  $yellow;
+    border-top: $btn-height-mobile solid $yellow;
     transform: translateX(100%);
     @include tablet-landscape {
-      border-top: $btn-height-tablet solid  $yellow;
+      border-top: $btn-height-tablet solid $yellow;
     }
-    
   }
 
   &:hover {

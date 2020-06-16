@@ -18,8 +18,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .goingDownImage:hover {
+//   transform: scale(1.5);
+// }
 .goingDownImage {
-  height: 100vh;
+  height: 800px;
   width: 100%;
   background-image: url("../assets/images/descente.png");
   background-size: cover;
