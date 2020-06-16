@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VuePageTransition from "vue-page-transition";
-import Vue2TouchEvents from 'vue2-touch-events'
+import Vue2TouchEvents from "vue2-touch-events";
 
 import App from "./App.vue";
 import router from "./javaScript/router";
