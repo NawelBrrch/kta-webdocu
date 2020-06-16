@@ -3,7 +3,7 @@
     <section>
       <video
         ref="currentVideo"
-        @click="stpLog()"
+        @ended="goToRoom()"
         class="wayDownPage__video"
         muted="true"
         autoplay="true"
@@ -11,6 +11,12 @@
         :src="videoTab[nbClick]"
         type="video/mp4"
       ></video>
+      <router-link
+        :to="{ name: 'Room', params: { id_room: this.id_room } }"
+        class="wayDowPage__CTA"
+      >
+        <CTA msg="Passer la vidéo" />
+      </router-link>
     </section>
   </div>
 </template>
@@ -23,9 +29,14 @@ import marche4 from "../assets/videos/marche4.mp4";
 import marche5 from "../assets/videos/marche5.mp4";
 import marche6 from "../assets/videos/marche6.mp4";
 import marche7 from "../assets/videos/marche7.mp4";
+import CTA from "@/components/CTA.vue";
+
 
 export default {
   name: "Video",
+  components: {
+    CTA,
+  },
   data(){
       return{
           videoTab: [marche1, marche2, marche3, marche4, marche5, marche6, marche7],
@@ -34,21 +45,10 @@ export default {
         },
   props: ["id_room"],
   methods: {
-    stpLog(){
-      let videoDuration = 0;
-
-      setTimeout(() => {
-        videoDuration = this.$refs.currentVideo.duration
-      
-      setTimeout(() => {
+    goToRoom(){
         window.location.href = `room/${this.id_room}`
-      }, videoDuration*1000);
-      }, 1000);
     }
   },
-  mounted(){
-    this.stpLog()
-  }
 };
 </script>
 
@@ -58,10 +58,14 @@ export default {
   height: 100vh;
   width: 100%;
 }
-
 .wayDownPage__video {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+.wayDowPage__CTA {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }
 </style>

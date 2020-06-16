@@ -116,6 +116,7 @@ import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import TextFrame from "@/components/TextFrame.vue";
 
+
 export default {
   name: "App.vue",
   components: {
@@ -123,27 +124,13 @@ export default {
     Footer,
     TextFrame
   },
-  data(){
+  data() {
     return {
       screenRef: {},
-    }
-  },
-  
-/*   methods: {
-    detectScreen() {
-    if(window.matchMedia("(min-width: 565px)").matches) {
-      this.isMobile = false
-    } else {
-      this.isMobile = true
-    }
-  }
-}, */
+      }
+     }
 
-  mounted(){
-    this.screenRef = this.$refs['screen']
-    this.detectScreen()
-  }
-}
+
 </script>
 
 <style lang="scss">
