@@ -5,6 +5,7 @@ import Disclaimer from "@/views/Disclaimer.vue";
 import Homepage from "@/views/Homepage.vue";
 import Equipment from "@/views/Equipment.vue";
 import GoingDownVideo from "@/views/GoingDownVideo.vue";
+import GoingUpVideo from "@/views/GoingUpVideo.vue";
 import GoingDownHistory from "@/views/GoingDownHistory.vue";
 import PanoramicView from "@/views/PanoramicView.vue";
 import Gallery from "@/views/Gallery.vue";
@@ -42,6 +43,11 @@ const routes = [
     path: "/goingDownVideo",
     name: "GoingDownVideo",
     component: GoingDownVideo,
+  },
+  {
+    path: "/goingUpVideo",
+    name: "GoingUpVideo",
+    component: GoingUpVideo,
   },
   {
     path: "/goingDownHistory",

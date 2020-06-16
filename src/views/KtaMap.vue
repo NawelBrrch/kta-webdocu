@@ -622,6 +622,9 @@
       </svg>
     </div>
     <div class="ktaMap__mouse" ref="mouse"></div>
+    <router-link :to="{ name: 'GoingUpVideo' }" class="ktaMap__CTA">
+      <CTA msg="Passer la vidéo" />
+    </router-link>
   </div>
 </template>
 
@@ -667,6 +670,7 @@ export default {
 }
 
 .ktaMap {
+  overflow: hidden;
   .ktaMap__map {
     height: 100vh;
     display: flex;
@@ -689,8 +693,6 @@ export default {
   }
 }
 
-
-
 #light {
   border-radius: 50%;
   position: absolute;
@@ -699,5 +701,12 @@ export default {
   box-shadow: inset 0 0 50px 70px #000;
   background: #fff;
   z-index: 10;
+}
+
+.ktaMap__CTA {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  z-index: 999;
 }
 </style>
