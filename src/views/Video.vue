@@ -3,7 +3,7 @@
     <section>
       <video
         ref="currentVideo"
-        @click="goToRoom()"
+        @ended="goToRoom()"
         class="wayDownPage__video"
         muted="true"
         autoplay="true"
@@ -46,20 +46,9 @@ export default {
   props: ["id_room"],
   methods: {
     goToRoom(){
-      let videoDuration = 0;
-
-      setTimeout(() => {
-        videoDuration = this.$refs.currentVideo.duration
-      
-      setTimeout(() => {
         window.location.href = `room/${this.id_room}`
-      }, videoDuration*1000);
-      }, 1000);
     }
   },
-  mounted(){
-    this.goToRoom()
-  }
 };
 </script>
 
