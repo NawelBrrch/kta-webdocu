@@ -648,7 +648,6 @@ export default {
       if (localStorage.getItem("nbClick") > 7) {
         localStorage.setItem("nbClick", 0);
       }
-      console.log(this.nbClick);
     },
     mouseMove(event) {
       this.$refs.mouse.style.left = event.pageX - 100 + "px";
