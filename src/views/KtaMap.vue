@@ -1,6 +1,5 @@
 <template>
   <div class="ktaMap">
-
     <div class="ktaMap__map" v-on:mousemove="(event) => mouseMove(event)">
       <svg
         class="ktaMap__map--svg"
@@ -643,7 +642,6 @@ export default {
       if (localStorage.getItem("nbClick") > 7) {
         localStorage.setItem("nbClick", 0);
       }
-
     },
     mouseMove(event) {
       this.$refs.mouse.style.left = event.pageX - 140 + "px";
@@ -655,7 +653,6 @@ export default {
 
 <style lang="scss" scoped>
 .ktaMap {
-
   background-color: #000;
   overflow-x: hidden;
 }
