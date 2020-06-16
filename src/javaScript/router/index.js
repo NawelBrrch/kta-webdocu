@@ -13,7 +13,7 @@ import Sources from "@/views/Sources.vue";
 import Room from "@/views/Room.vue";
 import KtaMap from "@/views/KtaMap.vue";
 import Exit from "@/views/Exit.vue";
-
+import UnofficialRoom from "@/views/UnofficialRoom.vue";
 import Video from "@/views/Video.vue";
 
 
@@ -89,6 +89,11 @@ const routes = [
     name: "Video",
     component: Video,
     props: true,
+  },
+  {
+    path: "/unofficial",
+    name: "UnofficialRoom",
+    component: UnofficialRoom,
   }
 ];
 

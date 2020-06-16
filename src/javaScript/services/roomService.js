@@ -20,4 +20,8 @@ export default {
   getMainPic(pathImage) {
     return apiClient.get("/images" + pathImage);
   },
+
+  getUnofficialRoom() {
+    return apiClient.get("/room/unofficial")
+  },
 };

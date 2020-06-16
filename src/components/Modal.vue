@@ -18,11 +18,6 @@ export default {
   props: {
       src: String
   }, 
-  methods: {
-      closeModal(){
-
-      }
-  }
 };
 </script>
 
