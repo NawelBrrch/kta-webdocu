@@ -2,7 +2,12 @@
   <div>
     <HeroRoom :room="room" :mainPic="mainPic" />
     <DocumentationRoom :room="room" :allPics="allPics" />
-    <RoomFacts v-for="(fact, idx) in facts" :key="idx" :fact="fact" />
+    <RoomFacts
+      v-for="(fact, idx, ids) in facts"
+      :key="idx"
+      :fact="fact"
+      :ids="ids"
+    />
   </div>
 </template>
 
@@ -27,6 +32,17 @@ export default {
       mainPic: "",
       allPics: {},
       facts: {},
+      ids: [
+        {
+          id: 1,
+        },
+        {
+          id: 2,
+        },
+        {
+          id: 3,
+        },
+      ],
     };
   },
   created() {
@@ -42,6 +58,28 @@ export default {
       .catch((error) => {
         console.log("There was an error:", error.response);
       });
+  },
+  mounted() {
+    this.parallax();
+  },
+  methods: {
+    parallax: function () {
+      //let docuImg = document.querySelector(".documentation__content--img");
+      let docuTxt = document.querySelector(".documentation__content--text");
+      let hero = document.querySelector(".hero");
+      //console.log(docuImg, docuTxt, hero);
+
+      window.addEventListener("scroll", function () {
+        let scrolled = window.pageYOffset;
+        let rate = scrolled * 0.5;
+        if (scrolled > hero.clientHeight) {
+          docuTxt.style.transform = "translateY(" + -rate + "px)";
+        }
+        //console.log(divHeroHeight, scrolled);
+        //let rate = scrolled * -10;
+        //target.style.transform = "translateY(" + rate + "px)";
+      });
+    },
   },
 };
 </script>
