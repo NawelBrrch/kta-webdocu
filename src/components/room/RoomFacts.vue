@@ -31,6 +31,8 @@ export default {
   background-position: center;
   background-size: cover;
   padding-top: 40px;
+  position: relative;
+  z-index: -10;
 
   @include tablet-portrait {
     padding-top: 100px;
@@ -39,6 +41,8 @@ export default {
   &--text {
     width: 75vw;
     margin-left: $padding-navBar-mobile;
+    position: relative;
+    z-index: -1;
 
     @include tablet-portrait {
       width: 43vw;
