@@ -3,7 +3,7 @@
     <section>
       <video
         ref="currentVideo"
-        @click="stpLog()"
+        @click="goToRoom()"
         class="wayDownPage__video"
         muted="true"
         autoplay="true"
@@ -45,7 +45,7 @@ export default {
         },
   props: ["id_room"],
   methods: {
-    stpLog(){
+    goToRoom(){
       let videoDuration = 0;
 
       setTimeout(() => {
@@ -58,7 +58,7 @@ export default {
     }
   },
   mounted(){
-    this.stpLog()
+    this.goToRoom()
   }
 };
 </script>
