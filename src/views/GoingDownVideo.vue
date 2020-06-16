@@ -11,7 +11,7 @@
         src="../assets/videos/ouverture-plaque.mp4"
         type="video/mp4"
       >></video>
-      <router-link :to="{ name: 'GoingDownHistory' }" class="wayDowPage__CTA">
+      <router-link :to="{ name: 'GoingDownHistory' }" class="wayDownPage__CTA">
         <CTA msg="Passer la vidéo" />
       </router-link>
     </section>
@@ -39,17 +39,20 @@ export default {
   position: relative;
   height: 100vh;
   width: 100%;
+
+  &__video {
+    width: 100%;
+    height: 95vh;
+    object-fit: cover;
+
+  }
+
+  &__CTA {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+
+  }
 }
 
-.wayDownPage__video {
-  width: 100%;
-  height: 95vh;
-  object-fit: cover;
-}
-
-.wayDowPage__CTA {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-}
 </style>
