@@ -116,6 +116,7 @@ import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import TextFrame from "@/components/TextFrame.vue";
 
+
 export default {
   name: "App.vue",
   components: {
@@ -123,7 +124,7 @@ export default {
     Footer,
     TextFrame
   },
-  data(){
+  data() {
     return {
       screenRef: {},
     }
@@ -133,6 +134,7 @@ export default {
     this.screenRef = this.$refs['screen']
   }
 }
+
 </script>
 
 <style lang="scss">

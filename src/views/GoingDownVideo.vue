@@ -2,6 +2,8 @@
   <div class="wayDownPage">
     <section>
       <video
+        ref="currentVideo"
+        @ended="goToHistory()"
         class="wayDownPage__video"
         autoplay="true"
         preload="auto"
@@ -23,6 +25,11 @@ export default {
   name: "GoingDownVideo",
   components: {
     CTA,
+  },
+  methods: {
+    goToHistory(){
+        window.location.href = 'GoingDownHistory'
+    }
   },
 };
 </script>

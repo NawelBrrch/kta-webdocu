@@ -159,7 +159,7 @@ export default {
 .mapMenu {
   width: 31px;
   position: relative;
-  z-index: 3;
+  z-index: 999;
   margin-top: 5px;
   margin-right: $padding-navBar-mobile;
 

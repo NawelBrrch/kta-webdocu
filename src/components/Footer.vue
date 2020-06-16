@@ -261,17 +261,17 @@ export default {
     return {
       isMute: false,
       isFullScreen: false,
-      full: this.$attrs
+      full: this.$attrs,
     };
   },
   props: {
     screen: {
       type: HTMLDivElement,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   methods: {
-    toggleIsMute(){
+    toggleIsMute() {
       var audio = this.$refs.audioElm;
       this.isMute = !this.isMute;
       if (this.isMute) {
@@ -281,31 +281,21 @@ export default {
       }
     },
 
-    toogleFullScreen(){
+    toogleFullScreen() {
       this.isFullScreen = !this.isFullScreen;
 
       if(this.isFullScreen){
-        this.$attrs.screenRef.requestFullscreen()
+        document.documentElement.requestFullscreen()
       }
       else {
         document.exitFullscreen()
       }
-    }
-    }  
-    
-}
-
-
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.soundOffIcon {
-  //display: none;
-}
-.smallScreenIcon {
-  //display: none;
-}
-
 .footer {
   display: flex;
   justify-content: flex-end;
@@ -349,6 +339,7 @@ export default {
   display: none;
 
   @include tablet-portrait {
+    cursor: pointer;
     display: flex;
     margin-right: 35px;
   }
