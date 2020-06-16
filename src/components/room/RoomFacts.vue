@@ -1,5 +1,6 @@
 <template>
   <div
+    :id="ids"
     class="room__fact"
     v-bind:style="{
       backgroundImage: 'url(http://kta-api.vhswebs.com/images' + fact.p + ')',
@@ -21,6 +22,7 @@ export default {
   },
   props: {
     fact: Object,
+    ids: Number,
   },
 };
 </script>

@@ -33,6 +33,7 @@ $arrowHeight: 30vh;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   align-items: center;
   background-position: center;
 
