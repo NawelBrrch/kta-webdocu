@@ -14,7 +14,6 @@
 <script>
 import RoomService from "@/javaScript/services/roomService.js";
 
-import CTA from "@/components/CTA.vue";
 import HeroRoom from "@/components/room/HeroRoom.vue";
 import DocumentationRoom from "@/components/room/DocumentationRoom.vue";
 import RoomFacts from "@/components/room/RoomFacts.vue";
