@@ -1,7 +1,9 @@
 <template>
   <div class="ktaMap">
+
     <div class="ktaMap__map" v-on:mousemove="(event) => mouseMove(event)">
       <div>ftg nawel</div>
+
       <svg
         class="ktaMap__map--svg"
         width="974"
@@ -620,6 +622,7 @@ export default {
       if (localStorage.getItem("nbClick") > 7) {
         localStorage.setItem("nbClick", 0);
       }
+
     },
     mouseMove(event) {
       this.$refs.mouse.style.left = event.pageX - 140 + "px";
@@ -631,6 +634,7 @@ export default {
 
 <style lang="scss" scoped>
 .ktaMap {
+
   background-color: #000;
   overflow-x: hidden;
 }
@@ -665,5 +669,17 @@ export default {
     opacity: 0.5;
     border-radius: 50%;
   }
+}
+
+
+
+#light {
+  border-radius: 50%;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  box-shadow: inset 0 0 50px 70px #000;
+  background: #fff;
+  z-index: 10;
 }
 </style>
