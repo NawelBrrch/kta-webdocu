@@ -176,8 +176,5 @@ a {
   @include landscape {
     display: none;
   }
-
-
 }
-
 </style>
