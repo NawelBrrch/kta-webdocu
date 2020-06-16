@@ -16,7 +16,6 @@ import Exit from "@/views/Exit.vue";
 
 import Video from "@/views/Video.vue";
 
-import MobileLandscape from "@/views/MobileLandscape";
 
 
 
@@ -24,11 +23,6 @@ import MobileLandscape from "@/views/MobileLandscape";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/MobileLandscape",
-    name: "MobileLandscape",
-    component: MobileLandscape,
-  },
   {
     path: "/disclaimer",
     name: "Disclaimer",

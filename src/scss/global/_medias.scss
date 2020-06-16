@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin landscape {
+  @media (min-width: 565px) {
+    @content;
+  }
+}
