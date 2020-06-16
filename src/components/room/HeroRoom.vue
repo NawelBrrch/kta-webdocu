@@ -39,7 +39,7 @@ $arrowHeight: 30vh;
 
   &__title {
     align-self: center;
-    margin-top: 25vh;
+    margin-top: 22vh;
     filter: drop-shadow(0px 0px 8px $black);
   }
 
