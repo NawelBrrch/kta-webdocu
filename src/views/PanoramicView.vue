@@ -1,5 +1,5 @@
 <template>
-  <div class="panorama" @mousedown="clickIcon" @click="clickIcon">
+  <div class="panorama" @mousedown="clickIcon" v-touch:tap="clickIcon">
     <NavBar />
     <Pano class="panorama__view" :source="url[0]"></Pano>
 
