@@ -127,9 +127,13 @@ export default {
   data() {
     return {
       screenRef: {},
-      }
-     }
+    }
+  },
 
+  mounted(){
+    this.screenRef = this.$refs['screen']
+  }
+}
 
 </script>
 
