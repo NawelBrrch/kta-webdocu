@@ -1,7 +1,7 @@
 <template>
   <div class="goingDownImage">
     <TextFrame class="text__frame">
-      <p class="goingDownImage__text">
+      <p ref="text" class="goingDownImage__text">
         Les catacombes sont d’anciennes carrières souterraines
         de l’époque romaine dont on exploitait la pierre calcaire pour
         construire la ville de Paris. En 1786, pour pallier à la saturation
@@ -45,6 +45,17 @@ export default {
     CTA,
     TextFrame
   },
+  methods:{
+    animEnd(){
+      const $text = this.$refs.text;
+      $text.addEventListener("webkitAnimationEnd", ()=>{
+        $text.style.overflowY = "scroll";
+      });
+    }
+  },
+  mounted(){
+    this.animEnd();
+  }
 };
 </script>
 
@@ -54,6 +65,9 @@ svg {
   transform: rotate(90deg);
   display: flex;
   margin-left: 44%;
+}
+.scroll{
+  overflow-Y: scroll !important;
 }
 .goingDownImage {
   height: 100vh;
@@ -72,12 +86,10 @@ svg {
     overflow: hidden;
   }
   &__text {
-    overflow: scroll;
-
     animation: slideUp 30s linear;
     padding: 0px 40px 0px 40px;
     height: 30vh;
-    width: 60vw;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: flex-start;
@@ -90,8 +102,9 @@ svg {
     0% {
       transform: translateY(300px);
     }
-    100% {
-      transform: translateY(-1000px);
+
+    100%{
+      transform: translateY(-900px);
     }
   }
 }
