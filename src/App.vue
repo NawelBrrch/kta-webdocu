@@ -128,20 +128,9 @@ export default {
       screenRef: {},
     }
   },
-  
-/*   methods: {
-    detectScreen() {
-    if(window.matchMedia("(min-width: 565px)").matches) {
-      this.isMobile = false
-    } else {
-      this.isMobile = true
-    }
-  }
-}, */
 
   mounted(){
     this.screenRef = this.$refs['screen']
-    this.detectScreen()
   }
 }
 </script>
