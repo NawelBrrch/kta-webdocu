@@ -64,20 +64,34 @@ export default {
   },
   methods: {
     parallax: function () {
-      //let docuImg = document.querySelector(".documentation__content--img");
+      let docuImg = document.querySelector(".documentation__content--img");
       let docuTxt = document.querySelector(".documentation__content--text");
       let hero = document.querySelector(".hero");
-      //console.log(docuImg, docuTxt, hero);
+      let docu = document.querySelector(".documentation");
+
+      let heroHeight = hero.clientHeight;
 
       window.addEventListener("scroll", function () {
+        let col1 =
+          docuTxt.clientHeight +
+          parseFloat(getComputedStyle(docu, null).paddingTop) +
+          parseFloat(getComputedStyle(docu, null).paddingBottom);
+        let col2 =
+          docuImg.clientHeight +
+          parseFloat(getComputedStyle(docu, null).paddingTop) +
+          parseFloat(getComputedStyle(docu, null).paddingBottom);
+        let allWindow =
+          document.querySelector(".hero").clientHeight +
+          document.querySelector(".documentation").clientHeight;
+        let travel = col1 - col2;
+        let columns = docu.clientHeight - allWindow;
+        let scrollInterval = columns / travel;
         let scrolled = window.pageYOffset;
-        let rate = scrolled * 0.5;
-        if (scrolled > hero.clientHeight) {
-          docuTxt.style.transform = "translateY(" + -rate + "px)";
+        let a = Math.round((scrolled - heroHeight) / scrollInterval);
+        if (scrolled > heroHeight) {
+          console.log(a / 100);
+          docuTxt.style.transform = "translate3d(0px, " + a / 5 + "px, 0px)";
         }
-        //console.log(divHeroHeight, scrolled);
-        //let rate = scrolled * -10;
-        //target.style.transform = "translateY(" + rate + "px)";
       });
     },
   },

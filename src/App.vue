@@ -4,11 +4,17 @@
       <div class="mobile__landscape">
         <TextFrame class="landscape__text">
           <span class="">
-              Pour  une meilleure expérience, tournez votre téléphone
-            </span>
+            Pour une meilleure expérience, tournez votre téléphone
+          </span>
         </TextFrame>
         <div class="landscape__icon">
-          <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="42"
+            height="41"
+            viewBox="0 0 42 41"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g clip-path="url(#clip0)">
               <path d="M1.43823 1.02411H22.6217L23.4579 19.1416H40.1817V40.3162H22.6217H1.43823V1.02411Z" fill="#393939"/>
               <path d="M14.1667 36.5971C14.1667 37.7588 13.2783 38.6471 12.1167 38.6471C10.955 38.6471 10.0667 37.7588 10.0667 36.5971C10.0667 35.4354 10.955 34.5471 12.1167 34.5471C13.2783 34.5471 14.1667 35.4354 14.1667 36.5971Z" fill="#FFCE1F"/>
@@ -99,16 +105,16 @@
             </defs>
           </svg>
         </div>
-        </div>
-      </div>
-      <div>
-        <NavBar />
-        <vue-page-transition name="fade-in-down">
-          <router-view></router-view>
-        </vue-page-transition>
-        <Footer :screenRef="screenRef" />
       </div>
     </div>
+    <div>
+      <NavBar />
+      <vue-page-transition name="fade-in-down">
+        <router-view></router-view>
+      </vue-page-transition>
+      <Footer :screenRef="screenRef" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -116,25 +122,23 @@ import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import TextFrame from "@/components/TextFrame.vue";
 
-
 export default {
   name: "App.vue",
   components: {
     NavBar,
     Footer,
-    TextFrame
+    TextFrame,
   },
   data() {
     return {
       screenRef: {},
-    }
+    };
   },
 
-  mounted(){
-    this.screenRef = this.$refs['screen']
-  }
-}
-
+  mounted() {
+    this.screenRef = this.$refs["screen"];
+  },
+};
 </script>
 
 <style lang="scss">

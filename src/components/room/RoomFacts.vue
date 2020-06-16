@@ -32,6 +32,7 @@ export default {
   height: 100vh;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 40px;
   position: relative;
   z-index: -10;

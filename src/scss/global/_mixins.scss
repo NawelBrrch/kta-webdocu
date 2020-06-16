@@ -7,48 +7,48 @@
 
 @mixin h1-style {
   @include h-style;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
 
   @include tablet-portrait {
     font-weight: normal;
-    font-size: 48px;
+    font-size: 4rem;
   }
 
   @include desktop {
     font-weight: normal;
-    font-size: 64px;
+    font-size: 5rem;
   }
 }
 
 @mixin h2-style {
   @include h-style;
-  font-size: 18px;
+  font-size: 1.4rem;
 
   @include tablet-portrait {
     font-weight: normal;
-    font-size: 36px;
+    font-size: 2.5rem;
   }
 
   @include desktop {
     font-weight: normal;
-    font-size: 48px;
+    font-size: 4rem;
   }
 }
 
 @mixin h3-style {
   font-family: "Dedale";
   color: $lightbrown;
-  font-size: 14px;
+  font-size: 1.2rem;
 
   @include tablet-portrait {
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.8rem;
   }
 
   @include desktop {
     font-weight: normal;
-    font-size: 30px;
+    font-size: 2.5rem;
   }
 }
 
@@ -56,13 +56,13 @@
   font-family: "Dedale";
   font-weight: normal;
   border-radius: 1px;
-  font-size: 14px;
+  font-size: 1.2rem;
   color: $gray;
   cursor: pointer;
   border: 1.3px solid $yellow;
 
   @include tablet-landscape {
-    font-size: 18px;
+    font-size: 1.4rem;
   }
 }
 
@@ -70,37 +70,36 @@
   font-family: "Merriweather";
   color: $gray;
   line-height: 150%;
-  font-size: 12px;
+  font-size: 1rem;
 
   @include tablet-portrait {
-    font-size: 13px;
+    font-size: 1.1rem;
   }
 
   @include tablet-landscape {
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   @include desktop {
-    font-size: 16px;
+    font-size: 1.3rem;
     font-weight: 100;
   }
 }
 
 @mixin em-style {
-  font-family: "Merriweather";
+  @include p-style;
   font-weight: bold;
-  font-size: 15px;
   color: $lightbrown;
 }
 
 @mixin exit-style {
   font-family: "Cinzel";
   font-weight: normal;
-  font-size: 10px;
+  font-size: 0.9rem;
   color: $white;
 
   @include tablet-landscape {
-    font-size: 18px;
+    font-size: 1.4rem;
   }
 }
 
@@ -110,10 +109,10 @@
   line-height: 150%;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 1.2rem;
 
   @include tablet-landscape {
-    font-size: 18px;
+    font-size: 1.4rem;
   }
 }
 

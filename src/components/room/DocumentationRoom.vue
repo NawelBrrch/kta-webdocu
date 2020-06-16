@@ -50,6 +50,7 @@ export default {
     &--text {
       width: 51vw;
       padding-right: $padding-navBar-mobile;
+      height: fit-content;
 
       @include tablet-landscape {
         width: 45vw;
