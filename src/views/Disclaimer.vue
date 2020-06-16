@@ -56,11 +56,4 @@ export default {
   }
 }
 
-/* .button {
-  opacity: 0;
-  animation-name: button;
-  animation-duration: 1s;
-  animation-delay: 4s;
-  animation-fill-mode: forwards;
-} */
 </style>

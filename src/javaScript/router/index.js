@@ -9,7 +9,6 @@ import GoingUpVideo from "@/views/GoingUpVideo.vue";
 import GoingDownHistory from "@/views/GoingDownHistory.vue";
 import PanoramicView from "@/views/PanoramicView.vue";
 import Gallery from "@/views/Gallery.vue";
-import About from "@/views/About.vue";
 import Sources from "@/views/Sources.vue";
 import Room from "@/views/Room.vue";
 import KtaMap from "@/views/KtaMap.vue";
@@ -63,11 +62,6 @@ const routes = [
     path: "/gallery",
     name: "Gallery",
     component: Gallery,
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
   },
   {
     path: "/sources",
