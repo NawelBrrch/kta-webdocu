@@ -1,6 +1,6 @@
 <template>
   <section class="hero" v-bind:style="{ backgroundImage: 'url(' + mainPic + ')' }">
-    <h1 class="hero__title">Salles perdus</h1>
+    <h1 class="hero__title">Salles perdues</h1>
     <div class="hero__nav">
       <img class="hero__nav--arrow" src="../../assets/icons/arrow-down-room.svg" alt />
       <p class="hero__nav--text">En savoir plus</p>

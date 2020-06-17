@@ -1,16 +1,18 @@
 <template>
   <div class="wrapper" v-on:mousemove="(event) => rotateImageDown(event)">
     <HeroRoomUnofficial />
-    <Card
-      v-for="(i, index ) in rooms"
-      :key="i"
-      :id="id[index].id"
-      :mainPic="getMainPic(mainPic[index].poster_principale)"
-      :describ="describ[index].room_describ"
-      :name="name[index].room_name"
-      class="cards"
-      ref="card"
-    />
+    <div class="cardsContainer">
+      <Card
+        v-for="(i, index ) in rooms"
+        :key="i"
+        :id="id[index].id"
+        :mainPic="getMainPic(mainPic[index].poster_principale)"
+        :describ="describ[index].room_describ"
+        :name="name[index].room_name"
+        class="cards"
+        ref="card"
+      />
+    </div>
   </div>
 </template>
 
@@ -32,7 +34,7 @@ export default {
       rotateImageDown(event){
         const ref = Object.values(this.$refs.card)
         ref.forEach((el , i) => {
-          el.$el.style.transform = "rotate(" + event.pageY / 50 + "deg)"
+          // el.$el.style.transform = "rotate(" + event.pageY / 50 + "deg)"
           // el.$el.style.transform = "rotateX(" + event.pageX / 100 + "deg)"
 
           // console.log(el.$el);
@@ -68,14 +70,25 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background-color: black;
+  background-color: rgb(26, 25, 25);
 }
-.cards:nth-child(odd) {
+
+.cardsContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.cards:nth-child(even) {
-  display: flex;
-  justify-content: flex-start;
+.cards {
+  flex: 0 1 300px;
+  margin-bottom: 30px;
 }
+
+// .cards:nth-child(odd) {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+// .cards:nth-child(even) {
+//   display: flex;
+//   justify-content: flex-start;
+// }
 </style>
