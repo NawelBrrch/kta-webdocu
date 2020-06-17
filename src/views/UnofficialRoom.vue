@@ -3,8 +3,8 @@
     <HeroRoomUnofficial />
     <div class="cardsContainer">
       <Card
-        v-for="(i, index ) in rooms"
-        :key="i"
+        v-for="(i, index) in rooms"
+        :key="index"
         :id="id[index].id"
         :mainPic="getMainPic(mainPic[index].poster_principale)"
         :describ="describ[index].room_describ"
@@ -24,22 +24,13 @@ import Card from "@/components/room/Card.vue";
 export default {
   name: "UnofficialRoom",
   components: {
-        HeroRoomUnofficial,
-        Card
+    HeroRoomUnofficial,
+    Card,
   },
   methods: {
-      getMainPic(pathimage){
-          return "http://kta-api.vhswebs.com/images" + pathimage;
-      },
-      rotateImageDown(event){
-        const ref = Object.values(this.$refs.card)
-        ref.forEach((el , i) => {
-          // el.$el.style.transform = "rotate(" + event.pageY / 50 + "deg)"
-          // el.$el.style.transform = "rotateX(" + event.pageX / 100 + "deg)"
-
-          // console.log(el.$el);
-          })        
-      }
+    getMainPic(pathimage) {
+      return "http://kta-api.vhswebs.com/images" + pathimage;
+    },
   },
   data() {
     return {
@@ -47,23 +38,21 @@ export default {
       id: {},
       mainPic: {},
       name: {},
-      describ: {}
+      describ: {},
     };
   },
-   created() {
+  created() {
     RoomService.getUnofficialRoom()
       .then((response) => {
-        const apiUrl = "http://kta-api.vhswebs.com/";
         this.rooms = response.data.result;
-        this.id =  Object.values(this.rooms)
-        this.mainPic =  Object.values(this.rooms)
-        this.name = Object.values(this.rooms)
-        this.describ = Object.values(this.rooms)
+        this.id = Object.values(this.rooms);
+        this.mainPic = Object.values(this.rooms);
+        this.name = Object.values(this.rooms);
+        this.describ = Object.values(this.rooms);
       })
       .catch((error) => {
         console.log("There was an error:", error.response);
       });
-      
   },
 };
 </script>

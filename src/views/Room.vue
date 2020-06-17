@@ -89,7 +89,6 @@ export default {
         let scrolled = window.pageYOffset;
         let a = Math.round((scrolled - heroHeight) / scrollInterval);
         if (scrolled > heroHeight) {
-          console.log(a / 100);
           docuTxt.style.transform = "translate3d(0px, " + a / 5 + "px, 0px)";
         }
       });
