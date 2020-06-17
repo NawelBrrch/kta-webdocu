@@ -1,13 +1,6 @@
 <template>
   <div class="footer">
-    <audio
-      ref="audioElm"
-      class="audio"
-      autoplay
-      loop
-      preload
-      src="@/assets/sound/audioKta.mp3"
-    ></audio>
+    <audio ref="audioElm" class="audio" autoplay loop src="@/assets/sound/audioKta.mp3"></audio>
     <div class="footer__icones">
       <div @click="toogleFullScreen()" class="footer__screen">
         <svg
@@ -259,7 +252,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      isMute: false,
+      isMute: true,
       isFullScreen: false,
       full: this.$attrs,
     };
@@ -280,7 +273,6 @@ export default {
         audio.play();
       }
     },
-
     toogleFullScreen() {
       this.isFullScreen = !this.isFullScreen;
 
@@ -293,6 +285,7 @@ export default {
     },
   },
   mounted() {
+    this.$refs.audioElm.muted = false;
     this.$refs.audioElm.volume = 0.1;
   }
 };
@@ -340,8 +333,8 @@ export default {
 
 .footer__screen {
   display: none;
-  transition: all .2s ease-in-out;
-    &:hover {
+  transition: all 0.2s ease-in-out;
+  &:hover {
     filter: drop-shadow(0px 0px 8px $yellow);
     transform: scale(1.3);
   }
@@ -363,8 +356,8 @@ export default {
 .footer__sound {
   margin-right: 20px;
   cursor: pointer;
-  transition: all .2s ease-in-out;
-    &:hover {
+  transition: all 0.2s ease-in-out;
+  &:hover {
     filter: drop-shadow(0px 0px 8px $yellow);
     transform: scale(1.3);
   }
