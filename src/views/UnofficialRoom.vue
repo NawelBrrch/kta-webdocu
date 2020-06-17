@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" v-on:mousemove="(event) => rotateImageDown(event)">
+  <div class="wrapper">
     <HeroRoomUnofficial />
     <div class="cardsContainer">
       <Card
