@@ -55,9 +55,9 @@ npm run lint
 
 ## Disclaimer
 
-Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera, en aucun cas, exploité à des fins commerciales et ne sera pas publié.
+This site has been created for educational purposes as part of the HETIC school's Bachelor program. The content presented has not been the subject of a request for a right of use. This site will in no case be used for commercial purposes and will not be published.
 
-De plus, tous les lieux présentés ont été visités par des personnes aguerries, les catacombes sont un endroit dangereux et il est interdit de s’y aventurer par arrêté préfectoral. Pour des raisons de sécurité, la carte que vous trouverez sur le site est fictive, mais les lieux présentés sont bien réels.
+In addition, all the places presented have been visited by experienced people, the catacombs are a dangerous place and it's prohibited to venture there by prefectural decree. For security reasons, the map you will find on the site is fictitious, but the places presented are very real.
 
 ## Contributors
 
