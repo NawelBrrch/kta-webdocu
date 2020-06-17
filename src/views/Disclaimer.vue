@@ -52,7 +52,7 @@ export default {
   text-align: center;
 
   @include desktop {
-    width: 800px;
+    width: 50vw;
   }
 }
 
