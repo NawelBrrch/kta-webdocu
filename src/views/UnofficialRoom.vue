@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <Loader v-if="isLoading" />
     <HeroRoomUnofficial />
     <div class="cardsContainer">
       <Card
@@ -20,12 +21,13 @@
 import RoomService from "@/javaScript/services/roomService.js";
 import HeroRoomUnofficial from "@/components/room/HeroRoomUnofficial.vue";
 import Card from "@/components/room/Card.vue";
-
+import Loader from "@/components/Loader.vue";
 export default {
   name: "UnofficialRoom",
   components: {
     HeroRoomUnofficial,
     Card,
+    Loader
   },
   methods: {
     getMainPic(pathimage) {
@@ -34,6 +36,7 @@ export default {
   },
   data() {
     return {
+      isLoading: true,
       rooms: {},
       id: {},
       mainPic: {},
@@ -49,6 +52,7 @@ export default {
         this.mainPic = Object.values(this.rooms);
         this.name = Object.values(this.rooms);
         this.describ = Object.values(this.rooms);
+        this.isLoading = false
       })
       .catch((error) => {
         console.log("There was an error:", error.response);
