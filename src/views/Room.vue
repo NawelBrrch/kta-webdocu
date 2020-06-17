@@ -8,12 +8,14 @@
       :fact="fact"
       :ids="ids"
     />
+    <CTA msg="Revenir à la carte" />
   </div>
 </template>
 
 <script>
 import RoomService from "@/javaScript/services/roomService.js";
 
+import CTA from "@/components/CTA.vue";
 import HeroRoom from "@/components/room/HeroRoom.vue";
 import DocumentationRoom from "@/components/room/DocumentationRoom.vue";
 import RoomFacts from "@/components/room/RoomFacts.vue";
@@ -24,6 +26,7 @@ export default {
     HeroRoom,
     DocumentationRoom,
     RoomFacts,
+    CTA,
   },
   props: ["id_room"],
   data() {
@@ -97,4 +100,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.CTA {
+  background-color: $black;
+  padding: 30px;
+}
+</style>
