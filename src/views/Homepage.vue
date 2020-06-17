@@ -39,7 +39,7 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: center / cover no-repeat url("../assets/images/homepage.png");
+  background: center / cover no-repeat url("../assets/images/homepage.jpg");
 
   &__presentation {
     width: 75%;

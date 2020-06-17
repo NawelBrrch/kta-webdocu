@@ -71,7 +71,7 @@ svg {
 .goingDownHistory {
   height: 100vh;
   width: 100%;
-  background : url("../assets/images/down.png") center center no-repeat;
+  background : url("../assets/images/down.jpg") center center no-repeat;
   background-attachment: fixed;
   background-size:100% auto;
   display: flex;
