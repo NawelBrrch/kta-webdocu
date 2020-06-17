@@ -678,6 +678,10 @@ export default {
     &--map {
       width: 90vw;
     }
+
+    &--svg {
+      width: 90vw;
+    }
   }
   &__mouse {
     position: absolute;
