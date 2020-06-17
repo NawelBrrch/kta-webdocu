@@ -1,12 +1,14 @@
 <template>
   <div>
     <Loader v-if="isLoading" />
-    <HeroRoom :room="room" :mainPic="mainPic" />
-    <DocumentationRoom :room="room" :allPics="allPics" />
-    <RoomFacts v-for="(fact, idx, ids) in facts" :key="idx" :fact="fact" :ids="ids" />
-    <router-link :to="{ name: 'KtaMap' }">
-      <CTA msg="Revenir à la carte" />
-    </router-link>
+    <div v-else>
+      <HeroRoom :room="room" :mainPic="mainPic" />
+      <DocumentationRoom :room="room" :allPics="allPics" />
+      <RoomFacts v-for="(fact, idx, ids) in facts" :key="idx" :fact="fact" :ids="ids" />
+      <router-link :to="{ name: 'KtaMap' }">
+        <CTA msg="Revenir à la carte" />
+      </router-link>
+    </div>
   </div>
 </template>
 

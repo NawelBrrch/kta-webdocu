@@ -1,18 +1,20 @@
 <template>
   <div class="wrapper">
     <Loader v-if="isLoading" />
-    <HeroRoomUnofficial />
-    <div class="cardsContainer">
-      <Card
-        v-for="(i, index) in rooms"
-        :key="index"
-        :id="id[index].id"
-        :mainPic="getMainPic(mainPic[index].poster_principale)"
-        :describ="describ[index].room_describ"
-        :name="name[index].room_name"
-        class="cards"
-        ref="card"
-      />
+    <div v-else>
+      <HeroRoomUnofficial />
+      <div class="cardsContainer">
+        <Card
+          v-for="(i, index) in rooms"
+          :key="index"
+          :id="id[index].id"
+          :mainPic="getMainPic(mainPic[index].poster_principale)"
+          :describ="describ[index].room_describ"
+          :name="name[index].room_name"
+          class="cards"
+          ref="card"
+        />
+      </div>
     </div>
   </div>
 </template>
