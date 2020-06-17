@@ -8,7 +8,7 @@
       <img
         class="hero__nav--arrow"
         src="../../assets/icons/arrow-down-room.svg"
-        alt=""
+        alt="fleche indication au scroll"
       />
       <p class="hero__nav--text">En savoir plus</p>
     </div>
