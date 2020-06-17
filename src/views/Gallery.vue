@@ -118,6 +118,7 @@ h2 {
 }
 
 img {
+  cursor: pointer;
   width: 20%;
   height: 20vw;
   object-fit: cover;
