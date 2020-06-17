@@ -1,9 +1,11 @@
 <template>
   <nav class="navBar">
+    <audio :src="soundMap" ref="soundMap"></audio>
     <BurgerMenu />
     <BurgerMenuTopBar />
     <router-link :to="{ name: 'KtaMap' }">
       <svg
+        @click="mapSoundOn()"
         class="mapMenu"
         data-map
         width="34"
@@ -110,12 +112,7 @@
           </linearGradient>
 
           <clipPath id="clip0">
-            <rect
-              width="24"
-              height="24"
-              fill="white"
-              transform="translate(0 0.282227)"
-            />
+            <rect width="24" height="24" fill="white" transform="translate(0 0.282227)" />
           </clipPath>
         </defs>
       </svg>
@@ -126,6 +123,8 @@
 <script>
 import BurgerMenu from "@/components/burgerMenu/BurgerMenu.vue";
 import BurgerMenuTopBar from "@/components/burgerMenu/BurgerMenuTopBar.vue";
+import soundMap from "../assets/sound/map.mp3";
+
 
 export default {
   name: "NavBar",
@@ -133,6 +132,17 @@ export default {
     BurgerMenu,
     BurgerMenuTopBar,
   },
+  data(){
+    return{
+      soundMap: soundMap
+    }
+  },
+  methods: {
+    mapSoundOn(){
+      this.$refs.soundMap.volume = 0.2
+      this.$refs.soundMap.play()
+    }
+  }
 };
 </script>
 
