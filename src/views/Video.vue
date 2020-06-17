@@ -11,7 +11,10 @@
         :src="videoTab[nbClick - 1]"
         type="video/mp4"
       ></video>
-      <router-link :to="{ name: 'Room', params: { id_room: this.id_room } }" class="walk__CTA">
+      <router-link
+        :to="{ name: 'Room', params: { id_room: this.id_room } }"
+        class="walk__CTA"
+      >
         <CTA msg="Passer la vidéo" />
       </router-link>
     </section>
@@ -51,6 +54,7 @@ export default {
 <style lang="scss" scoped>
 .walk {
   position: relative;
+  overflow: hidden;
   height: 100vh;
   width: 100%;
 }
