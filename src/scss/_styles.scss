@@ -23,6 +23,17 @@ li {
   @include p-style;
 }
 
+.documentation__content--text {
+  p {
+    line-height: 200%;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 ul {
   margin-top: 10px;
 }
