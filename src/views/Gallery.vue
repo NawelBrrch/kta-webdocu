@@ -102,16 +102,19 @@ export default {
 
 h2 {
   padding-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .galery__images {
+  padding-top: 30px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
   align-items: stretch;
+  position: relative;
+  overflow-x: hidden;
 }
 .galery__images--modal {
   opacity: 0.3;
@@ -122,7 +125,6 @@ img {
   width: 20%;
   height: 20vw;
   object-fit: cover;
-  overflow: hidden;
 
   &:hover {
     transform: scale(1.07);
