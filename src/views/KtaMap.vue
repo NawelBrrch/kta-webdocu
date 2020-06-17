@@ -9,7 +9,7 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-<!--         <defs>
+        <!--         <defs>
           <filter id="shadow">
             <feDropShadow dx="0" dy="0" stdDeviation="4" />
           </filter>
@@ -628,13 +628,11 @@
 </template>
 
 <script>
-
 import CTA from "@/components/CTA.vue";
-
 export default {
   name: "KtaMap",
-  compoments: {
-    CTA 
+  components: {
+    CTA,
   },
   data() {
     return {
@@ -662,13 +660,13 @@ export default {
   z-index: 20;
   color: #000;
 }
-
 /* .shadow {
   filter: url(#shadow);
 }
  */
 .ktaMap {
   overflow: hidden;
+  position: relative;
   .ktaMap__map {
     background-color: #000;
     overflow-x: hidden;
@@ -692,12 +690,10 @@ export default {
     border-radius: 50%;
   }
 }
-
 .ktaMap__CTA {
   position: absolute;
-  bottom: 10px;
-  left: 20px;
+  bottom: $padding-button-footer;
+  left: $padding-button-footer;
   z-index: 999;
-  border: 2px solid red;
 }
 </style>
