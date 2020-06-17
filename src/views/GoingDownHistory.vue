@@ -93,7 +93,7 @@ svg {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    line-height: 9vh;
+    line-height: 9.5vh;
     font-size: 14px;
 
     @include tablet-portrait {

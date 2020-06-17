@@ -62,7 +62,7 @@ export default {
 .mouse__icon {
   display: block;
   z-index: 999;
-  animation: dragAnimationMouse 0.8s linear 0s infinite alternate;
+  animation: dragAnimationMouse 0.7s linear 0s infinite alternate;
   position: absolute;
   top: 70%;
   left: 50%;
