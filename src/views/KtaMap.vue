@@ -667,7 +667,6 @@ export default {
     },
     removeLocalStorage(){
       localStorage.removeItem('nbClick');
-        alert(localStorage.getItem("nbClick"));
     }
   },
 };

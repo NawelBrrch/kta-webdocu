@@ -44,7 +44,7 @@ export default {
 
   &__video {
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     object-fit: cover;
   }
 
