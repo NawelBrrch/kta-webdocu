@@ -144,7 +144,7 @@
               <stop offset="1" stop-color="white" stop-opacity="0" />
             </linearGradient>
             <linearGradient
-              id="b2"
+              id="b1"
               x1="19.8659"
               y1="-10.4141"
               x2="-36.3279"
