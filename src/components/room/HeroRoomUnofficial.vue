@@ -32,6 +32,7 @@ $arrowHeight: 30vh;
   background-attachment: fixed;
   align-items: center;
   background-position: center;
+  margin-bottom: 50px;
 
   &__title {
     align-self: center;
