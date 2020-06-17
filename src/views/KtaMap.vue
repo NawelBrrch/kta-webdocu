@@ -169,7 +169,7 @@
         <router-link :to="{ name: 'UnofficialRoom'}">
           <path
             d="M609.322 324.069C619.966 324.069 628.594 318.044 628.594 310.611C628.594 303.179 619.966 297.153 609.322 297.153C598.678 297.153 590.05 303.179 590.05 310.611C590.05 318.044 598.678 324.069 609.322 324.069Z"
-            fill="#ffce1f"
+            fill="#000"
           />
         </router-link>
         <!-- OBSERVATOIRE DOT -->
@@ -634,7 +634,9 @@
     </div>
     <div class="ktaMap__mouse" ref="mouse"></div>
     <router-link :to="{ name: 'GoingUpVideo' }" class="ktaMap__CTA">
-      <CTA msg="Finir la visite" />
+      <div @click="removeLocalStorage()">
+        <CTA msg="Finir la visite" />
+      </div>
     </router-link>
   </div>
 </template>
@@ -656,13 +658,17 @@ export default {
       this.nbClick++;
       localStorage.setItem("nbClick", this.nbClick);
       if (localStorage.getItem("nbClick") > 7) {
-        localStorage.setItem("nbClick", 0);
+        localStorage.setItem("nbClick", 1);
       }
     },
     mouseMove(event) {
       this.$refs.mouse.style.left = event.pageX - 140 + "px";
       this.$refs.mouse.style.top = event.pageY - 140 + "px";
     },
+    removeLocalStorage(){
+      localStorage.removeItem('nbClick');
+        alert(localStorage.getItem("nbClick"));
+    }
   },
 };
 </script>
