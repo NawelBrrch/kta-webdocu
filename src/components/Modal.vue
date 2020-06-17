@@ -3,24 +3,21 @@
     <div class="modal-mask" @click="$emit('close')">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <img :src="src" alt="ok" />
+          <img :src="src" alt="image galerie catacombes" />
         </div>
       </div>
     </div>
   </transition>
 </template>
 
-
 <script>
-
 export default {
   name: "Modal",
   props: {
-      src: String
-  }, 
+    src: String,
+  },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .modal-mask {
@@ -64,5 +61,3 @@ export default {
   float: right;
 }
 </style>
-
-

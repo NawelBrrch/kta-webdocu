@@ -6,6 +6,7 @@
     ></div>
     <div class="documentation__content documentation__content--img">
       <img
+        alt="photo de la salle"
         v-for="item in allPics"
         :key="item"
         :src="'http://kta-api.vhswebs.com/images' + item"
