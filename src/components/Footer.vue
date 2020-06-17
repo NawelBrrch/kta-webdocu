@@ -252,7 +252,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      isMute: true,
+      isMute: false,
       isFullScreen: false,
       full: this.$attrs,
     };
