@@ -28,6 +28,7 @@ export default {
   overflow: hidden;
   position: relative;
   z-index: 9999;
+  margin: 0px 100px;
   img {
     height: 100%;
     width: 100%;

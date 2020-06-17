@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" v-on:mousemove="(event) => rotateImageDown(event)">
     <HeroRoomUnofficial />
     <Card
       v-for="(i, index ) in rooms"
@@ -8,6 +8,8 @@
       :mainPic="getMainPic(mainPic[index].poster_principale)"
       :describ="describ[index].room_describ"
       :name="name[index].room_name"
+      class="cards"
+      ref="card"
     />
   </div>
 </template>
@@ -26,6 +28,15 @@ export default {
   methods: {
       getMainPic(pathimage){
           return "http://kta-api.vhswebs.com/images" + pathimage;
+      },
+      rotateImageDown(event){
+        const ref = Object.values(this.$refs.card)
+        ref.forEach((el , i) => {
+          el.$el.style.transform = "rotate(" + event.pageY / 50 + "deg)"
+          // el.$el.style.transform = "rotateX(" + event.pageX / 100 + "deg)"
+
+          // console.log(el.$el);
+          })        
       }
   },
   data() {
@@ -59,8 +70,12 @@ export default {
 .wrapper {
   background-color: black;
 }
-.ok {
-  margin-top: 100px;
-  color: white;
+.cards:nth-child(odd) {
+  display: flex;
+  justify-content: flex-end;
+}
+.cards:nth-child(even) {
+  display: flex;
+  justify-content: flex-start;
 }
 </style>
