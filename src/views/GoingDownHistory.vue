@@ -67,17 +67,18 @@ svg {
 }
 
 .goingDownHistory {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
-  background-image: url("../assets/images/down.png");
-  background-size: cover;
+  background : url("../assets/images/down.png") center center no-repeat;
+  background-attachment: fixed;
+  background-size:100% auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
 
   &__frame {
-    width: 60vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -87,22 +88,21 @@ svg {
     overflow-y: scroll;
     padding-right: 17px; 
     box-sizing: content-box; 
-    padding: 0px 30px 0px 30px;
+    padding: 0px 10px 0px 10px;
     height: 30vh;
     width: 100%;
     margin: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    line-height: 5vh;
-    font-size: 20px;
+    line-height: 9vh;
+    font-size: 14px;
 
-/*     @include mobile-landscape {
-      animation: slideUpMobile 35s linear;
-      padding: 0px 10px 0px 10px;
-      line-height: 9vh;
-      font-size: 14px;
-    } */
+    @include tablet-portrait {
+      padding: 0px 30px 0px 30px;
+      line-height: 6vh;
+      font-size: 20px;
+    } 
   }
 }
 
