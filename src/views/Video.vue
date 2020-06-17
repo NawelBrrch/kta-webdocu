@@ -1,10 +1,10 @@
 <template>
-  <div class="video">
+  <div class="walk">
     <section>
       <video
         ref="currentVideo"
         @ended="goToRoom()"
-        class="wayDownPage__video"
+        class="walk__video"
         muted="true"
         autoplay="true"
         preload="auto"
@@ -13,7 +13,7 @@
       ></video>
       <router-link
         :to="{ name: 'Room', params: { id_room: this.id_room } }"
-        class="wayDowPage__CTA"
+        class="walk__CTA"
       >
         <CTA msg="Passer la vidéo" />
       </router-link>
@@ -52,17 +52,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wayDownPage {
+.walk {
   position: relative;
   height: 100vh;
   width: 100%;
 }
-.wayDownPage__video {
+.walk__video {
   width: 100%;
   height: 98vh;
   //object-fit: cover;
 }
-.wayDowPage__CTA {
+.walk__CTA {
   position: absolute;
   bottom: 10px;
   left: 20px;
