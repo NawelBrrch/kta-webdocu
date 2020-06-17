@@ -8,7 +8,9 @@
       :fact="fact"
       :ids="ids"
     />
-    <CTA msg="Revenir à la carte" />
+    <router-link :to="{ name: 'KtaMap' }">
+      <CTA msg="Revenir à la carte" />
+    </router-link>
   </div>
 </template>
 
