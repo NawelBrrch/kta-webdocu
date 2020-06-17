@@ -120,7 +120,8 @@ export default {
 
 <style lang="scss" scoped>
 #burger.active {
-  
+  position: relative;
+  z-index: 10;
   .burgerMenu__bone--top {
     transform: translateX(6px) rotate(45deg);
   }
@@ -137,19 +138,19 @@ export default {
 .burgerMenu__bone {
   cursor: pointer;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
-  opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .burgerMenu {
   &__icon--close {
     cursor: pointer;
-    z-index: 999;
     margin-left: $padding-navBar-mobile;
-    transition: all .2s ease-in-out;
-      &:hover {
-        filter: drop-shadow(0px 0px 8px $yellow);
-        transform: scale(1.3);
-  }
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 8px $yellow);
+      transform: scale(1.1);
+    }
 
     @include tablet-portrait {
       width: 40px;

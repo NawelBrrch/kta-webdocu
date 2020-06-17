@@ -150,6 +150,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 999;
   list-style: none;
   width: 100%;
   height: 55px;
@@ -162,14 +163,14 @@ export default {
 .mapMenu {
   width: 31px;
   position: relative;
-  z-index: 999;
+  z-index: 10;
   margin-top: 5px;
   margin-right: $padding-navBar-mobile;
   cursor: pointer;
-  transition: all .2s ease-in-out;
-    &:hover {
+  transition: all 0.2s ease-in-out;
+  &:hover {
     filter: drop-shadow(0px 0px 8px $yellow);
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 
   @include tablet-portrait {

@@ -1,7 +1,10 @@
-<template >
+<template>
   <div class="galery">
     <h2>Galerie photos</h2>
-    <div class="galery__images" :class="isShow ? 'galery__images--modal' : null">
+    <div
+      class="galery__images"
+      :class="isShow ? 'galery__images--modal' : null"
+    >
       <img
         v-for="i in srcVideo"
         :key="i"
@@ -43,28 +46,51 @@ import Img24 from "../assets/images/gallery24.png";
 import Img25 from "../assets/images/gallery25.jpg";
 import Img26 from "../assets/images/gallery26.png";
 
-
-
-
 export default {
   name: "Gallery",
   components: {
-    Modal
+    Modal,
   },
   methods: {
-    toogleIsShow(src){
-      this.isShow = true
-        this.modalSrc = src
-        console.log(this.modalSrc)
-    }, 
+    toogleIsShow(src) {
+      this.isShow = true;
+      this.modalSrc = src;
+      console.log(this.modalSrc);
+    },
   },
-  data(){
+  data() {
     return {
       isShow: false,
-      srcVideo: [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21, Img22, Img24, Img25, Img26],
-      modalSrc: ''
-    }
-  }
+      srcVideo: [
+        Img1,
+        Img2,
+        Img3,
+        Img4,
+        Img5,
+        Img6,
+        Img7,
+        Img8,
+        Img9,
+        Img10,
+        Img11,
+        Img12,
+        Img13,
+        Img14,
+        Img15,
+        Img16,
+        Img17,
+        Img18,
+        Img19,
+        Img20,
+        Img21,
+        Img22,
+        Img24,
+        Img25,
+        Img26,
+      ],
+      modalSrc: "",
+    };
+  },
 };
 </script>
 
