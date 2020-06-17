@@ -8,7 +8,7 @@
         autoplay="true"
         preload="auto"
         muted="true"
-        src="../assets/videos/ouverture-plaque.mp4"
+        src="../assets/videos/open.mp4"
         type="video/mp4"
       >
         >
