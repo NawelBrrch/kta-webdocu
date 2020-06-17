@@ -6,19 +6,14 @@
         de l’époque romaine dont on exploitait la pierre calcaire pour
         construire la ville de Paris. 
         <br/>
-        <br/>
-
         En 1786, pour pallier à la saturation des cimetières dûe à la 
         peste noire, la ville ordonne de vider les
         cimetières et ses 6 millions de cadavres dans les anciennes carrières
         abandonnées. 
-        <br/>
-        <br/>
-        
+        <br/>   
         Deux siècles plus tard, l’utilisation de ces catacombes est
         bien différentes. Dans les années 80 des jeunes redécouvrent l’accès de ces
         galeries et commencent à les explorer. 
-        <br/>
         <br/>
 
         Cet espace innocupé devient un lieu de
@@ -26,6 +21,7 @@
         groupes de cataphiles. Avec eux se dessine un nouveau monde parallèle.
       </p>
     </TextFrame>
+    <Mouse/>
     <router-link class="goingDownHistory__CTA" :to="{ name: 'PanoramicView' }">
       <CTA msg="Continuer" />
     </router-link>
@@ -35,13 +31,15 @@
 <script>
 import CTA from "@/components/CTA.vue";
 import TextFrame from "@/components/TextFrame.vue";
+import Mouse from "@/components/Mouse.vue";
 
 
 export default {
   name: "GoingDownHistory",
   components: {
     CTA,
-    TextFrame
+    TextFrame, 
+    Mouse
   },
   methods:{
     animEnd(){
