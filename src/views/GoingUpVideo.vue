@@ -10,7 +10,9 @@
         muted="true"
         src="../assets/videos/upVideo.mp4"
         type="video/mp4"
-      >></video>
+      >
+        >
+      </video>
       <router-link :to="{ name: 'Exit' }" class="goingUpVideo__CTA">
         <CTA msg="Passer la vidéo" />
       </router-link>
@@ -19,7 +21,6 @@
 </template>
 
 <script>
-
 import CTA from "@/components/CTA.vue";
 
 export default {
@@ -28,15 +29,14 @@ export default {
     CTA,
   },
   methods: {
-    goToExit(){
-        window.location.href = 'Exit'
-    }
+    goToExit() {
+      window.location.href = "Exit";
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .goingUpVideo {
   position: relative;
   height: 100vh;
@@ -46,7 +46,6 @@ export default {
     width: 100%;
     height: 95vh;
     object-fit: cover;
-
   }
 
   &__CTA {
