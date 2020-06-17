@@ -31,23 +31,22 @@ import marche6 from "../assets/videos/marche6.mp4";
 import marche7 from "../assets/videos/marche7.mp4";
 import CTA from "@/components/CTA.vue";
 
-
 export default {
   name: "Video",
   components: {
     CTA,
   },
-  data(){
-      return{
-          videoTab: [marche1, marche2, marche3, marche4, marche5, marche6, marche7],
-          nbClick: localStorage.getItem('nbClick'),
-          }
-        },
+  data() {
+    return {
+      videoTab: [marche1, marche2, marche3, marche4, marche5, marche6, marche7],
+      nbClick: localStorage.getItem("nbClick"),
+    };
+  },
   props: ["id_room"],
   methods: {
-    goToRoom(){
-        window.location.href = `room/${this.id_room}`
-    }
+    goToRoom() {
+      window.location.href = `room/${this.id_room}`;
+    },
   },
 };
 </script>
@@ -60,8 +59,8 @@ export default {
 }
 .wayDownPage__video {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  height: 98vh;
+  //object-fit: cover;
 }
 .wayDowPage__CTA {
   position: absolute;
