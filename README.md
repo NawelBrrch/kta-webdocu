@@ -5,7 +5,7 @@
 
 ## Project description
 
-:construction: Work in progress :construction:
+Concevoir et développer un web-documentaire sur un thème libre
 
 ## Website
 
@@ -47,8 +47,9 @@ npm run lint
   * AWS
 
 ## Disclaimer
+Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera, en aucun cas, exploité à des fins commerciales et ne sera pas publié.
 
-:construction: Work in progress :construction:
+De plus, tous les lieux présentés ont été visités par des personnes aguerries, les catacombes sont un endroit dangereux et il est interdit de s’y aventurer par arrêté préfectoral. Pour des raisons de sécurité, la carte que vous trouverez sur le site est fictive, mais les lieux présentés sont bien réels.
 
 ## Contributors
 
