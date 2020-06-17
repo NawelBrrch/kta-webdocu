@@ -15,6 +15,8 @@ import KtaMap from "@/views/KtaMap.vue";
 import Exit from "@/views/Exit.vue";
 import UnofficialRoom from "@/views/UnofficialRoom.vue";
 import Video from "@/views/Video.vue";
+import NotFound from "@/views/NotFound.vue";
+
 
 Vue.use(VueRouter);
 
@@ -91,6 +93,15 @@ const routes = [
     name: "UnofficialRoom",
     component: UnofficialRoom,
   },
+  {
+    path: "/NotFound",
+    name: "NotFound",
+    component: NotFound,
+  },
+  {
+    path: "/*",
+    redirect: "/NotFound"
+  }
 ];
 
 const router = new VueRouter({
