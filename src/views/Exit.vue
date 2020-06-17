@@ -1,6 +1,6 @@
 <template>
   <div class="exit">
-    <div class="exit__art"> Arrêté préfectoral du 2 novembre 1955</div>
+    <h2 class="exit__art"> Arrêté préfectoral du 2 novembre 1955</h2>
 
 
 
@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .exit {
   @include exit-style;
   background-image: url("../assets/images/backgroundParcheminNoir.png");
@@ -45,10 +46,11 @@ export default {
 
   &__art {
     margin-bottom: 2%;
-    width: 90vw;
+    width: 80vw;
     text-align: center;
     @include tablet-landscape {
-      margin-bottom: 4%;
+      margin-bottom: 2%;
+      width: 60vw;
     }
   }
 }

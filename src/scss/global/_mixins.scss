@@ -95,11 +95,13 @@
 @mixin exit-style {
   font-family: "Cinzel";
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: $white;
+  line-height: 150%;
 
   @include tablet-landscape {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 150%;
   }
 }
 
