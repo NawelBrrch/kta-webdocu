@@ -622,14 +622,20 @@
     </div>
     <div class="ktaMap__mouse" ref="mouse"></div>
     <router-link :to="{ name: 'GoingUpVideo' }" class="ktaMap__CTA">
-      <CTA msg="Passer la vidéo" />
+      <CTA msg="Finir la visite" />
     </router-link>
   </div>
 </template>
 
 <script>
+
+import CTA from "@/components/CTA.vue";
+
 export default {
   name: "KtaMap",
+  compoments: {
+    CTA 
+  },
   data() {
     return {
       nbClick: localStorage.getItem("nbClick"),
@@ -692,5 +698,6 @@ export default {
   bottom: 10px;
   left: 20px;
   z-index: 999;
+  border: 2px solid red;
 }
 </style>

@@ -67,14 +67,15 @@ svg {
 }
 
 .goingDownHistory {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  background-image: url("../assets/images/descente.png");
+  background-image: url("../assets/images/down.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+
   &__frame {
     width: 60vw;
     display: flex;
@@ -83,7 +84,9 @@ svg {
     overflow: hidden;
   }
   &__text {
-    animation: slideUp 30s linear;
+    overflow-y: scroll;
+    padding-right: 17px; 
+    box-sizing: content-box; 
     padding: 0px 30px 0px 30px;
     height: 30vh;
     width: 100%;
