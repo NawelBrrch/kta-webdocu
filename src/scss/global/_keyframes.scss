@@ -29,7 +29,7 @@
   }
 }
 
-@keyframes dragAnimationMouse {
+@keyframes scrollAnimationMouse {
   from {
     transform: translateY(-10px);
   }
@@ -37,6 +37,16 @@
     transform: translateY(10px);
   }
 }
+
+@keyframes scrollAnimationMouseMobile {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
 
 @keyframes lightIcons {
   from {

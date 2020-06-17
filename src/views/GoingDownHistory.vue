@@ -6,22 +6,26 @@
         de l’époque romaine dont on exploitait la pierre calcaire pour
         construire la ville de Paris. 
         <br/>
+        <br/>
         En 1786, pour pallier à la saturation des cimetières dûe à la 
         peste noire, la ville ordonne de vider les
         cimetières et ses 6 millions de cadavres dans les anciennes carrières
         abandonnées. 
+        <br/>
         <br/>   
         Deux siècles plus tard, l’utilisation de ces catacombes est
         bien différentes. Dans les années 80 des jeunes redécouvrent l’accès de ces
         galeries et commencent à les explorer. 
+        <br/>
         <br/>
 
         Cet espace innocupé devient un lieu de
         rencontres, de création artistiques et de fêtes. Ces personnes constituent les premiers
         groupes de cataphiles. Avec eux se dessine un nouveau monde parallèle.
       </p>
+      <Mouse/>
+      <br/>
     </TextFrame>
-    <Mouse/>
     <router-link class="goingDownHistory__CTA" :to="{ name: 'PanoramicView' }">
       <CTA msg="Continuer" />
     </router-link>
@@ -81,6 +85,10 @@ svg {
     justify-content: center;
     margin: auto;
     overflow: hidden;
+    height: 48vh;
+
+    @include tablet-portrait {}
+    height: 45vh;
   }
   &__text {
     overflow-y: scroll;
@@ -97,8 +105,8 @@ svg {
     font-size: 14px;
 
     @include tablet-portrait {
-      padding: 0px 30px 0px 30px;
-      line-height: 6vh;
+      padding: 0px 30px 30px 30px;
+      line-height: 5vh;
       font-size: 20px;
     } 
   }

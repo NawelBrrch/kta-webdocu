@@ -62,11 +62,14 @@ export default {
 .mouse__icon {
   display: block;
   z-index: 999;
-  animation: dragAnimationMouse 0.7s linear 0s infinite alternate;
+  animation: scrollAnimationMouseMobile 0.7s linear 0s infinite alternate;
   position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 75%;
+  left: 48%;
+  @include tablet-portrait {
+    top: 85%;
+    animation: scrollAnimationMouse 0.7s linear 0s infinite alternate;
+  }
 }
 
 </style>

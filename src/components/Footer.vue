@@ -3,9 +3,9 @@
     <audio
       ref="audioElm"
       class="audio"
-      autoplay="true"
-      loop="true"
-      preload="auto"
+      autoplay
+      loop
+      preload
       src="@/assets/sound/audioKta.mp3"
     ></audio>
     <div class="footer__icones">
