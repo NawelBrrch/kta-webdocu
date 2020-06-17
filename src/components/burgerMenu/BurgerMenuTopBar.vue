@@ -15,11 +15,6 @@
             <router-link :to="{ name: 'Gallery' }">Galerie</router-link>
           </li>
           <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
-            <router-link :to="{ name: 'UnofficialRoom' }"
-              >Salles perdues</router-link
-            >
-          </li>
-          <li class="list__item" @click="closeTopBarPanel" v-if="isPanelOpen">
             <router-link :to="{ name: 'Sources' }">Sources</router-link>
           </li>
         </ul>
