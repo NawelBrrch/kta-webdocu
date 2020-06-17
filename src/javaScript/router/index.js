@@ -16,10 +16,6 @@ import Exit from "@/views/Exit.vue";
 import UnofficialRoom from "@/views/UnofficialRoom.vue";
 import Video from "@/views/Video.vue";
 
-
-
-
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -94,7 +90,7 @@ const routes = [
     path: "/unofficial",
     name: "UnofficialRoom",
     component: UnofficialRoom,
-  }
+  },
 ];
 
 const router = new VueRouter({

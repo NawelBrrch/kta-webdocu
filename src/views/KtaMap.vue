@@ -634,14 +634,18 @@
     </div>
     <div class="ktaMap__mouse" ref="mouse"></div>
     <router-link :to="{ name: 'GoingUpVideo' }" class="ktaMap__CTA">
-      <CTA msg="Passer la vidéo" />
+      <CTA msg="Finir la visite" />
     </router-link>
   </div>
 </template>
 
 <script>
+import CTA from "@/components/CTA.vue";
 export default {
   name: "KtaMap",
+  components: {
+    CTA,
+  },
   data() {
     return {
       nbClick: localStorage.getItem("nbClick"),
@@ -668,13 +672,13 @@ export default {
   z-index: 20;
   color: #000;
 }
-
 /* .shadow {
   filter: url(#shadow);
 }
  */
 .ktaMap {
   overflow: hidden;
+  position: relative;
   .ktaMap__map {
     background-color: #000;
     overflow-x: hidden;
@@ -684,6 +688,10 @@ export default {
     justify-content: center;
     align-items: center;
     &--map {
+      width: 90vw;
+    }
+
+    &--svg {
       width: 90vw;
     }
   }
@@ -698,11 +706,10 @@ export default {
     border-radius: 50%;
   }
 }
-
 .ktaMap__CTA {
   position: absolute;
-  bottom: 10px;
-  left: 20px;
+  bottom: $padding-button-footer;
+  left: $padding-button-footer;
   z-index: 999;
 }
 </style>

@@ -1,6 +1,10 @@
 <template>
   <div class="burgerMenu">
-    <div class="burgerMenu__backdrop" @click="closeTopBarPanel" v-if="isPanelOpen"></div>
+    <div
+      class="burgerMenu__backdrop"
+      @click="closeTopBarPanel"
+      v-if="isPanelOpen"
+    ></div>
     <transition name="slide">
       <div v-if="isPanelOpen" class="burgerMenu__panel">
         <ul class="burgerMenu__panel--list">
@@ -57,7 +61,7 @@ export default {
     left: 0;
     top: 0;
     height: 57px;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     background: linear-gradient(
       180deg,
@@ -78,6 +82,7 @@ export default {
       justify-content: space-around;
       align-items: center;
       height: 100%;
+      margin-top: 0;
 
       @include tablet-portrait {
         padding: 0 20%;
@@ -92,15 +97,17 @@ export default {
 
 .list__item {
   @include menu-style;
+  margin-top: 10px;
 
   a {
     text-decoration: none;
-    color: white;
+    color: $white;
   }
 
   &:hover {
-    transition: all 0.3s linear;
+    transition: all 0.3s ease;
     filter: drop-shadow(0px 0px 5px $white);
+    transform: scale(1.1);
   }
 
   &--menu {

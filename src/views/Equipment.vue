@@ -167,13 +167,13 @@ export default {
 
 .equipment__text {
   width: 60vw;
-  height: 150px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @include mobile-landscape {
-    height: 80px;
+  @include tablet-landscape {
+    height: 110px;
   }
 }
 </style>

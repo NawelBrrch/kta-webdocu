@@ -8,9 +8,11 @@
         autoplay="true"
         preload="auto"
         muted="true"
-        src="../assets/videos/ouverture-plaque.mp4"
+        src="../assets/videos/open.mp4"
         type="video/mp4"
-      >></video>
+      >
+        >
+      </video>
       <router-link :to="{ name: 'GoingDownHistory' }" class="wayDownPage__CTA">
         <CTA msg="Passer la vidéo" />
       </router-link>
@@ -27,9 +29,9 @@ export default {
     CTA,
   },
   methods: {
-    goToHistory(){
-        window.location.href = 'GoingDownHistory'
-    }
+    goToHistory() {
+      window.location.href = "GoingDownHistory";
+    },
   },
 };
 </script>
@@ -44,14 +46,12 @@ export default {
     width: 100%;
     height: 95vh;
     object-fit: cover;
-
   }
 
   &__CTA {
     position: absolute;
     bottom: 10px;
     left: 20px;
-
   }
 }
 </style>

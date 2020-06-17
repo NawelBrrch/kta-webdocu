@@ -1,7 +1,10 @@
-<template >
+<template>
   <div class="galery">
     <h2>Galerie photos</h2>
-    <div class="galery__images" :class="isShow ? 'galery__images--modal' : null">
+    <div
+      class="galery__images"
+      :class="isShow ? 'galery__images--modal' : null"
+    >
       <img
         v-for="i in srcVideo"
         :key="i"
@@ -43,28 +46,50 @@ import Img24 from "../assets/images/gallery24.png";
 import Img25 from "../assets/images/gallery25.jpg";
 import Img26 from "../assets/images/gallery26.png";
 
-
-
-
 export default {
   name: "Gallery",
   components: {
-    Modal
+    Modal,
   },
   methods: {
-    toogleIsShow(src){
-      this.isShow = true
-        this.modalSrc = src
-        console.log(this.modalSrc)
-    }, 
+    toogleIsShow(src) {
+      this.isShow = true;
+      this.modalSrc = src;
+    },
   },
-  data(){
+  data() {
     return {
       isShow: false,
-      srcVideo: [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21, Img22, Img24, Img25, Img26],
-      modalSrc: ''
-    }
-  }
+      srcVideo: [
+        Img1,
+        Img2,
+        Img3,
+        Img4,
+        Img5,
+        Img6,
+        Img7,
+        Img8,
+        Img9,
+        Img10,
+        Img11,
+        Img12,
+        Img13,
+        Img14,
+        Img15,
+        Img16,
+        Img17,
+        Img18,
+        Img19,
+        Img20,
+        Img21,
+        Img22,
+        Img24,
+        Img25,
+        Img26,
+      ],
+      modalSrc: "",
+    };
+  },
 };
 </script>
 
@@ -72,29 +97,40 @@ export default {
 .galery {
   background-image: url("../assets/images/backgroundParcheminNoir.png");
   background-repeat: repeat;
-  width: 100vw;
+  width: 100%;
 }
 
 h2 {
   padding-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .galery__images {
+  padding-top: 30px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
   align-items: stretch;
+  position: relative;
+  overflow-x: hidden;
 }
 .galery__images--modal {
   opacity: 0.3;
 }
 
 img {
-  width: 20vw;
+  cursor: pointer;
+  width: 20%;
   height: 20vw;
   object-fit: cover;
-  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.07);
+    transition: all 0.2s linear;
+    filter: drop-shadow(0 0 10px black);
+    border-radius: 5px;
+  }
 }
 </style>
