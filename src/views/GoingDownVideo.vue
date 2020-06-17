@@ -39,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 .wayDownPage {
   position: relative;
+  overflow: hidden;
   height: 100vh;
   width: 100%;
 
