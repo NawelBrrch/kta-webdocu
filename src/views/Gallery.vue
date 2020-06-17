@@ -55,7 +55,6 @@ export default {
     toogleIsShow(src) {
       this.isShow = true;
       this.modalSrc = src;
-      console.log(this.modalSrc);
     },
   },
   data() {
@@ -98,7 +97,7 @@ export default {
 .galery {
   background-image: url("../assets/images/backgroundParcheminNoir.png");
   background-repeat: repeat;
-  width: 100vw;
+  width: 100%;
 }
 
 h2 {
@@ -108,6 +107,7 @@ h2 {
 }
 
 .galery__images {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
@@ -118,9 +118,16 @@ h2 {
 }
 
 img {
-  width: 20vw;
+  width: 20%;
   height: 20vw;
   object-fit: cover;
   overflow: hidden;
+
+  &:hover {
+    transform: scale(1.07);
+    transition: all 0.2s linear;
+    filter: drop-shadow(0 0 10px black);
+    border-radius: 5px;
+  }
 }
 </style>
