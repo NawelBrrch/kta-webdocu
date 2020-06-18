@@ -4,7 +4,12 @@
     <div v-else>
       <HeroRoom :room="room" :mainPic="mainPic" />
       <DocumentationRoom :room="room" :allPics="allPics" />
-      <RoomFacts v-for="(fact, idx, ids) in facts" :key="idx" :fact="fact" :ids="ids" />
+      <RoomFacts
+        v-for="(fact, idx, ids) in facts"
+        :key="idx"
+        :fact="fact"
+        :ids="ids"
+      />
       <router-link :to="{ name: 'KtaMap' }">
         <CTA msg="Revenir à la carte" />
       </router-link>
@@ -21,7 +26,6 @@ import DocumentationRoom from "@/components/room/DocumentationRoom.vue";
 import RoomFacts from "@/components/room/RoomFacts.vue";
 import Loader from "@/components/Loader.vue";
 
-
 export default {
   name: "Room",
   components: {
@@ -29,7 +33,7 @@ export default {
     DocumentationRoom,
     RoomFacts,
     CTA,
-    Loader
+    Loader,
   },
   props: ["id_room"],
   data() {
@@ -61,14 +65,14 @@ export default {
           apiUrl + "/images" + response.data.result[0].poster_principale;
         this.allPics = response.data.result[0].pics;
         this.facts = response.data.result[0].picsAndFacts;
-        this.isLoading = false
+        this.isLoading = false;
+        this.$nextTick(function () {
+          this.parallax();
+        });
       })
       .catch((error) => {
         console.log("There was an error:", error.response);
       });
-  },
-  mounted() {
-    this.parallax();
   },
   methods: {
     parallax: function () {
