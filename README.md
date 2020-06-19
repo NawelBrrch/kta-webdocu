@@ -1,6 +1,6 @@
 # Les catacombes, la face cachée de Paris
 
-<img src="screenshot.png" alt="capture ecran du site kta-webdocu">
+<img src="public/screenshot.png" alt="capture ecran du site kta-webdocu">
 
 ## Project description
 
